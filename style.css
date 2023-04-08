@@ -44,8 +44,8 @@ body{
     height: 200px;
     margin: 50px;
     background-color: rgb(219, 195, 163);
-    border-radius: 15px;
-    border: solid 3px gray;
+    border-radius: 5px;
+    border: solid 2px gray;
 }
 .info{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -125,7 +125,7 @@ body{
     width: 250px;
     height: 200px;
     background-color: aqua;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 .footer{
@@ -140,3 +140,4 @@ body{
     font-size: 20px;
     text-align: center;
 }
+
