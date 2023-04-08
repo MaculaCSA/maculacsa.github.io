@@ -28,9 +28,10 @@ body{
     font-size: 50px;
 }
 .content{
-    height: 1000px;
-    background-color: orange;
+    height: 3000px;
+    background-color: darksalmon;
     border-top: solid 2px gray;
+    margin: 0;
 }
 .container{
     display: flex;
@@ -40,12 +41,14 @@ body{
 .item{
     height: 200px;
     margin: 50px;
-    background-color: antiquewhite;
+    background-color: rgb(219, 195, 163);
     border-radius: 15px;
+    border: solid 3px gray;
 }
 .info{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
+    font-size: 24px;
     text-align: center;
 }
 .twitch{
@@ -61,10 +64,78 @@ body{
 }
 .tlogo{
     float: right;
-    height: 330px;
+    height: 315px;
     width: 500px;
 }
 .titulot{
-    margin: 20px;
-    font-size: 200px;
+    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    font-size: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}
+.linktwitch{
+    margin-top: 0;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}
+.actriz, .actor, .guion, .animacion, .documental, .corto{
+    height: 300px;
+    width: 1200px;
+    transition: all;
+    transition-duration: 2s;
+}
+.actriz:hover{
+    height: 320px;
+    width: 1220px;
+}
+.actor:hover{
+    height: 320px;
+    width: 1220px;
+}
+.guion:hover{
+    height: 320px;
+    width: 1220px;
+}
+.animacion:hover{
+    height: 320px;
+    width: 1220px;
+}
+.documental:hover{
+    height: 320px;
+    width: 1220px;
+}
+.corto:hover{
+    height: 320px;
+    width: 1220px;
+}
+.container2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.vid{
+    width: 250px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 10px;
+
+}
+.footer{
+    border-top: solid 3px gray;
+    height: 300px;
+    margin: 0;
+}
+.creator{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+body{
+    background-color: lightslategray;
 }
