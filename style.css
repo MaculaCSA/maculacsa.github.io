@@ -130,12 +130,10 @@ body{
     border-top: solid 3px gray;
     height: 300px;
     margin: 0;
+    background-color: lightslategray;
 }
 .creator{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     text-align: center;
-}
-body{
-    background-color: lightslategray;
 }
