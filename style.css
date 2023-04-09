@@ -27,7 +27,7 @@ body{
     font-size: 50px;
 }
 .content{
-    height: 3000px;
+    height: 2600px;
     background-color: darksalmon;
     border-top: solid 2px gray;
 }
@@ -38,8 +38,6 @@ body{
     justify-content: center;
 }
 .item{
-    justify-items: center;
-    height: 200px;
     margin: 50px;
     background-color: rgb(219, 195, 163);
     border-radius: 5px;
@@ -53,13 +51,26 @@ body{
 }
 .twitch{
     height: 400px;
-    width: 1000px;
+    width: 90%;
     transition: all;
     transition-duration: 2s;
 }
 .twitch:hover{
     height: 420px;
-    width: 1020px;
+    width: 95%;
+}
+.tcont{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.imgt{
+    flex-grow: 50%;
+}
+.tinfo{
+    flex-grow: 50%;
 }
 .tlogo{
     float: right;
@@ -71,14 +82,14 @@ body{
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
-    font-size: 100px;
+    font-size: 500%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: blueviolet;
 }
 .linktwitch{
     margin-top: 0;
     margin-left: 50px;
-    font-size: 60px;
+    font-size: 300%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: blueviolet;
 }
@@ -86,40 +97,40 @@ body{
     margin-top: 0;
     margin-left: 50px;
     margin-bottom: 20px;
-    font-size: 50px;
+    font-size: 300%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: blueviolet;
 
 }
 .actriz, .actor, .guion, .animacion, .documental, .corto{
-    height: 300px;
-    width: 1200px;
+    height: 250px;
+    width: 90%;
     transition: all;
     transition-duration: 2s;
 }
 .actriz:hover{
-    height: 320px;
-    width: 1220px;
+    height: 270px;
+    width: 95%;
 }
 .actor:hover{
-    height: 320px;
-    width: 1220px;
+    height: 270px;
+    width: 95%;
 }
 .guion:hover{
-    height: 320px;
-    width: 1220px;
+    height: 270px;
+    width: 95%;
 }
 .animacion:hover{
-    height: 320px;
-    width: 1220px;
+    height: 270px;
+    width: 95%;
 }
 .documental:hover{
-    height: 320px;
-    width: 1220px;
+    height: 270px;
+    width: 95%;
 }
 .corto:hover{
-    height: 320px;
-    width: 1220px;
+    height: 270px;
+    width: 95%;
 }
 .container2{
     display: flex;
@@ -130,8 +141,8 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
-    width: 250px;
-    height: 200px;
+    width: 20%;
+    height: 150px;
     background-color: cadetblue;
     border-radius: 5px;
 
@@ -147,4 +158,3 @@ body{
     font-size: 20px;
     text-align: center;
 }
-
