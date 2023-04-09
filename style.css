@@ -3,9 +3,7 @@ body{
 }
 .header{
     height: 400px;
-    width: 5000px;
     background-color: tan;
-    background-size: contain;
 }
 .logo-container{
     display: flex;
@@ -30,18 +28,17 @@ body{
 }
 .content{
     height: 3000px;
-    width: 5000px;
     background-color: darksalmon;
-    background-size: contain;
     border-top: solid 2px gray;
-    margin: 0;
 }
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .item{
+    justify-items: center;
     height: 200px;
     margin: 50px;
     background-color: rgb(219, 195, 163);
@@ -57,7 +54,6 @@ body{
 .twitch{
     height: 400px;
     width: 1000px;
-    overflow: hidden;
     transition: all;
     transition-duration: 2s;
 }
@@ -82,10 +78,18 @@ body{
 .linktwitch{
     margin-top: 0;
     margin-left: 50px;
-    margin-bottom: 50px;
     font-size: 60px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: blueviolet;
+}
+.fecha{
+    margin-top: 0;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+
 }
 .actriz, .actor, .guion, .animacion, .documental, .corto{
     height: 300px;
@@ -135,10 +139,8 @@ body{
 .footer{
     border-top: solid 3px gray;
     height: 200px;
-    width: 5000px;
     margin: 0;
     background-color: lightslategray;
-    background-size: contain;
 }
 .creator{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
