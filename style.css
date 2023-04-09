@@ -158,3 +158,20 @@ body{
     font-size: 20px;
     text-align: center;
 }
+.popup{
+/*Objeto centrado en la pantalla*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    display: none;
+}
+.cerrarpopup{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
