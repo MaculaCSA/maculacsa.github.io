@@ -1,8 +1,9 @@
 body{
-    background-color: peru;
+    margin: 0;
 }
 .header{
     height: 400px;
+    width: 5000px;
     background-color: tan;
     background-size: contain;
 }
@@ -29,6 +30,7 @@ body{
 }
 .content{
     height: 3000px;
+    width: 5000px;
     background-color: darksalmon;
     background-size: contain;
     border-top: solid 2px gray;
@@ -133,6 +135,7 @@ body{
 .footer{
     border-top: solid 3px gray;
     height: 200px;
+    width: 5000px;
     margin: 0;
     background-color: lightslategray;
     background-size: contain;
