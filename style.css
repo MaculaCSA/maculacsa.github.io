@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 .header{
-    background-color: tan;
+    background-color: darkgray;
 }
 .logo-container{
     display: flex;
@@ -26,7 +26,8 @@ body{
     font-size: 50px;
 }
 .content{
-    background-color: darksalmon;
+    height: 3400px;
+    background-color: rgb(65, 65, 65);
     border-top: solid 2px gray;
 }
 .container{
@@ -37,7 +38,7 @@ body{
 }
 .item{
     margin: 50px;
-    background-color: rgb(219, 195, 163);
+    background-color: rgb(192, 192, 192);
     border-radius: 5px;
     border: solid 2px gray;
 }
