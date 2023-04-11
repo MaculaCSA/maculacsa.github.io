@@ -178,11 +178,13 @@ body{
     display: none;
 }
 .cerrarpopup{
-    position: absolute;
-    bottom: 100%;
-    right: 0;
+    position: fixed;
+    bottom: -25%;
+    right: 40%;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0);
     border: none;
+    padding: 0px;
 }
 
 .fondoimg{
