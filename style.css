@@ -85,44 +85,20 @@ body{
     margin-top: 0;
 }
 
-.actriz, .actor, .guion, .animacion, .documental, .corto{
+.categoria, .corto{
     height: 250px;
     width: 90%;
     transition: all;
     transition-duration: 2s;
 }
-.actriz:hover{
-    height: 270px;
-    width: 95%;
-}
-.actor:hover{
-    height: 270px;
-    width: 95%;
-}
-.guion:hover{
-    height: 270px;
-    width: 95%;
-}
-.animacion:hover{
-    height: 270px;
-    width: 95%;
-}
-.documental:hover{
+.categoria:hover{
     height: 270px;
     width: 95%;
 }
 .corto:hover{
     width: 95%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.vestuario:hover{
-    height: 270px;
-    width: 95%;
-}
-.edicion:hover{
-    height: 270px;
-    width: 95%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
 }
 .container2{
     display: flex;
