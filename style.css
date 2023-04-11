@@ -70,8 +70,8 @@ body{
 .tinfo{
     flex-grow: 50%;
     text-align: center;
-    /*contenido alineado a la derecha*/
-    align-self: flex-end;
+    /*contenido alineado al centro*/
+    align-self: center;
 }
 .tlogo{
     float: right;
