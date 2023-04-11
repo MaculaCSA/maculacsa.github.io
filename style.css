@@ -27,7 +27,7 @@ body{
     font-size: 50px;
 }
 .content{
-    height: 2600px;
+    height: 3350px;
     background-color: darksalmon;
     border-top: solid 2px gray;
 }
@@ -62,14 +62,14 @@ body{
 .tcont{
     text-align: center;
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    justify-content: space-around;
     align-items: center;
 }
 .imgt{
     flex-grow: 50%;
 }
 .tinfo{
+    margin-right: 20px;
     flex-grow: 50%;
 }
 .tlogo{
@@ -132,6 +132,14 @@ body{
     height: 270px;
     width: 95%;
 }
+.vestuario:hover{
+    height: 270px;
+    width: 95%;
+}
+.edicion:hover{
+    height: 270px;
+    width: 95%;
+}
 .container2{
     display: flex;
     justify-content: space-around;
@@ -171,7 +179,7 @@ body{
 }
 .cerrarpopup{
     position: absolute;
-    top: 100%;
+    bottom: 100%;
     right: 0;
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -182,4 +190,16 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.vestuario{
+    width: 90%;
+    height: 250px;
+    transition-property: all;
+    transition-duration: 2s;
+}
+.edicion{
+    width: 90%;
+    height: 250px;
+    transition-property: all;
+    transition-duration: 2s;
 }
