@@ -53,9 +53,6 @@ body{
     transition: all;
     transition-duration: 2s;
 }
-.twitch:hover{
-    width: 95%;
-}
 .tcont{
     text-align: center;
     display: flex;
@@ -171,8 +168,5 @@ body{
 @media screen and (min-width:1300px){
     .twitch{
         width: 60%;
-    }
-    .twitch:hover{
-        width: 65%;
     }
 }
