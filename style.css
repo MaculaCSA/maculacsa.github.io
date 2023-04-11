@@ -55,7 +55,7 @@ body{
     transition-duration: 2s;
 }
 .twitch:hover{
-    height: 420px;
+    height: 50%;
     width: 95%;
 }
 .tcont{
