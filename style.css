@@ -50,7 +50,6 @@ body{
     text-align: center;
 }
 .twitch{
-    height: 400px;
     width: 90%;
     transition: all;
     transition-duration: 2s;
