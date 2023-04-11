@@ -27,7 +27,7 @@ body{
     font-size: 50px;
 }
 .content{
-    height: 3350px;
+    height: 3400px;
     background-color: darksalmon;
     border-top: solid 2px gray;
 }
@@ -55,7 +55,6 @@ body{
     transition-duration: 2s;
 }
 .twitch:hover{
-    height: 50%;
     width: 95%;
 }
 .tcont{
@@ -186,4 +185,12 @@ body{
     height: 250px;
     transition-property: all;
     transition-duration: 2s;
+}
+@media screen and (min-width:1300px){
+    .twitch{
+        width: 60%;
+    }
+    .twitch:hover{
+        width: 65%;
+    }
 }
