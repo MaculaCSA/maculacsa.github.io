@@ -139,6 +139,8 @@ body{
     border-radius: 5px;
     /*color de la fuente*/
     color: white;
+    /*Fuente en negrita*/
+    font-weight: 600;
 }
 .footer{
     border-top: solid 3px gray;
