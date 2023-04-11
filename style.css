@@ -75,12 +75,15 @@ body{
 .tlogo{
     float: right;
     height: 315px;
+    margin-bottom: 5%;
+    margin-left: 5%;
 }
 
 .texttw{
     font-size: 300%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: blueviolet;
+    margin-top: 0;
 }
 
 .actriz, .actor, .guion, .animacion, .documental, .corto{
