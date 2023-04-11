@@ -26,7 +26,6 @@ body{
     font-size: 50px;
 }
 .content{
-    height: 3600px;
     background-color: rgb(65, 65, 65);
     border-top: solid 2px gray;
 }
