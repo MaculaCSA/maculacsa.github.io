@@ -113,8 +113,9 @@ body{
     width: 95%;
 }
 .corto:hover{
-    height: 270px;
     width: 95%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .vestuario:hover{
     height: 270px;
@@ -128,6 +129,8 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 .corto{
     text-align: center;
