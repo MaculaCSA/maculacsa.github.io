@@ -86,14 +86,13 @@ body{
 }
 
 .categoria, .corto{
-    height: 250px;
-    width: 90%;
     transition: all;
     transition-duration: 2s;
+    width: 90%;
 }
-.categoria:hover{
-    height: 270px;
-    width: 95%;
+.corto{
+    height: 250px;
+    margin-bottom: 2.5%;
 }
 .corto:hover{
     width: 95%;
