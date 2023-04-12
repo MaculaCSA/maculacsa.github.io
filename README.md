@@ -1,2 +1,2 @@
 # maculacsa.github.io 
-Página oficial Macula
+Página oficial de los Macula de los Agustinos de Santander
