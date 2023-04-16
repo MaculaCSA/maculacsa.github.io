@@ -9,19 +9,29 @@ function handleScroll() {
   // obtener la duración total del video en segundos
   const videoDuration = video.duration;
 
+  // obtener la altura total de la página
+  const pageHeight = document.body.scrollHeight;
+
   // obtener la posición vertical actual de la página
   const scrollPosition = window.scrollY;
 
-  // verificar si el valor de scrollPosition es mayor o igual a cero y si el valor de windowHeight es mayor que cero
-  if (scrollPosition >= 0 && windowHeight > 0) {
+  // verificar si el valor de scrollPosition es mayor o igual a cero y si el valor de windowHeight y pageHeight son mayores que cero
+  if (scrollPosition >= 0 && windowHeight > 0 && pageHeight > 0) {
     // calcular la posición del video en relación a la página
-    const videoPosition = scrollPosition / windowHeight;
+    let videoPosition;
 
-    // calcular el frame actual del video
-    const currentFrame = Math.round(videoPosition * videoDuration * 30); // 30 es la tasa de frames por segundo del video
+    if (scrollPosition + windowHeight >= pageHeight) {
+      // si se llega al final de la página, reproducir hasta el final del video
+      videoPosition = 1;
+    } else {
+      videoPosition = scrollPosition / (pageHeight - windowHeight);
+    }
 
-    // establecer el frame actual del video
-    video.currentTime = currentFrame / 24; // dividir por 30 para obtener el tiempo en segundos
+    // calcular el tiempo actual del video
+    const currentTime = videoPosition * videoDuration;
+
+    // establecer el tiempo actual del video
+    video.currentTime = currentTime;
   }
 }
 
