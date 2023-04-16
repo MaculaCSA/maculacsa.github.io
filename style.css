@@ -15,14 +15,14 @@ body{
 }
     
 @media screen and (min-width: 100vh) {
-.video {
-    height: 100vh;
+    .video {
+        height: 100vh;
     }
 }
     
-    @media screen and (max-width: 100vh) {
+@media screen and (max-width: 100vh) {
     .video {
-    width: 100vw;
+        width: 100vw;
     }
 }
 
@@ -61,6 +61,8 @@ body{
 }
 .item{
     margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
     background-color: rgb(192, 192, 192);
     border-radius: 5px;
     border: solid 2px gray;
@@ -75,7 +77,6 @@ body{
     width: 90%;
     transition: all;
     transition-duration: 2s;
-    right: 20vh;
 }
 .tcont{
     text-align: center;
@@ -192,7 +193,9 @@ body{
 @media screen and (min-width:1300px){
     .twitch{
         position: relative;
-        width: 60%;
-        right: 285px;
+        width: 50%;
+    }
+    .categoria{
+        width: 50%;
     }
 }
