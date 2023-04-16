@@ -1,6 +1,8 @@
 const video = document.getElementById('video');
 let animationFrameId = null;
 
+// Al hacer scroll, se actualiza el tiempo del video
+
 function handleScroll() {
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId);
