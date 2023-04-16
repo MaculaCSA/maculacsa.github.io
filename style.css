@@ -9,21 +9,10 @@ body{
 
 .video {
     position: fixed;
-    top: 4vh;
-    right: -10vh;
+    top: 1vh;
+    right: 0vh;
     z-index: -1;
-}
-    
-@media screen and (min-width: 100vh) {
-    .video {
-        height: 100vh;
-    }
-}
-    
-@media screen and (max-width: 100vh) {
-    .video {
-        width: 100vw;
-    }
+    height: 100vh;
 }
 
 .header{
