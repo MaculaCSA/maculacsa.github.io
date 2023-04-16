@@ -1,7 +1,31 @@
 body{
     margin: 0;
-    background-color: darkgray;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgb(65, 65, 65);
 }
+
+.video {
+    position: fixed;
+    top: 4vh;
+    right: -10vh;
+    z-index: -1;
+}
+    
+@media screen and (min-width: 100vh) {
+.video {
+    height: 100vh;
+    }
+}
+    
+    @media screen and (max-width: 100vh) {
+    .video {
+    width: 100vw;
+    }
+}
+
 .header{
     background-color: darkgray;
 }
@@ -27,8 +51,7 @@ body{
     font-size: 50px;
 }
 .content{
-    background-color: rgb(65, 65, 65);
-    border-top: solid 2px gray;
+    width: 100%;
 }
 .container{
     display: flex;
@@ -52,6 +75,7 @@ body{
     width: 90%;
     transition: all;
     transition-duration: 2s;
+    right: 20vh;
 }
 .tcont{
     text-align: center;
@@ -167,6 +191,8 @@ body{
 }
 @media screen and (min-width:1300px){
     .twitch{
+        position: relative;
         width: 60%;
+        right: 285px;
     }
 }
