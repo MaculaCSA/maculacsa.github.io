@@ -181,12 +181,8 @@ body{
     transition-duration: 2s;
 }
 @media screen and (min-width:1300px){
-    .twitch{
-        position: relative;
-        width: 50%;
-    }
-    .categoria{
-        width: 50%;
+    .categoria, .twitch{
+        width: 55%;
     }
     .footer{
         height: 24vh;
