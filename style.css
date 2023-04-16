@@ -132,7 +132,7 @@ body{
 }
 .footer{
     border-top: solid 3px gray;
-    height: 250px;
+    height: 14vh;
     margin: 0;
     background-color: lightslategray;
 }
@@ -187,5 +187,8 @@ body{
     }
     .categoria{
         width: 50%;
+    }
+    .footer{
+        height: 24vh;
     }
 }
