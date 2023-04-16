@@ -21,7 +21,7 @@ function handleScroll() {
     const currentFrame = Math.round(videoPosition * videoDuration * 30); // 30 es la tasa de frames por segundo del video
 
     // establecer el frame actual del video
-    video.currentTime = currentFrame / 30; // dividir por 30 para obtener el tiempo en segundos
+    video.currentTime = currentFrame / 24; // dividir por 30 para obtener el tiempo en segundos
   }
 }
 
