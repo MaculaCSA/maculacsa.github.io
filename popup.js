@@ -14,10 +14,20 @@ function openPopup(VideoId) {
     }
 }
 
+// Abrir popup para carteles
+function openPopupImg(ImageId) {
+    // Se cambia el src del iframe
+    document.getElementById("IframeImg").src = "img/" + ImageId;
+    // Se muestra el div
+    document.getElementById("popupImg").style.display = "block";
+
+}
+
 // Cuando el boton de cerrar se pulsa
 function closePopup() {
     // Desaparece el div
     document.getElementById("popup").style.display = "none";
+    document.getElementById("popupImg").style.display = "none";
 }
 
 // Redirigir a una web
