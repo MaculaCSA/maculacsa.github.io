@@ -11,6 +11,7 @@ function openPopup(VideoId) {
         document.getElementById("IframeVideo").src = "https://www.youtube.com/embed/" + VideoId;
         // Se muestra el div
         document.getElementById("popup").style.display = "block";
+        document.getElementById("closePopup").style.display = "block";
     }
 }
 
@@ -28,6 +29,7 @@ function closePopup() {
     // Desaparece el div
     document.getElementById("popup").style.display = "none";
     document.getElementById("popupImg").style.display = "none";
+    document.getElementById("closePopup").style.display = "none";
 }
 
 // Redirigir a una web
