@@ -21,6 +21,7 @@ function openPopupImg(ImageId) {
     document.getElementById("IframeImg").src = "img/" + ImageId;
     // Se muestra el div
     document.getElementById("popupImg").style.display = "block";
+    document.getElementById("closePopup").style.display = "block";
 
 }
 
