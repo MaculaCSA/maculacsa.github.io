@@ -216,6 +216,7 @@ transform-origin: 50% 50%;
     height: 50%;
     display: none;
     text-align: center;
+    z-index: 3;
 }
 .cerrarpopup{
     position: fixed;
@@ -225,6 +226,7 @@ transform-origin: 50% 50%;
     background-color: transparent;
     border: none;
     padding: 0px;
+    z-index: 3;
 }
 .cerrarpopupgigante{
     position: fixed;
