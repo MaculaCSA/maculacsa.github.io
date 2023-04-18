@@ -184,9 +184,14 @@ transform-origin: 50% 50%;
     left: 0;
     transition-property: all;
     transition-duration: 2s;
+    z-index: 1;
 }
 .corto:hover::after{
     opacity: 0%;
+}
+.nombre{
+    position: relative;
+    z-index: 2;
 }
 .footer{
     border-top: solid 3px gray;
