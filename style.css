@@ -143,8 +143,8 @@ transform-origin: 50% 50%;
     width: 90%;
 }
 .corto{
-    height: 250px;
     margin-bottom: 2.5%;
+    overflow: hidden;
 }
 .corto:hover{
     width: 35%;
@@ -170,6 +170,28 @@ transform-origin: 50% 50%;
     color: white;
     /*Fuente en negrita*/
     font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+.corto::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-property: all;
+    transition-duration: 2s;
+    z-index: 1;
+}
+.corto:hover::after{
+    opacity: 0%;
+}
+.nombre{
+    position: relative;
+    z-index: 2;
 }
 .footer{
     border-top: solid 3px gray;
@@ -194,6 +216,7 @@ transform-origin: 50% 50%;
     height: 50%;
     display: none;
     text-align: center;
+    z-index: 3;
 }
 .cerrarpopup{
     position: fixed;
@@ -203,6 +226,7 @@ transform-origin: 50% 50%;
     background-color: transparent;
     border: none;
     padding: 0px;
+    z-index: 3;
 }
 .cerrarpopupgigante{
     position: fixed;
