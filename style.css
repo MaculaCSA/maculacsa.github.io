@@ -204,6 +204,14 @@ transform-origin: 50% 50%;
     position: relative;
     z-index: 2;
 }
+.textocarteles{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cartel::after{
+    opacity: 15% !important;
 }
 .footer{
     border-top: solid 3px gray;
