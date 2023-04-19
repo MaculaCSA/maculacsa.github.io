@@ -204,8 +204,6 @@ transform-origin: 50% 50%;
     position: relative;
     z-index: 2;
 }
-.agua::after{
-    opacity: 20% !important;
 }
 .footer{
     border-top: solid 3px gray;
