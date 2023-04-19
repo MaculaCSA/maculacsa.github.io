@@ -42,6 +42,17 @@ transform-origin: 50% 50%;
     
 /*Fin pantalla de carga*/
 
+#IframeImg{
+    position: fixed;
+    /*centrado en el centro de la pantalla*/
+    top: 50%;
+    left: 50%;
+    /*centrado en el centro de la pantalla*/
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    background-color: white;
+}
+
 .video {
     position: fixed;
     top: 1vh;
@@ -218,10 +229,13 @@ transform-origin: 50% 50%;
     text-align: center;
     z-index: 3;
 }
+.cerrarpopupImg{
+    top: 125% !important;
+}
 .cerrarpopup{
     position: fixed;
-    top: 100%;
-    right: 44%;
+    top: 102%;
+    right: 40%;
     text-align: center;
     background-color: transparent;
     border: none;
