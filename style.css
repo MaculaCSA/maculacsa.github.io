@@ -265,3 +265,7 @@ transform-origin: 50% 50%;
         height: 24vh;
     }
 }
+.ganador{
+    /*borde resaltado de dorado difuminandose hacia afuera a transparente*/
+    box-shadow: 0 0 10px 10px gold;
+}
