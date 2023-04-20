@@ -4,7 +4,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: rgb(65, 65, 65);
+    background-color: black;
 }
 
 /*Pantalla de carga:*/
@@ -104,9 +104,9 @@ transform-origin: 50% 50%;
     margin: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    background-color: rgb(192, 192, 192);
+    background-color: white;
     border-radius: 5px;
-    border: solid 2px gray;
+    border: solid 2px black;
 }
 .info{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
