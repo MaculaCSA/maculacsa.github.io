@@ -203,7 +203,6 @@ transform-origin: 50% 50%;
 .nombre{
     position: relative;
     z-index: 2;
-    margin: 20px;
 }
 .textocarteles{
     position: absolute;
