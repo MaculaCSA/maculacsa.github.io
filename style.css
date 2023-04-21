@@ -169,6 +169,12 @@ transform-origin: 50% 50%;
     margin-left: 1%;
     margin-right: 1%;
 }
+.unico{
+    width: 90% !important;
+}
+.unico:hover{
+    width: 100% !important;
+}
 .corto{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
