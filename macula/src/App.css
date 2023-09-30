@@ -166,25 +166,3 @@
   place-items: center;
   cursor: pointer;
 }
-
-/* This styles the aside container */
-#aSide {
-  height: 100%;
-  width: 100%;
-}
-
-/* This styles the 3D object inserted in the aside container */
-#aSide model-viewer {
-  height: 100%;
-  width: 100%;
-  border: none;
-}
-
-.modelo {
-  background: transparent;
-  height: 75%;
-  width: 50%;
-  position: absolute;
-  top: 10%;
-  right: 0;
-}
