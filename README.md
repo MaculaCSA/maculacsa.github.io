@@ -1,2 +1,2 @@
 # maculacsa.github.io 
-Página oficial Macula
+Página web oficial Macula
