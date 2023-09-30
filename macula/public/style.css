@@ -56,15 +56,6 @@
             border: none;
         }
         
-        /* This styles the descriptions of the 3D object */
-        #content {
-            height: 500px;
-            width: 700px;
-            position: absolute;
-            left: 12%;
-            top: calc(50% - 250px);
-        }
-        
         /* This styles the heading in the 3D description */
         #content h2 {
             font-size: 140px;
@@ -73,7 +64,7 @@
         
         /* This styles the paragraph in the 3D description*/
         #content p {
-            font-size: 20px;
+            font-size: 30px;
             color: rgb(189, 189, 189);
         }
         
@@ -148,11 +139,39 @@
             height: 75%;
             width: 50%;
             position: absolute;
-            right: 30vh;
+            right: 0;
         }
 
-        .content{
-            height: 100%;
+        /* This styles the descriptions of the 3D object */
+        #content {
+            height: 40%;
+            width: 700px;
+            position: absolute;
+            top: calc(50% - 250px);
+        }
 
-            right: 25vh;
+        @media (max-width: 1300px) {
+            .modelo {
+                text-align: center;
+                width: 100%;
+                height: 45%;
+            }
+
+            .modelo model-viewer {
+                width: 50%;
+                height: 100%;
+                top: 20%;
+            }
+
+            #content{
+                width: 100%;
+                height: 100%;
+                top: 0%;
+                text-align: center;
+            }
+
+            .margen {
+                width: 100%;
+                height: calc(45% - 250px);
+            }
         }
