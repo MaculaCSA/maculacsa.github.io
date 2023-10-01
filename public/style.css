@@ -117,13 +117,13 @@
         
         /* This styles the button in the 3D description*/
         button {
-            width: 150px;
+            width: 100px;
             height: auto;
             font-size: 20px;
             font-family: sans-serif;
             /*margin-top: 5vh;*/
             position: absolute;
-            left: 3%;
+            right: 0;
             top: 15px;
             margin-left: center;
             border: none;
