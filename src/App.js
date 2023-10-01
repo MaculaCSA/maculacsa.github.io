@@ -50,7 +50,7 @@ export default App;
 //        console.log("Modelo cargado");
 //});
 
-//window.onload = function(){
+window.onload = function(){
   //esperar 6 segundos
   setTimeout(function(){
           //handleScroll();
@@ -60,4 +60,4 @@ export default App;
   }
   , 6000);
   
-//}
+}
