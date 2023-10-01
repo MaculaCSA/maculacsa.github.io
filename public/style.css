@@ -22,11 +22,12 @@
             
             width: 490px;
             height: 335.983px;
-            }
+        }
             
-            .hidden{
+        .hidden{
             overflow: hidden;
-            }
+        }
+        
         .invisible{
             visibility: hidden;
         }
