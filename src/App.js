@@ -11,9 +11,10 @@ function App() {
   return (
     <div className="App">
       <Parallax pages={10} scrolling={false}>
-        <ParallaxLayer offset={0} style={{ backgroundColor: 'white' }} />
+        <ParallaxLayer offset={0}/>
         <ParallaxLayer offset={1} style={{ backgroundColor: 'white' }} />
         <ParallaxLayer offset={2} style={{ backgroundColor: '#87BCDE' }} />
+        <ParallaxLayer offset={3} style={{ backgroundColor: '#87BCDE' }}/>
         
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content">
@@ -29,19 +30,6 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        
-        <ParallaxLayer offset={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div id="navbar">
-            <div id="logo">
-                <img src="img/logoMP.png" alt="logo"/>
-            </div>
-            <ul>
-                <li><a href="%PUBLIC_URL%/v1"><button>2023</button></a></li>
-            </ul>
-          </div>
-        </ParallaxLayer>
-
-        
         <ParallaxLayer offset={1} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content" class="creditos">
             <h3 class="titulo">Hecho con ❤️ por Pablo García y Aarón Sancibrián</h3>
