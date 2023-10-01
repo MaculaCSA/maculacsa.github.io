@@ -20,7 +20,6 @@ function App() {
             <h2 class="titulo">PREMIOS MÀCULA</h2>
             <div class="margen"></div>
             <p class="subtitulo">2024</p>
-            <button>¿Donde ver?</button>
           </div>
         </ParallaxLayer>
 
