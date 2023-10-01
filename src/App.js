@@ -76,7 +76,6 @@ window.onload = function(){
   setTimeout(function(){
           //handleScroll();
           $('#mainNav').removeClass('invisible');
-          $('body').removeClass('hidden');
           $('#carga').fadeOut();
   }
   , 6000);
