@@ -41,6 +41,15 @@ function App() {
           </div>
         </ParallaxLayer>
 
+        
+        <ParallaxLayer offset={1} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div id="content" class="creditos">
+            <h3 class="titulo">Hecho con ❤️ por Pablo García y Aarón Sancibrián</h3>
+            <div class="margen"></div>
+            <p class="subtitulo">Modelo por Hector Sancibrián</p>
+          </div>
+        </ParallaxLayer>
+
 
       </Parallax>
     

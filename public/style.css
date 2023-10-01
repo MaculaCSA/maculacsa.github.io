@@ -109,12 +109,17 @@
             font-size: 140px;
             color: grey;
         }
+
+        h3 {
+            font-size: 50px;
+            color: grey;
+        }
         
         /* This styles the paragraph in the 3D description*/
         #content p {
             font-size: 30px;
             color: rgb(189, 189, 189);
-            display: none;
+            /*display: none;*/
         }
         
         /* This styles the button in the 3D description*/
