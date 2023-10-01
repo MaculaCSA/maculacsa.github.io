@@ -115,8 +115,8 @@
         }
         
         /* This styles the button in the 3D description*/
-        #content button {
-            width: 35%;
+        button {
+            width: auto;
             height: 40px;
             font-size: 16px;
             font-family: sans-serif;
