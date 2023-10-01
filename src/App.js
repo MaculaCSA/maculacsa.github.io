@@ -29,6 +29,18 @@ function App() {
           </div>
         </ParallaxLayer>
 
+        
+        <ParallaxLayer offset={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div id="navbar">
+            <div id="logo">
+                <img src="img/logoMP.png" alt="logo"/>
+            </div>
+            <ul>
+                <li><a href="%PUBLIC_URL%/v1"><button>2023</button></a></li>
+            </ul>
+          </div>
+        </ParallaxLayer>
+
 
       </Parallax>
     
