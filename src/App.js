@@ -2,6 +2,11 @@ import './App.css';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
+//importar jquery
+import $ from 'jquery';
+
+console.log("App.js")
+
 function App() {
   return (
     <div className="App">
@@ -21,7 +26,7 @@ function App() {
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div class="modelo">
-            <model-viewer id="aSide" src="model/maculanogirar.glb" alt="Macula" auto-rotate ar ar-modes="webxr scene-viewer quick-look" poster="model/poster.webp" shadow-intensity="1" autoplay environment-image="model/fireplace_2k.hdr"> </model-viewer>
+            <model-viewer id="aSide" src="model/maculanogirar.glb" alt="Macula" auto-rotate loading="eager" ar ar-modes="webxr scene-viewer quick-look" poster="model/poster.webp" shadow-intensity="1" autoplay environment-image="model/fireplace_2k.hdr"> </model-viewer>
           </div>
         </ParallaxLayer>
 
@@ -33,3 +38,27 @@ function App() {
 }
 
 export default App;
+
+//const modelViewer = document.getElementById('aSide');
+
+//console.log("Cargando modelo en app.js");
+
+//modelViewer.addEventListener('loaded', function() {
+//        handleScroll();
+//        $('#mainNav').removeClass('invisible');
+//        $('body').removeClass('hidden');
+//        $('#carga').fadeOut();
+//        console.log("Modelo cargado");
+//});
+
+//window.onload = function(){
+  //esperar 6 segundos
+  setTimeout(function(){
+          //handleScroll();
+          $('#mainNav').removeClass('invisible');
+          $('body').removeClass('hidden');
+          $('#carga').fadeOut();
+  }
+  , 6000);
+  
+//}

@@ -1,6 +1,11 @@
 window.onload = function(){
-        handleScroll();
-        $('#mainNav').removeClass('invisible');
-        $('body').removeClass('hidden');
-        $('#carga').fadeOut();
+        //esperar 6 segundos
+        setTimeout(function(){
+                handleScroll();
+                $('#mainNav').removeClass('invisible');
+                $('body').removeClass('hidden');
+                $('#carga').fadeOut();
+        }
+        , 6000);
+        
 }

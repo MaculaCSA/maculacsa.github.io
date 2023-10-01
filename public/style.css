@@ -1,3 +1,49 @@
+        /*Pantalla de carga:*/
+
+        @keyframes rotate {from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}}
+        @-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}}
+        .imgr{
+        -webkit-animation: 3s rotate linear infinite;
+        animation: 3s rotate linear infinite;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        }
+
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            position: absolute;
+            top: 50%;
+            transform: translate(50%, -50%);
+            
+            width: 490px;
+            height: 335.983px;
+            }
+            
+            .hidden{
+            overflow: hidden;
+            }
+        .invisible{
+            visibility: hidden;
+        }
+            
+        /*Fin pantalla de carga*/
+        
+        #IframeImg{
+            position: fixed;
+            /*centrado en el centro de la pantalla*/
+            top: 50%;
+            left: 50%;
+            /*centrado en el centro de la pantalla*/
+            transform: translate(-50%, -50%);
+            width: 50vh;
+            background-color: white;
+        }
+        
         /*  This is for styling the main container that holds everything */
         #container {
             height: 100vh;

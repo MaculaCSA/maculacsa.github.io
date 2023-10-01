@@ -30,7 +30,14 @@
     -->
     <title>Premios Macula</title>
   </head>
-  <body>
+  <body class="hidden">
+
+    <div id="carga" style="width: 100%; height: 100vh; background-color: white;">
+      <div class="logo" style="width: 50%;">
+          <img width="100%" src="./img/logoMP.png" alt="" class="imgr">
+      </div>
+    </div>
+
     <noscript>Para poder entrar necesitas activar el javascript en tu navegador</noscript>
     <div id="root"></div>
     <!--
@@ -52,4 +59,8 @@
       </ul>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="%PUBLIC_URL%/js/popup.js"></script>
+  <script src="%PUBLIC_URL%/js/video.js"></script>
+  <!--script src="%PUBLIC_URL%/js/carga.js"></script-->
 </html>
