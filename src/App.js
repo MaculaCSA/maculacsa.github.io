@@ -10,11 +10,7 @@ console.log("App.js")
 function App() {
   return (
     <div className="App">
-      <Parallax pages={10} scrolling={false}>
-        <ParallaxLayer offset={0}/>
-        <ParallaxLayer offset={1}/>
-        <ParallaxLayer offset={2} style={{ backgroundColor: '#87BCDE' }} />
-        <ParallaxLayer offset={3} style={{ backgroundColor: '#87BCDE' }}/>
+      <Parallax pages={3} scrolling={false}>
         
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content">
