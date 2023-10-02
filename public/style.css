@@ -60,7 +60,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background: white;
+            background: none;
         }
         
         /* This styles the logo in the navbar */
@@ -206,6 +206,11 @@
             position: absolute;
             top: calc(50% - 250px);
         }
+        #content button{
+            position: relative;
+            text-align: center;
+            z-index: 1000;
+        }
 
         @media (max-width: 1300px) {
             .modelo {
@@ -230,25 +235,27 @@
                 text-align: center;
             }
 
-            .margen {
-                width: 100%;
-                height: calc(45% - 250px);
+            .titulo{
+                margin-bottom: 0;
+            }
+
+            #content p{
+                margin-top: 0px;
             }
         }
 
-        @media screen and (max-width: 590px) {
+        @media screen and (max-width: 675px) {
             #content h2 {
+                margin-top: 20%;
                 font-size: 400%;
                 top: 10%;
-                position: relative;
             }
 
             #content p {
-                top: -13%;
-                position: relative;
+                top: 10%;
             }
         }
 
         .creditos{
-            left: 10%;
+            text-align: center;
         }
