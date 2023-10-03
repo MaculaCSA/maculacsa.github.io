@@ -123,7 +123,7 @@
         }
         
         /* This styles the button in the 3D description*/
-        button {
+        .button {
             width: 100px;
             height: auto;
             font-size: 20px;
@@ -212,7 +212,65 @@
             z-index: 1000;
         }
 
+        .colegios{
+            text-align: center;
+            margin-top: 20%;
+            color: #ffffff;
+            font-size: 700%;
+            align-items: center;
+            align-content: center;
+        }
+
+        .flexcolegios{
+            position: relative;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+            gap: 5%;
+        }
+
+        .bcolegios{
+            position: relative;
+            color: #00ffff;
+            background-color: #ffffff;
+            border: none;
+            height: 100px;
+            width: 500px;
+            border-radius: 30px;
+            font-size: 200%;
+            z-index: 1;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        .bcolegios:hover{
+            color: blue;
+        }
+        .bcolegios::after{
+            position: absolute;
+            top: 100px;
+            right: 0;
+            content: "";
+            background-color: #00ffff;
+            height: 100%;
+            width: 100%;
+            transition-duration: 1s;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .bcolegios:hover::after{
+            top: 0;
+            opacity: 10%;
+            background-color: #00ffff;
+        }
+
         @media (max-width: 1300px) {
+            .colegios{
+                font-size: 300%;
+            }
             .modelo {
                 text-align: center;
                 width: 100%;
