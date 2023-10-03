@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Parallax pages={3} scrolling={false}>
-        <ParallaxLayer offset={2} style={{backgroundColor: '#171717'}}/>
+        <ParallaxLayer offset={2} style={{backgroundColor: '#00ffff'}}/>
 
 
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -36,6 +36,11 @@ function App() {
           </div>
         </ParallaxLayer>
 
+        <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center" }}>
+          <div>
+            <h2 class="colegios">¿De que colegio eres?</h2>
+          </div>
+        </ParallaxLayer>
 
       </Parallax>
     
