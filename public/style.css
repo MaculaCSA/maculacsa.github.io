@@ -232,7 +232,7 @@
 
         .bcolegios{
             position: relative;
-            color: #00d6d6;
+            color: #171717;
             background-color: #ffffff;
             border: none;
             height: 100px;
@@ -246,14 +246,14 @@
             overflow: hidden;
         }
         .bcolegios:hover{
-            color: blue;
+            /*color: blue;*/
         }
         .bcolegios::after{
             position: absolute;
             top: 100px;
             right: 0;
             content: "";
-            background-color: #00d6d6;
+            background-color: #171717;
             height: 100%;
             width: 100%;
             transition-duration: 1s;
