@@ -242,6 +242,8 @@
             z-index: 1;
             transition-property: all;
             transition-duration: 1s;
+            cursor: pointer;
+            overflow: hidden;
         }
         .bcolegios:hover{
             color: blue;
@@ -257,7 +259,6 @@
             transition-duration: 1s;
             transition-property: all;
             transition-timing-function: ease-in-out;
-            overflow: hidden;
             z-index: 2;
         }
 
@@ -266,7 +267,15 @@
             opacity: 10%;
             background-color: #00ffff;
         }
-
+        @media (max-width: 1500px){
+            .flexcolegios{
+                flex-direction: column;
+                gap: 30px;
+            }
+            .colegios{
+                margin-top: 10%;
+            }
+        }
         @media (max-width: 1300px) {
             .colegios{
                 font-size: 300%;
@@ -302,7 +311,10 @@
             }
         }
 
-        @media screen and (max-width: 675px) {
+        @media (max-width: 675px) {
+            .bcolegios{
+                width: 400px;
+            }
             #content h2 {
                 margin-top: 20%;
                 font-size: 400%;
