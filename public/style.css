@@ -232,7 +232,7 @@
 
         .bcolegios{
             position: relative;
-            color: #00ffff;
+            color: #00d6d6;
             background-color: #ffffff;
             border: none;
             height: 100px;
@@ -253,7 +253,7 @@
             top: 100px;
             right: 0;
             content: "";
-            background-color: #00ffff;
+            background-color: #00d6d6;
             height: 100%;
             width: 100%;
             transition-duration: 1s;
@@ -265,7 +265,6 @@
         .bcolegios:hover::after{
             top: 0;
             opacity: 10%;
-            background-color: #00ffff;
         }
         @media (max-width: 1500px){
             .flexcolegios{
