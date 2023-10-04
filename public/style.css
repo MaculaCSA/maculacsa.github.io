@@ -245,9 +245,9 @@
             cursor: pointer;
             overflow: hidden;
         }
-        .bcolegios:hover{
-            /*color: blue;*/
-        }
+        /*.bcolegios:hover{
+            color: blue;
+        }*/
         .bcolegios::after{
             position: absolute;
             top: 100px;
