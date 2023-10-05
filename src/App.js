@@ -22,6 +22,10 @@ function App() {
           </div>
         </ParallaxLayer>
 
+        <ParallaxLayer offset={1.9} sticky={{start: 1.9, end: 3}} style={{ display: 'flex', zIndex: 0 }}>
+          <div id="navbar" style={{backgroundColor: 'white'}}/>
+        </ParallaxLayer>
+
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div class="modelo">
             <model-viewer id="aSide" src="model/maculanogirar.glb" alt="Macula" auto-rotate loading="eager" ar ar-modes="webxr scene-viewer quick-look" poster="model/poster.webp" shadow-intensity="1" autoplay environment-image="model/fireplace_2k.hdr"> </model-viewer>
