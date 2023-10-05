@@ -64,7 +64,7 @@
         }
         
         /* This styles the logo in the navbar */
-        #navbar #logo {
+        #navbar #logo, #logoback {
             height: 60px;
             width: 60px;
             position: absolute;
@@ -73,9 +73,14 @@
         }
         
         /* This styles the logo image to be used in the navbar */
-        #navbar #logo img {
+        #navbar #logo img, #logoback {
             height: 60px;
             width: 60px;
+        }
+
+        #logoback{
+            /*bordes redondeados a circular*/
+            border-radius: 50%;
         }
         
         /* This styles the unlisted links in the navbar */

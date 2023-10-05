@@ -23,7 +23,7 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.9} sticky={{start: 1.9, end: 3}} style={{ display: 'flex', zIndex: 0 }}>
-          <div id="navbar" style={{backgroundColor: 'white'}}/>
+          <div id="logoback" style={{backgroundColor: 'white'}}/>
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
