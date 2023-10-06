@@ -22,8 +22,8 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.9} sticky={{start: 1.9, end: 3}} style={{ display: 'flex', zIndex: 0 }}>
-          <div id="logoback" style={{backgroundColor: 'white'}}/>
+        <ParallaxLayer offset={1.8} sticky={{start: 1.9, end: 3}} style={{ display: 'flex', zIndex: 0 }}>
+          <div class="logoback" style={{backgroundColor: 'transparent'}}/>
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

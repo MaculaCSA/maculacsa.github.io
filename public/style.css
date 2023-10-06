@@ -54,17 +54,17 @@
         }
         
         /* This styles the navbar and its contents */
-        #navbar {
+        /*#navbar {
             height: 80px;
             width: 100%;
             position: fixed;
             top: 0;
             left: 0;
             background: none;
-        }
+        }*/
         
         /* This styles the logo in the navbar */
-        #navbar #logo, #logoback {
+        #navbar #logo, .logoback {
             height: 60px;
             width: 60px;
             position: absolute;
@@ -73,12 +73,12 @@
         }
         
         /* This styles the logo image to be used in the navbar */
-        #navbar #logo img, #logoback {
+        #navbar #logo img, .logoback {
             height: 60px;
             width: 60px;
         }
 
-        #logoback{
+        .logoback{
             /*bordes redondeados a circular*/
             border-radius: 50%;
         }
