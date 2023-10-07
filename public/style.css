@@ -76,6 +76,11 @@
         #navbar #logo img {
             height: 60px;
             width: 60px;
+
+            /*Borde*/
+            border-radius: 50%;
+            background-color: white;
+            border: 7px solid white;
         }
         
         /* This styles the unlisted links in the navbar */
