@@ -237,7 +237,7 @@
 
         .bcolegios{
             position: relative;
-            color: #00d6d6;
+            color: #407ECD;
             background-color: #ffffff;
             border: none;
             height: 100px;
@@ -258,7 +258,7 @@
             top: 100px;
             right: 0;
             content: "";
-            background-color: #00d6d6;
+            background-color: #407ECD;
             height: 100%;
             width: 100%;
             transition-duration: 1s;
