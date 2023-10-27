@@ -1,9 +1,12 @@
 import './App.css';
 
+import carga from './carga.js';
+
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
-//importar jquery
-import $ from 'jquery';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import sitios from './Sitios';
 
 console.log("App.js")
 
@@ -38,9 +41,9 @@ function App() {
 
         <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center", flexDirection: "column", flexWrap : "wrap" }}>
           <div class="flexcolegios">
-            <button class="bcolegios">Santander</button>
-            <button class="bcolegios">Los Negrales</button>
-            <button class="bcolegios">Alicante</button>
+            <button class="bcolegios" onClick={() => window.open('./santander')} id='santander'>Santander</button>
+            <button class="bcolegios" onClick={() => window.open('./negrales')} id='negrales'>Los Negrales</button>
+            <button class="bcolegios" onClick={() => window.open('./alicante')} id='alicante'>Alicante</button>
           </div>
         </ParallaxLayer>
 
@@ -64,15 +67,5 @@ export default App;
 //        console.log("Modelo cargado");
 //});
 
-window.onload = function(){
-  //esperar 6 segundos
-  setTimeout(function(){
-          //handleScroll();
-          $('#mainNav').removeClass('invisible');
-          $('body').removeClass('hidden');
-          $('#carga').fadeOut();
-  }
-  , 6000);
-  
-}
+window.onload = carga()
 
