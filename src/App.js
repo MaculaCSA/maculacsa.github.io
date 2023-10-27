@@ -37,7 +37,6 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center", flexDirection: "column", flexWrap : "wrap" }}>
-          <h2 class="colegios">¿De que colegio eres?</h2>
           <div class="flexcolegios">
             <button class="bcolegios">Santander</button>
             <button class="bcolegios">Los Negrales</button>

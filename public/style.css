@@ -233,6 +233,9 @@
             align-content: center;
             justify-content: space-between;
             gap: 5%;
+            /*Alinear al centro en el eje vertical*/
+            top: 50%;
+            transform: translate(0%, -50%);
         }
 
         .bcolegios{
@@ -249,6 +252,7 @@
             transition-duration: 1s;
             cursor: pointer;
             overflow: hidden;
+            display: inline-block;
         }
         .bcolegios:hover{
             color: blue;
@@ -277,7 +281,7 @@
                 gap: 30px;
             }
             .colegios{
-                margin-top: 10%;
+                margin-top: 20%;
             }
         }
         @media (max-width: 1300px) {
