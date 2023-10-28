@@ -37,9 +37,9 @@ function App() {
 
         <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center", flexDirection: "column", flexWrap : "wrap" }}>
           <div class="flexcolegios">
-            <button class="bcolegios" onClick={() => window.open('./santander')} id='santander'>Santander</button>
-            <button class="bcolegios" onClick={() => window.open('./negrales')} id='negrales'>Los Negrales</button>
-            <button class="bcolegios" onClick={() => window.open('./alicante')} id='alicante'>Alicante</button>
+            <button class="bcolegios" onClick={() => window.location.href='./santander'} id='santander'>Santander</button>
+            <button class="bcolegios" onClick={() => window.location.href='./negrales'} id='negrales'>Los Negrales</button>
+            <button class="bcolegios" onClick={() => window.location.href='./alicante'} id='alicante'>Alicante</button>
           </div>
         </ParallaxLayer>
 
