@@ -1,8 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './errorpage.css';
-// importar logo desde public/img/LogoDEV.png
-//import logo from './img/LogoDEV.png';
+
+//importar jquery
+import $ from 'jquery';
+
+//función de carga de la página
+const carga = () => {
+    $('#mainNav').removeClass('invisible');
+    $('body').removeClass('hidden');
+    $('#carga').fadeOut();
+}
 
 const ErrorPage = () => {
     return (
@@ -17,3 +25,6 @@ const ErrorPage = () => {
 };
 
 export default ErrorPage;
+
+//carga de la página
+window.onload = carga()
