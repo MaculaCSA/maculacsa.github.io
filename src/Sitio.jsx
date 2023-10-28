@@ -29,9 +29,9 @@ const Sitios = ({ciudad}) => {
 
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content">
-            <h2 class="titulociudad titulo">{titulo}</h2>
+            <h2 className="titulociudad titulo">{titulo}</h2>
 
-            <p class="subtitulo">Mácula 2024</p>
+            <p className="subtitulo">Mácula 2024</p>
           </div>
         </ParallaxLayer>
 

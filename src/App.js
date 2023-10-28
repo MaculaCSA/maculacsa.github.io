@@ -17,31 +17,31 @@ function App() {
 
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content">
-            <h2 class="titulo">PREMIOS MÁCULA</h2>
+            <h2 className="titulo">PREMIOS MÁCULA</h2>
 
-            <p class="subtitulo">2024</p>
+            <p className="subtitulo">2024</p>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <div class="modelo">
+          <div className="modelo">
             <model-viewer id="aSide" src="model/maculanogirar.glb" alt="Macula" auto-rotate loading="eager" ar ar-modes="webxr scene-viewer quick-look" poster="model/poster.webp" shadow-intensity="1" autoplay environment-image="model/fireplace_2k.hdr"> </model-viewer>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div id="content" class="creditos">
-            <h3 class="titulo">Hecho con ❤️</h3>
-            <h3 class="titulo">Pablo García y Aarón Sancibrián</h3>
-            <p class="subtitulo">Modelo por Hector Sancibrián</p>
+          <div id="content" className="creditos">
+            <h3 className="titulo">Hecho con ❤️</h3>
+            <h3 className="titulo">Pablo García y Aarón Sancibrián</h3>
+            <p className="subtitulo">Modelo por Hector Sancibrián</p>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center", flexDirection: "column", flexWrap : "wrap" }}>
-          <div class="flexcolegios">
-            <button class="bcolegios" onClick={() => window.location.href='./santander'} id='santander'>Santander</button>
-            <button class="bcolegios" onClick={() => window.location.href='./negrales'} id='negrales'>Los Negrales</button>
-            <button class="bcolegios" onClick={() => window.location.href='./alicante'} id='alicante'>Alicante</button>
+          <div className="flexcolegios">
+            <button className="bcolegios" onClick={() => window.location.href='./santander'} id='santander'>Santander</button>
+            <button className="bcolegios" onClick={() => window.location.href='./negrales'} id='negrales'>Los Negrales</button>
+            <button className="bcolegios" onClick={() => window.location.href='./alicante'} id='alicante'>Alicante</button>
           </div>
         </ParallaxLayer>
 
