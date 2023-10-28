@@ -7,6 +7,8 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 console.log("App.js")
 
 function App() {
+  //carga de la página
+  window.onload = carga()
   return (
     <div className="App">
       <Parallax pages={3} scrolling={false}>
@@ -63,5 +65,5 @@ export default App;
 //        console.log("Modelo cargado");
 //});
 
-window.onload = carga()
+//window.onload = carga()
 

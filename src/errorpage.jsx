@@ -13,6 +13,8 @@ const carga = () => {
 }
 
 const ErrorPage = () => {
+    //carga de la página
+    window.onload = carga()
     return (
         <div className="error-page">
             <img src="./img/LogoDEV.png" className='devlogo' alt="Error" />
@@ -25,6 +27,3 @@ const ErrorPage = () => {
 };
 
 export default ErrorPage;
-
-//carga de la página
-window.onload = carga()
