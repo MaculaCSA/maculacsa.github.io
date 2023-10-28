@@ -1,0 +1,38 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /*background-color: #f8f8f8;*/
+    /*fondo negro*/
+    background-color: black;
+}
+
+h1 {
+    font-size: 10vh;
+    margin-bottom: 2rem;
+    /*Color de la fuente a blanco */
+    color: white;
+    /*Alinear fuente al centro*/
+    text-align: center;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077b6;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #023e8a;
+}
+
+.devlogo {
+    height: 50%;
+}
