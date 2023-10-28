@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Sitios from './Sitio';
+
 import ErrorPage from './errorpage';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -13,6 +15,18 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/santander",
+    element: <Sitios ciudad="santander" />,
+  },
+  {
+    path: "/negrales",
+    element: <Sitios ciudad="negrales" />,
+  },
+  {
+    path: "/alicante",
+    element: <Sitios ciudad="alicante" />,
   },
 ]);
 
