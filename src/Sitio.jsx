@@ -1,4 +1,4 @@
-import { React, react_app } from "react";
+import React from "react";
 
 import carga from './carga.js';
 
