@@ -17,7 +17,7 @@ const ErrorPage = () => {
     window.onload = carga()
     return (
         <div className="error-page">
-            <img src="./img/LogoDEV.png" className='devlogo' alt="Error" />
+            <img src={process.env.PUBLIC_URL + '/img/LogoDEV.png'} className='devlogo' alt="Error" />
             <h1 className="fade-in">Pagina no encontrada</h1>
             <Link to="/">
                 <button className="btn-hover" onClick={() => window.location.href = "/"}>Página principal</button>
