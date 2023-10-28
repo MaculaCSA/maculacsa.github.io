@@ -6,66 +6,66 @@
             "edicion": [
                 {
                     "titulo": "Película 1",
-                    "nombre_foto": "https://example.com/foto1.jpg",
+                    "nombre_foto": "foto1.jpg",
                     "youtube_id": "abc123"
                 },
                 {
                     "titulo": "Película 2",
-                    "nombre_foto": "https://example.com/foto2.jpg",
+                    "nombre_foto": "foto2.jpg",
                     "youtube_id": "def456"
                 },
                 {
                     "titulo": "Película 3",
-                    "nombre_foto": "https://example.com/foto3.jpg",
+                    "nombre_foto": "foto3.jpg",
                     "youtube_id": "ghi789"
                 },
                 {
                     "titulo": "Película 4",
-                    "nombre_foto": "https://example.com/foto4.jpg",
+                    "nombre_foto": "foto4.jpg",
                     "youtube_id": "jkl012"
                 }
             ],
             "actor": [
                 {
                     "titulo": "Actor 1",
-                    "nombre_foto": "https://example.com/foto5.jpg",
+                    "nombre_foto": "foto5.jpg",
                     "youtube_id": "mno345"
                 },
                 {
                     "titulo": "Actor 2",
-                    "nombre_foto": "https://example.com/foto6.jpg",
+                    "nombre_foto": "foto6.jpg",
                     "youtube_id": "pqr678"
                 },
                 {
                     "titulo": "Actor 3",
-                    "nombre_foto": "https://example.com/foto7.jpg",
+                    "nombre_foto": "foto7.jpg",
                     "youtube_id": "stu901"
                 },
                 {
                     "titulo": "Actor 4",
-                    "nombre_foto": "https://example.com/foto8.jpg",
+                    "nombre_foto": "foto8.jpg",
                     "youtube_id": "vwx234"
                 }
             ],
             "actriz": [
                 {
                     "titulo": "Actriz 1",
-                    "nombre_foto": "https://example.com/foto9.jpg",
+                    "nombre_foto": "foto9.jpg",
                     "youtube_id": "yza567"
                 },
                 {
                     "titulo": "Actriz 2",
-                    "nombre_foto": "https://example.com/foto10.jpg",
+                    "nombre_foto": "foto10.jpg",
                     "youtube_id": "bcd890"
                 },
                 {
                     "titulo": "Actriz 3",
-                    "nombre_foto": "https://example.com/foto11.jpg",
+                    "nombre_foto": "foto11.jpg",
                     "youtube_id": "efg123"
                 },
                 {
                     "titulo": "Actriz 4",
-                    "nombre_foto": "https://example.com/foto12.jpg",
+                    "nombre_foto": "foto12.jpg",
                     "youtube_id": "hij456"
                 }
             ]
@@ -78,66 +78,66 @@
             "edicion": [
                 {
                     "titulo": "Película 5",
-                    "nombre_foto": "https://example.com/foto13.jpg",
+                    "nombre_foto": "foto13.jpg",
                     "youtube_id": "klm789"
                 },
                 {
                     "titulo": "Película 6",
-                    "nombre_foto": "https://example.com/foto14.jpg",
+                    "nombre_foto": "foto14.jpg",
                     "youtube_id": "nop012"
                 },
                 {
                     "titulo": "Película 7",
-                    "nombre_foto": "https://example.com/foto15.jpg",
+                    "nombre_foto": "foto15.jpg",
                     "youtube_id": "qrs345"
                 },
                 {
                     "titulo": "Película 8",
-                    "nombre_foto": "https://example.com/foto16.jpg",
+                    "nombre_foto": "foto16.jpg",
                     "youtube_id": "tuv678"
                 }
             ],
             "actor": [
                 {
                     "titulo": "Actor 5",
-                    "nombre_foto": "https://example.com/foto17.jpg",
+                    "nombre_foto": "foto17.jpg",
                     "youtube_id": "wxy901"
                 },
                 {
                     "titulo": "Actor 6",
-                    "nombre_foto": "https://example.com/foto18.jpg",
+                    "nombre_foto": "foto18.jpg",
                     "youtube_id": "zab234"
                 },
                 {
                     "titulo": "Actor 7",
-                    "nombre_foto": "https://example.com/foto19.jpg",
+                    "nombre_foto": "foto19.jpg",
                     "youtube_id": "cde567"
                 },
                 {
                     "titulo": "Actor 8",
-                    "nombre_foto": "https://example.com/foto20.jpg",
+                    "nombre_foto": "foto20.jpg",
                     "youtube_id": "fgh890"
                 }
             ],
             "actriz": [
                 {
                     "titulo": "Actriz 5",
-                    "nombre_foto": "https://example.com/foto21.jpg",
+                    "nombre_foto": "foto21.jpg",
                     "youtube_id": "ijk123"
                 },
                 {
                     "titulo": "Actriz 6",
-                    "nombre_foto": "https://example.com/foto22.jpg",
+                    "nombre_foto": "foto22.jpg",
                     "youtube_id": "lmn456"
                 },
                 {
                     "titulo": "Actriz 7",
-                    "nombre_foto": "https://example.com/foto23.jpg",
+                    "nombre_foto": "foto23.jpg",
                     "youtube_id": "opq789"
                 },
                 {
                     "titulo": "Actriz 8",
-                    "nombre_foto": "https://example.com/foto24.jpg",
+                    "nombre_foto": "foto24.jpg",
                     "youtube_id": "rst012"
                 }
             ]
@@ -150,66 +150,66 @@
             "edicion": [
                 {
                     "titulo": "Película 9",
-                    "nombre_foto": "https://example.com/foto25.jpg",
+                    "nombre_foto": "foto25.jpg",
                     "youtube_id": "uvw345"
                 },
                 {
                     "titulo": "Película 10",
-                    "nombre_foto": "https://example.com/foto26.jpg",
+                    "nombre_foto": "foto26.jpg",
                     "youtube_id": "xyz678"
                 },
                 {
                     "titulo": "Película 11",
-                    "nombre_foto": "https://example.com/foto27.jpg",
+                    "nombre_foto": "foto27.jpg",
                     "youtube_id": "abc901"
                 },
                 {
                     "titulo": "Película 12",
-                    "nombre_foto": "https://example.com/foto28.jpg",
+                    "nombre_foto": "foto28.jpg",
                     "youtube_id": "def234"
                 }
             ],
             "actor": [
                 {
                     "titulo": "Actor 9",
-                    "nombre_foto": "https://example.com/foto29.jpg",
+                    "nombre_foto": "foto29.jpg",
                     "youtube_id": "ghi567"
                 },
                 {
                     "titulo": "Actor 10",
-                    "nombre_foto": "https://example.com/foto30.jpg",
+                    "nombre_foto": "foto30.jpg",
                     "youtube_id": "jkl890"
                 },
                 {
                     "titulo": "Actor 11",
-                    "nombre_foto": "https://example.com/foto31.jpg",
+                    "nombre_foto": "foto31.jpg",
                     "youtube_id": "mno123"
                 },
                 {
                     "titulo": "Actor 12",
-                    "nombre_foto": "https://example.com/foto32.jpg",
+                    "nombre_foto": "foto32.jpg",
                     "youtube_id": "pqr456"
                 }
             ],
             "actriz": [
                 {
                     "titulo": "Actriz 9",
-                    "nombre_foto": "https://example.com/foto33.jpg",
+                    "nombre_foto": "foto33.jpg",
                     "youtube_id": "stu789"
                 },
                 {
                     "titulo": "Actriz 10",
-                    "nombre_foto": "https://example.com/foto34.jpg",
+                    "nombre_foto": "foto34.jpg",
                     "youtube_id": "vwx012"
                 },
                 {
                     "titulo": "Actriz 11",
-                    "nombre_foto": "https://example.com/foto35.jpg",
+                    "nombre_foto": "foto35.jpg",
                     "youtube_id": "yza345"
                 },
                 {
                     "titulo": "Actriz 12",
-                    "nombre_foto": "https://example.com/foto36.jpg",
+                    "nombre_foto": "foto36.jpg",
                     "youtube_id": "bcd678"
                 }
             ]
