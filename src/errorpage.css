@@ -1,6 +1,6 @@
-html {
+/*html {
     background-color: black;
-}
+}*/
 .error-page {
     display: flex;
     flex-direction: column;
@@ -8,12 +8,7 @@ html {
     justify-content: center;
     height: 100vh;
     width: 100%;
-    /*background-color: #f8f8f8;*/
-    /*fondo negro*/
-
-    /*margen izquierdo y derecho*/
-    /*margin-left: 25%;
-    margin-right: 25%;*/
+    background-color: black;
 }
 
 h1 {
@@ -23,6 +18,10 @@ h1 {
     color: white;
     /*Alinear fuente al centro*/
     text-align: center;
+
+    /*margen izquierdo y derecho*/
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 button {
@@ -41,5 +40,5 @@ button:hover {
 }
 
 .devlogo {
-    height: 50vh;
+    height: 50%;
 }
