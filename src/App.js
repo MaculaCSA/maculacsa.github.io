@@ -4,10 +4,6 @@ import carga from './carga.js';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import sitios from './Sitios';
-
 console.log("App.js")
 
 function App() {
