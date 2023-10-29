@@ -1,339 +1,343 @@
-        /*Pantalla de carga:*/
+/*Pantalla de carga:*/
 
-        @keyframes rotate {from {transform: rotate(0deg);}
-        to {transform: rotate(360deg);}}
-        @-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
-        to {-webkit-transform: rotate(360deg);}}
-        .imgr{
-        -webkit-animation: 3s rotate linear infinite;
-        animation: 3s rotate linear infinite;
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-        }
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
-        .logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            position: absolute;
-            top: 50%;
-            transform: translate(50%, -50%);
-            
-            width: 490px;
-            height: 335.983px;
-        }
-            
-        .hidden{
-            overflow: hidden;
-        }
-        
-        .invisible{
-            visibility: hidden;
-        }
-            
-        /*Fin pantalla de carga*/
-        
-        #IframeImg{
-            position: fixed;
-            /*centrado en el centro de la pantalla*/
-            top: 50%;
-            left: 50%;
-            /*centrado en el centro de la pantalla*/
-            transform: translate(-50%, -50%);
-            width: 50vh;
-            background-color: white;
-        }
-        
-        /*  This is for styling the main container that holds everything */
-        #container {
-            height: 100vh;
-            width: 100%;
-            position: relative;
-            background: #f7f7f7;
-        }
-        
-        /* This styles the navbar and its contents */
-        #navbar {
-            height: 80px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: none;
-        }
-        
-        /* This styles the logo in the navbar */
-        #navbar #logo {
-            height: 60px;
-            width: 60px;
-            position: absolute;
-            left: 3%;
-            top: 15px;
-        }
-        
-        /* This styles the logo image to be used in the navbar */
-        #navbar #logo img {
-            height: 60px;
-            width: 60px;
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
 
-            /*Borde*/
-            border-radius: 50%;
-            background-color: white;
-            border: 7px solid white;
-        }
-        
-        /* This styles the unlisted links in the navbar */
-        #navbar ul {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            right: 5%;
-            top: 0;
-        }
-        
-        /* This changes the appearance of the listed links in the navbar */
-        #navbar ul li {
-            height: 60px;
-            width: 80px;
-            margin: 0 30px;
-            display: grid;
-            place-items: center;
-            color: grey;
-        }
-        
-        /* This sets the hover action of the navbar links */
-        #navbar ul:hover .active {
-            background: none;
-            border: none;
-        }
-        
-        /* This styles the heading in the 3D description */
-        #content h2 {
-            font-size: 140px;
-            color: grey;
-        }
+.imgr {
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
 
-        h3 {
-            font-size: 50px;
-            color: grey;
-        }
-        
-        /* This styles the paragraph in the 3D description*/
-        #content p {
-            font-size: 30px;
-            color: rgb(189, 189, 189);
-            /*display: none;*/
-        }
-        
-        /* This styles the button in the 3D description*/
-        .button {
-            width: 100px;
-            height: auto;
-            font-size: 20px;
-            font-family: sans-serif;
-            /*margin-top: 5vh;*/
-            position: absolute;
-            right: 0;
-            top: 15px;
-            margin-left: center;
-            border: none;
-            outline: none;
-            border-radius: 20px;
-            background: dodgerblue;
-            color: white;
-        }
-        
-        /* This adds some hover effects over the button */
-        #content button:hover {
-            background: navy;
-        }
-        
-        /* This styles the social media icons*/
-        #icons {
-            height: 500px;
-            width: 140px;
-            background: none;
-            position: absolute;
-            left: 0;
-            top: calc(50% - 250px);
-            display: flex;
-            align-items: center;
-            filter: drop-shadow(2px 2px 2px grey);
-        }
-        
-        /* This styles the social media icons logos*/
-        #icons #iconsLogo {
-            height: 300px;
-            width: 50px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        /* This styles the social media icons logos images*/
-        #icons #iconsLogo i {
-            height: 50px;
-            width: 50px;
-            font-size: 30px;
-            margin: 10px;
-            color: grey;
-            display: grid;
-            place-items: center;
-            cursor: pointer;
-        }
-        
-        /* This styles the aside container */
-        #aSide {
-            height: 100%;
-            width: 100%;
-        }
-        
-        /* This styles the 3D object inserted in the aside container */
-        #aSide model-viewer {
-            height: 100%;
-            width: 100%;
-            border: none;
-        }
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 490px;
+    height: 335.983px;
+}
 
-        .modelo {
-            background: transparent;
-            height: 75%;
-            width: 50%;
-            position: absolute;
-            right: 0;
-        }
+.hidden {
+    overflow: hidden;
+}
 
-        /* This styles the descriptions of the 3D object */
-        #content {
-            height: 40%;
-            width: 700px;
-            position: absolute;
-            top: calc(50% - 250px);
-        }
-        #content button{
-            position: relative;
-            text-align: center;
-            z-index: 1000;
-        }
+.invisible {
+    visibility: hidden;
+}
 
-        .colegios{
-            text-align: center;
-            margin-top: 20%;
-            color: #ffffff;
-            font-size: 700%;
-            align-items: center;
-            align-content: center;
-        }
+/*Fin pantalla de carga*/
 
-        .flexcolegios{
-            position: relative;
-            display: flex;
-            align-items: center;
-            align-content: center;
-            justify-content: space-between;
-            gap: 5%;
-            /*Alinear al centro en el eje vertical*/
-            top: 50%;
-            transform: translate(0%, -50%);
-        }
+#IframeImg {
+    position: fixed;
+    /*centrado en el centro de la pantalla*/
+    top: 50%;
+    left: 50%;
+    /*centrado en el centro de la pantalla*/
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    background-color: white;
+}
 
-        .bcolegios{
-            position: relative;
-            color: #407ECD;
-            background-color: #ffffff;
-            border: none;
-            height: 100px;
-            width: 500px;
-            border-radius: 30px;
-            font-size: 200%;
-            z-index: 1;
-            transition-property: all;
-            transition-duration: 1s;
-            cursor: pointer;
-            overflow: hidden;
-            display: inline-block;
-        }
-        .bcolegios:hover{
-            color: blue;
-        }
-        .bcolegios::after{
-            position: absolute;
-            top: 100px;
-            right: 0;
-            content: "";
-            background-color: #407ECD;
-            height: 100%;
-            width: 100%;
-            transition-duration: 1s;
-            transition-property: all;
-            transition-timing-function: ease-in-out;
-            z-index: 2;
-        }
+/*  This is for styling the main container that holds everything */
+#container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #f7f7f7;
+}
 
-        .bcolegios:hover::after{
-            top: 0;
-            opacity: 10%;
-        }
-        @media (max-width: 1500px){
-            .flexcolegios{
-                flex-direction: column;
-                gap: 30px;
-            }
-            .colegios{
-                margin-top: 20%;
-            }
-        }
-        @media (max-width: 1300px) {
-            .colegios{
-                font-size: 300%;
-            }
-            .modelo {
-                text-align: center;
-                width: 100%;
-                height: 45%;
-                
-                position: relative;
-                top: 10%;
-            }
+/* This styles the navbar and its contents */
+#navbar {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: none;
+}
 
-            .modelo model-viewer {
-                width: 50%;
-                height: 100%;
-                top: 20%;
-            }
+/* This styles the logo in the navbar */
+#navbar #logo {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 3%;
+    top: 15px;
+}
 
-            #content{
-                width: 100%;
-                height: 100%;
-                top: 0%;
-                text-align: center;
-            }
+/* This styles the logo image to be used in the navbar */
+#navbar #logo img {
+    height: 60px;
+    width: 60px;
+    /*Borde*/
+    border-radius: 50%;
+    background-color: white;
+    border: 7px solid white;
+}
 
-            .titulo{
-                margin-bottom: 0;
-            }
+/* This styles the unlisted links in the navbar */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 5%;
+    top: 0;
+}
 
-            #content p{
-                margin-top: 0px;
-            }
-        }
+/* This changes the appearance of the listed links in the navbar */
+#navbar ul li {
+    height: 60px;
+    width: 80px;
+    margin: 0 30px;
+    display: grid;
+    place-items: center;
+    color: grey;
+}
 
-        @media (max-width: 675px) {
-            .bcolegios{
-                width: 400px;
-            }
-            #content h2 {
-                margin-top: 20%;
-                font-size: 400%;
-                top: 10%;
-            }
+/* This sets the hover action of the navbar links */
+#navbar ul:hover .active {
+    background: none;
+    border: none;
+}
 
-            #content p {
-                top: 10%;
-            }
-        }
+/* This styles the heading in the 3D description */
+#content h2 {
+    font-size: 140px;
+    color: grey;
+}
 
-        .creditos{
-            text-align: center;
-        }
+h3 {
+    font-size: 50px;
+    color: grey;
+}
+
+/* This styles the paragraph in the 3D description*/
+#content p {
+    font-size: 30px;
+    color: rgb(189, 189, 189);
+    /*display: none;*/
+}
+
+/* This styles the button in the 3D description*/
+.button {
+    width: 100px;
+    height: auto;
+    font-size: 20px;
+    font-family: sans-serif;
+    /*margin-top: 5vh;*/
+    position: absolute;
+    right: 0;
+    top: 15px;
+    margin-left: center;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: dodgerblue;
+    color: white;
+}
+
+/* This adds some hover effects over the button */
+#content button:hover {
+    background: navy;
+}
+
+/* This styles the social media icons*/
+#icons {
+    height: 500px;
+    width: 140px;
+    background: none;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 250px);
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(2px 2px 2px grey);
+}
+
+/* This styles the social media icons logos*/
+#icons #iconsLogo {
+    height: 300px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* This styles the social media icons logos images*/
+#icons #iconsLogo i {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    margin: 10px;
+    color: grey;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+/* This styles the aside container */
+#aSide {
+    height: 100%;
+    width: 100%;
+}
+
+/* This styles the 3D object inserted in the aside container */
+#aSide model-viewer {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.modelo {
+    background: transparent;
+    height: 75%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+/* This styles the descriptions of the 3D object */
+#content {
+    height: 40%;
+    width: 700px;
+    position: absolute;
+    top: calc(50% - 250px);
+}
+#content button{
+    position: relative;
+    text-align: center;
+    z-index: 1000;
+}
+
+.colegios {
+    text-align: center;
+    margin-top: 20%;
+    color: #ffffff;
+    font-size: 700%;
+    align-items: center;
+    align-content: center;
+}
+
+.flexcolegios {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 5%;
+    /*Alinear al centro en el eje vertical*/
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.bcolegios {
+    position: relative;
+    color: #407ECD;
+    background-color: #ffffff;
+    border: none;
+    height: 100px;
+    width: 500px;
+    border-radius: 30px;
+    font-size: 200%;
+    z-index: 1;
+    transition-property: all;
+    transition-duration: 1s;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+}
+.bcolegios:hover {
+    color: blue;
+}
+.bcolegios::after {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    content: "";
+    background-color: #407ECD;
+    height: 100%;
+    width: 100%;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+}
+
+.bcolegios:hover::after {
+    top: 0;
+    opacity: 10%;
+}
+@media (max-width: 1500px) {
+    .flexcolegios {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .colegios {
+        margin-top: 20%;
+    }
+}
+@media (max-width: 1300px) {
+    .colegios {
+        font-size: 300%;
+    }
+    .modelo {
+        text-align: center;
+        width: 100%;
+        height: 45%;
+        position: relative;
+        top: 10%;
+    }
+    .modelo model-viewer {
+        width: 50%;
+        height: 100%;
+        top: 20%;
+    }
+    #content {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        text-align: center;
+    }
+    .titulo {
+        margin-bottom: 0;
+    }
+    #content p {
+        margin-top: 0px;
+    }
+}
+@media (max-width: 675px) {
+    .bcolegios {
+        width: 400px;
+    }
+    #content h2 {
+        margin-top: 20%;
+        font-size: 400%;
+        top: 10%;
+    }
+    #content p {
+        top: 10%;
+    }
+}
+
+.creditos {
+    text-align: center;
+}
