@@ -46,10 +46,10 @@ const Sitios = ({ciudad}) => {
         <div className="item categoria">
           <p className="info">Nominados al mejor guion:</p>
           <div className="container2">
-            <button style={{backgroundImage: 'url(img/nominados/rencor.png)'}} onClick={() => console.log('GTxQBbB46mo')} className="corto fondoimg"><p className="nombre">El Rencor</p></button>
-            <button style={{backgroundImage: 'url(img/nominados/asalto.png)'}} onClick={() => console.log('xat-XYdr_u8')} className="corto fondoimg ganador"><p className="nombre">Un Asalto a la historia</p></button>
-            <button style={{backgroundImage: 'url(img/nominados/x.png)'}} onClick={() => console.log('pSFSd89KPbc')} className="corto fondoimg"><p className="nombre">Proyecto X</p></button>
-            <button style={{backgroundImage: 'url(img/nominados/newton2.png)'}} onClick={() => console.log('i7XQBbb94pY')} className="corto fondoimg"><p className="nombre">Newton</p></button>
+            <button style={{backgroundImage: `url(img/nominados/rencor.png)`}} onClick={() => console.log('GTxQBbB46mo')} className="corto fondoimg"><p className="nombre">El Rencor</p></button>
+            <button style={{backgroundImage: `url(img/nominados/asalto.png)`}} onClick={() => console.log('xat-XYdr_u8')} className="corto fondoimg ganador"><p className="nombre">Un Asalto a la historia</p></button>
+            <button style={{backgroundImage: `url(img/nominados/x.png)`}} onClick={() => console.log('pSFSd89KPbc')} className="corto fondoimg"><p className="nombre">Proyecto X</p></button>
+            <button style={{backgroundImage: `url(img/nominados/newton2.png)`}} onClick={() => console.log('i7XQBbb94pY')} className="corto fondoimg"><p className="nombre">Newton</p></button>
           </div>
         </div>
           
