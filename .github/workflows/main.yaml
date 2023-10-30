@@ -9,6 +9,8 @@ on:
   pull_request:
     branches: []
   workflow_dispatch:
+  fork:
+    branches: []
 
 jobs:
   build:
