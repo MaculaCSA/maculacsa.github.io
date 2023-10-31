@@ -16,7 +16,7 @@ const Sitios = ({ciudad}) => {
     const titulo = datosCiudad.titulo;
     const fotociudad = '/img/colegios/' + datosCiudad.fotociudad;
 
-    const modelocategoria = '/img/categorias/' + 'claqueta.mp4';
+    const modelocategoria = '/img/categorias/claqueta.mp4';
     
     console.log(datosCiudad);
 
