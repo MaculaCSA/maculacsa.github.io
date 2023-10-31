@@ -16,7 +16,14 @@
     height: 75%;
     width: 50%;
     position: absolute;
-    right: 0;
+    right: -8%;
+}
+
+.titulocategoria {
+    font-size: 50px !important;
+    margin-bottom: 20px !important;
+    /*Color de la fuente a #212121*/
+    color: #393939 !important;
 }
 
 @media (max-width: 1300px) {
@@ -29,6 +36,7 @@
         height: 45%;        
         position: fixed;
         bottom: 0;
+        right: 0;
     }
 
     .modelocategoria * {
@@ -52,6 +60,18 @@
     #content p{
         margin-top: 0px;
     }
+
+    .item {
+        position: absolute;
+        top: 15%;
+    }
+}
+
+@media (min-width: 1299px){
+    .item {
+        position: absolute;
+        left: 0;
+    }
 }
 
 
@@ -60,7 +80,7 @@
 .categoria, .corto{
     transition: all;
     transition-duration: 2s;
-    width: 75%;
+    width: 62%;
 }
 .corto{
     margin-bottom: 2.5%;
