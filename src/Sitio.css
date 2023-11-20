@@ -72,6 +72,9 @@
         position: absolute;
         left: 0;
     }
+    .corto{
+        border-radius: 15px;
+    }
 }
 
 
@@ -105,7 +108,7 @@
     width: 20%;
     height: 17vh; /* 150px/923*100 */
     background-color: cadetblue;
-    border-radius: 0.26%; /* 5px/1920*100 */
+    border-radius: 10px;
     color: white;
     font-weight: 600;
     position: relative;
