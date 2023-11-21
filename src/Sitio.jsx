@@ -35,7 +35,7 @@ const Sitios = ({ciudad}) => {
   const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
     const cortos = datosCiudad.categorias[categoria].map((corto) => (
       <button
-        style={{backgroundImage: `url(img/nominados/${corto.nombre_foto})`}}
+        style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
         onClick={() => openPopup(corto.youtube_id)}
         className="corto fondoimg"
       >
