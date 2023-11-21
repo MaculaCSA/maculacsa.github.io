@@ -10,24 +10,61 @@ const datos = require('./datos.json');
 
 const Sitios = ({ciudad}) => {
 
-    console.log(ciudad);
-    //coger dato de datos.json
-    const datosCiudad = datos[ciudad];
-    const titulo = datosCiudad.titulo;
-    const fotociudad = '/img/colegios/' + datosCiudad.fotociudad;
+  console.log(ciudad);
+  //coger dato de datos.json
+  const datosCiudad = datos[ciudad];
+  const titulo = datosCiudad.titulo;
+  const fotociudad = '/img/colegios/' + datosCiudad.fotociudad;
+  
+  const numCategorias = Object.keys(datosCiudad.categorias).length;
+  
+  console.log("Categorias: " + numCategorias);
 
-    const modelocategoria = '/img/categorias/claqueta.mp4';
+  const numPaginas = numCategorias + 1;
+  console.log("Paginas: " + numPaginas);
+
+  const modelocategoria = '/img/categorias/claqueta.mp4';
+  
+  console.log(datosCiudad);
+
+  window.onload = carga();
+
+  let categoriaId = 0; // Id inicial de la categoría
+
+  // Generate category elements
+  const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
+    const cortos = datosCiudad.categorias[categoria].map((corto) => (
+      <button
+        style={{backgroundImage: `url(img/nominados/${corto.nombre_foto})`}}
+        onClick={() => console.log(corto.youtube_id)}
+        className="corto fondoimg"
+      >
+        <p className="nombre">{corto.titulo}</p>
+      </button>
+    ));
     
-    console.log(datosCiudad);
-
-    window.onload = carga()
+    categoriaId++;
+    console.log("Id de página: " + categoriaId);
     return (
+    <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div className="item categoria">
+        <h2 className="titulocategoria titulo">{categoria}</h2>
+        <div className="container2">
+          {cortos}
+        </div>
+      </div>
+    </ParallaxLayer>
+    );
+  });
+
+  return (
     <div className="App">
-      <Parallax style={{ backgroundColor: '#212121' }} pages={2} scrolling={false}>
+
+      <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={false}>
         <ParallaxLayer offset={0}>
           <img className="fondo" src={fotociudad} alt="" />
-        </ParallaxLayer>
-
+      </ParallaxLayer>
+        
 
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content">
@@ -41,24 +78,12 @@ const Sitios = ({ciudad}) => {
           <video src={modelocategoria} className="modelocategoria" autoPlay muted loop />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          
-          <div className="item categoria">
-            <h2 className="titulocategoria titulo">Nominados al mejor guion:</h2>
-            <div className="container2">
-              <button style={{backgroundImage: `url(img/nominados/rencor.png)`}} onClick={() => console.log('GTxQBbB46mo')} className="corto fondoimg"><p className="nombre">El Rencor</p></button>
-              <button style={{backgroundImage: `url(img/nominados/asalto.png)`}} onClick={() => console.log('xat-XYdr_u8')} className="corto fondoimg ganador"><p className="nombre">Un Asalto a la historia</p></button>
-              <button style={{backgroundImage: `url(img/nominados/x.png)`}} onClick={() => console.log('pSFSd89KPbc')} className="corto fondoimg"><p className="nombre">Proyecto X</p></button>
-              <button style={{backgroundImage: `url(img/nominados/newton2.png)`}} onClick={() => console.log('i7XQBbb94pY')} className="corto fondoimg"><p className="nombre">Newton</p></button>
-            </div>
-          </div>
-          
-        </ParallaxLayer>
+        {categorias}
 
       </Parallax>
     
     </div>
-    );
+  );
 };
  
 export default Sitios;
