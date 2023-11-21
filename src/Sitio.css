@@ -132,6 +132,41 @@
 .corto:hover::after{
     opacity: 0%;
 }
+.popup{
+/*Objeto centrado en la pantalla*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    display: none;
+    text-align: center;
+    z-index: 3;
+}
+.cerrarpopupImg{
+    top: 125% !important;
+}
+.cerrarpopup{
+    position: fixed;
+    top: 102%;
+    right: 46%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    z-index: 3;
+}
+.cerrarpopupgigante{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+}
 .fondoimg{
     background-size: cover;
     background-position: center;
