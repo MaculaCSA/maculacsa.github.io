@@ -130,14 +130,14 @@ function openPopup(VideoId) {
 }
 
 // Abrir popup para carteles
-function openPopupImg(ImageId) {
+/*function openPopupImg(ImageId) {
   // Se cambia el src del iframe
   document.getElementById("IframeImg").src = "img/nominados/carteles/" + ImageId;
   // Se muestra el div
   document.getElementById("popupImg").style.display = "block";
   document.getElementById("closePopup").style.display = "block";
 
-}
+}*/
 
 // Cuando el boton de cerrar se pulsa
 function closePopup() {
