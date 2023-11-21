@@ -145,6 +145,9 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
   document.getElementById("popupImg").style.display = "none";
   document.getElementById("closePopup").style.display = "none";
+
+  // Se para el video
+  document.getElementById("IframeVideo").src = "";
 }
 
 // Redirigir a una web
