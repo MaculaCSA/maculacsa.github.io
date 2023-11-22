@@ -31,9 +31,9 @@ function App() {
 
         <ParallaxLayer offset={1} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content" class="creditos">
-            <h3 class="titulo">Hecho con ❤️</h3>
-            <h3 class="titulo">Pablo García y Aarón Sancibrián</h3>
-            <p class="subtitulo">Modelos por Hector Sancibrián</p>
+            <h3 className="titulo">Hecho con ❤️</h3>
+            <h3 className="titulo">Pablo García y Aarón Sancibrián</h3>
+            <p className="subtitulo">Modelos por Hector Sancibrián</p>
           </div>
         </ParallaxLayer>
 
