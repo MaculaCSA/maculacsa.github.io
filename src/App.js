@@ -32,7 +32,7 @@ function App() {
           <div id="content" class="creditos">
             <h3 class="titulo">Hecho con ❤️</h3>
             <h3 class="titulo">Pablo García y Aarón Sancibrián</h3>
-            <p class="subtitulo">Modelo por Hector Sancibrián</p>
+            <p class="subtitulo">Modelos por Hector Sancibrián</p>
           </div>
         </ParallaxLayer>
 
