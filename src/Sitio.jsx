@@ -23,7 +23,6 @@ const Sitios = ({ciudad}) => {
   const numPaginas = numCategorias + 1;
   console.log("Paginas: " + numPaginas);
 
-  const modelocategoria = '/img/categorias/claqueta.mp4';
   
   console.log(datosCiudad);
 
@@ -32,38 +31,40 @@ const Sitios = ({ciudad}) => {
   let categoriaId = 0; // Id inicial de la categoría
 
   // Generate category elements
-  const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
-    const cortos = datosCiudad.categorias[categoria].map((corto) => (
-      <button
-        style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
-        onClick={() => openPopup(corto.youtube_id)}
-        className="corto fondoimg"
-      >
-        <p className="nombre">{corto.titulo}</p>
-      </button>
-    ));
-    
-    categoriaId++;
-    console.log("Id de página: " + categoriaId);
-    return (
-    <>
+const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
+  const categoriaData = datosCiudad.categorias[categoria];
+  const modelocategoria = categoriaData[0].modelo; // Obtén la ruta del video desde la primera película de la categoría
 
-    <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
-    </ParallaxLayer>
+  const cortos = categoriaData.slice(1).map((corto) => (
+    <button
+      style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
+      onClick={() => openPopup(corto.youtube_id)}
+      className="corto fondoimg"
+    >
+      <p className="nombre">{corto.titulo}</p>
+    </button>
+  ));
 
-    <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div className="item categoria">
-        <h2 className="titulocategoria titulo">{categoria}</h2>
-        <div className="container2">
-          {cortos}
+  categoriaId++;
+  console.log("Id de página: " + categoriaId);
+
+  return (
+    <React.Fragment key={categoriaId}>
+      <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
+      </ParallaxLayer>
+
+      <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="item categoria">
+          <h2 className="titulocategoria titulo">{categoria}</h2>
+          <div className="container2">
+            {cortos}
+          </div>
         </div>
-      </div>
-    </ParallaxLayer>
-
-    </>
-    );
-  });
+      </ParallaxLayer>
+    </React.Fragment>
+  );
+});
 
   return (
     <div className="App">
