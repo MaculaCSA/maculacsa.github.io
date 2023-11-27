@@ -8,6 +8,7 @@ import Sitios from './Sitio';
 
 import ErrorPage from './errorpage';
 
+import Proximamente from './proximamente';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
