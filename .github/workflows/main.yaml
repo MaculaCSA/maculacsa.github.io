@@ -30,6 +30,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifact
+        path: ./build
 
   deploy:
     needs: build
