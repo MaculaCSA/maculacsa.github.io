@@ -46,6 +46,12 @@ const Sitios = ({ciudad}) => {
     categoriaId++;
     console.log("Id de página: " + categoriaId);
     return (
+    <>
+
+    <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
+    </ParallaxLayer>
+
     <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div className="item categoria">
         <h2 className="titulocategoria titulo">{categoria}</h2>
@@ -54,6 +60,8 @@ const Sitios = ({ciudad}) => {
         </div>
       </div>
     </ParallaxLayer>
+
+    </>
     );
   });
 
@@ -100,10 +108,6 @@ const Sitios = ({ciudad}) => {
 
             <p className="subtitulo">Mácula 2024</p>
           </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
         </ParallaxLayer>
 
         {categorias}
