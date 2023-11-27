@@ -1,0 +1,44 @@
+/*html {
+    background-color: black;
+}*/
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+h1 {
+    font-size: 250%;
+    margin-bottom: 2rem;
+    /*Color de la fuente a blanco */
+    color: white;
+    /*Alinear fuente al centro*/
+    text-align: center;
+
+    /*margen izquierdo y derecho*/
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077b6;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #023e8a;
+}
+
+.devlogo {
+    height: 50%;
+}
