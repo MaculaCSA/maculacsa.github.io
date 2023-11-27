@@ -1,0 +1,245 @@
+{
+    "santander": {
+        "titulo": "Santander",
+        "fotociudad": "santander.jpg",
+        "categorias": {
+            "Mejor Edición": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Película 1",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 2",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 3",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 4",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ],
+            "Mejor Actor": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Actor 1",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 2",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 3",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 4",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ],
+            "Mejor Actríz": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Actriz 1",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 2",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 3",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 4",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ]
+        }
+    },
+    "negrales": {
+        "titulo": "Los Negrales",
+        "fotociudad": "negrales.jpg",
+        "categorias": {
+            "Mejor Edición": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Película 5",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 6",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 7",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 8",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ],
+            "Mejor Actor": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Actor 5",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 6",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 7",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 8",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ],
+            "Mejor Actríz": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Actriz 5",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 6",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 7",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 8",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ]
+        }
+    },
+    "alicante": {
+        "titulo": "Alicante",
+        "fotociudad": "alicante.jpg",
+        "categorias": {
+            "Mejor Edición": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Película 9",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 10",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 11",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Película 12",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ],
+            "Mejor Actor": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Actor 9",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 10",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 11",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actor 12",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ],
+            "Mejor Actríz": [
+                {
+                    "modelo": "/img/categorias/claqueta.mp4"
+                },
+                {
+                    "titulo": "Actriz 9",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 10",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 11",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                },
+                {
+                    "titulo": "Actriz 12",
+                    "nombre_foto": "Donpollo.webp",
+                    "youtube_id": "s6-XHVueA9k"
+                }
+            ]
+        }
+    }
+}
