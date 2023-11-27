@@ -103,7 +103,7 @@ const Sitios = ({ciudad}) => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <video src={modelocategoria} className="modelocategoria" autoPlay muted loop />
+          <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
         </ParallaxLayer>
 
         {categorias}
