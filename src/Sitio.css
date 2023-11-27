@@ -166,6 +166,12 @@
     background-color: transparent;
     border-color: transparent;
     display: none;
+    z-index: 1;
+    /*cursor normal*/
+    cursor: auto;
+}
+.cerrarpopupgigante:hover{
+    background: transparent;
 }
 .fondoimg{
     background-size: cover;

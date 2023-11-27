@@ -69,10 +69,6 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
   return (
     <div className="App">
 
-
-
-<button id="closePopup" className="cerrarpopupgigante" onClick={closePopup}></button>
-
       <div className="popup" id="popup">
         <iframe
           width="100%"
@@ -95,7 +91,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
         </button>
       </div>
 
-
+      <button id="closePopup" className="cerrarpopupgigante" onClick={closePopup}></button>
 
       <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={false}>
         <ParallaxLayer offset={0}>
