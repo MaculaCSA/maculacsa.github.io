@@ -14,21 +14,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/santander",
-    element: <Sitios ciudad="santander" />,
-  },
-  {
-    path: "/negrales",
-    element: <Sitios ciudad="negrales" />,
-  },
-  {
-    path: "/alicante",
-    element: <Sitios ciudad="alicante" />,
-  },
+    element: <Proximamente />,
+    errorElement: <Proximamente />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
