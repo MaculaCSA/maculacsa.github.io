@@ -77,6 +77,43 @@
     }
 }
 
+@media (max-width: 900px){
+    .titulocategoria{
+        font-size: 30px !important;
+    }
+    .container2{
+        /*valores por defecto de justify-content y align items*/
+        justify-content: normal !important;
+        align-items: normal !important;
+
+        /*text-align: center !important;*/
+
+        /*display: inline-block !important;*/
+
+        /*display: grid 2x2*/
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+        grid-gap: 10px !important;
+
+        /*Alinear verticalmente*/
+        /*flex-direction: column !important;*/
+    }
+    .corto{
+        width: 100% !important;
+        /*display: inline-block !important;*/
+    }
+    .item{
+        top: 75px !important;
+        width: 75% !important;
+    }
+
+    /*texto de dentro del botón*/
+    .nombre{
+        font-size: 25px !important;
+    }
+}
+
 
 /*Importado desde V1*/
 
