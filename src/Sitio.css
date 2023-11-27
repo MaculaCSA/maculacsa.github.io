@@ -232,8 +232,15 @@
 .nombre{
     position: relative;
     z-index: 2;
-    /*Tamaño auto*/
-    font-size: 1.5vw;
+    /*Tamaño automatico al padre*/
+    font-size: 2vw;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+/*Despues de 1400px el tamaño baja a 1.5vw*/
+@media (min-width: 1400px){
+    .nombre{
+        font-size: 1.5vw;
+    }
 }
