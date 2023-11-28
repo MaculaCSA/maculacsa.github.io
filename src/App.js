@@ -4,9 +4,23 @@ import carga from './carga.js';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
+// Base de datos
+const datos = require('./datos.json');
+
 console.log("App.js")
 
 function App() {
+
+  //const data = JSON.parse(datos);
+  const ciudades = Object.keys(datos);
+  console.log(datos);
+
+  const botones = ciudades.map((ciudad) => {
+    return (
+      <button className="bcolegios" onClick={() => window.location.href='./' + ciudad} id={ciudad}>{datos[ciudad].titulo}</button>
+    );
+  });
+
   //carga de la página
   window.onload = carga()
   return (
@@ -39,9 +53,7 @@ function App() {
 
         <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center", flexDirection: "column", flexWrap : "wrap" }}>
           <div className="flexcolegios">
-            <button className="bcolegios" onClick={() => window.location.href='./santander'} id='santander'>Santander</button>
-            <button className="bcolegios" onClick={() => window.location.href='./negrales'} id='negrales'>Los Negrales</button>
-            <button className="bcolegios" onClick={() => window.location.href='./alicante'} id='alicante'>Alicante</button>
+            {botones}
           </div>
         </ParallaxLayer>
 
