@@ -21,8 +21,23 @@
 
 .fotocorto {
     height: 100%;
+    width: 100%;
 
     object-fit: cover;
+}
+
+.gradient {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #212121);
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.DivImgCorto {
+    height: 100%;
 }
 
 .titulocategoria {
