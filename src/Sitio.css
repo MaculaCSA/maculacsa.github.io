@@ -20,11 +20,7 @@
 }
 
 .fotocorto {
-    background: transparent;
     height: 100%;
-    width: 50%;
-    position: absolute;
-    right: -8%;
 
     object-fit: cover;
 }
@@ -56,21 +52,13 @@
         object-fit: cover;
     }
 
-    .fotocorto {
-        /*text-align: center;*/
-        width: 100%;
-        height: 45%;        
-        position: fixed;
-        bottom: 0;
-        right: 0;
+    /*.fotocorto {
+        
     }
 
     .fotocorto * {
-        width: 50%;
-        height: 100%;
-        top: 20%;
-        object-fit: cover;
-    }
+        
+    }*/
 
     #content{
         width: 100%;
