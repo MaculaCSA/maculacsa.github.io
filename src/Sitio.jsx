@@ -57,7 +57,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
       <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ display: 'none'}} className="DivImgCorto modelocategoria">
           <div className="gradient fotocorto"></div>
-          <img src="../img/LogoDEV.png" className="fotocorto" alt="" />
+          <img id={'img' + categoriaId} src="../img/LogoDEV.png" className="fotocorto" alt="" />
         </div>
       </ParallaxLayer>
 
