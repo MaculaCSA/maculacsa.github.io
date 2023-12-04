@@ -54,6 +54,10 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
         <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
       </ParallaxLayer>
 
+      <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <img src="../img/LogoDEV.png" className="fotocorto" alt="" />
+      </ParallaxLayer>
+
       <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="item categoria">
           <h2 className="titulocategoria titulo">{categoria}</h2>
