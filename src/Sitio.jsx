@@ -2,6 +2,9 @@ import React from "react";
 
 import carga from './carga.js';
 
+//Importar jquery
+import $ from 'jquery';
+
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import './Sitio.css';
@@ -129,13 +132,19 @@ function cambiarimg(img, categoriaId) {
   mostrarimg(categoriaId);
 }
 
+const velocidad = 175;
+
 function mostrarimg(Id) {
-  document.getElementById('div' + Id).style.display = "block";
+  //document.getElementById('div' + Id).style.display = "block";
+  //fadein jquery
+  $('#div' + Id).fadeIn(velocidad);
   console.log("Mostrando imagen" + Id);
 }
 
 function ocultarimg(Id) {
-  document.getElementById('div' + Id).style.display = "none";
+  //document.getElementById('div' + Id).style.display = "none";
+  //FadeOut jquery
+  $('#div' + Id).fadeOut(velocidad);
   console.log("Ocultando imagen" + Id);
 }
 
