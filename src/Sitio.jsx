@@ -5,6 +5,9 @@ import carga from './carga.js';
 //Importar jquery
 import $ from 'jquery';
 
+//Importar elevator.js
+import Elevator from 'elevator.js';
+
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import './Sitio.css';
@@ -12,6 +15,17 @@ import './Sitio.css';
 const datos = require('./datos.json');
 
 const Sitios = ({ciudad}) => {
+
+  window.onload = function() {
+    carga();
+    console.log("Elevator cargado");
+    var elevator = new Elevator({
+      element: document.querySelector('#elevator'),
+      mainAudio: '../public/elevator/subir.mp3',
+      endAudio: '../public/elevator/ding.mp3'
+    });
+  }
+  
 
   console.log(ciudad);
   //coger dato de datos.json
@@ -29,7 +43,7 @@ const Sitios = ({ciudad}) => {
   
   console.log(datosCiudad);
 
-  window.onload = carga();
+  //window.onload = carga();
 
   let categoriaId = 0; // Id inicial de la categoría
 
@@ -122,6 +136,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
         {categorias}
 
       </Parallax>
+      <button id="elevator" style={{display: 'block', position: 'fixed', bottom: '20px', right: '20px'}}><svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></button>
     </div>
   );
 };
