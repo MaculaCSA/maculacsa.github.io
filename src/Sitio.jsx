@@ -57,7 +57,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
       </ParallaxLayer>
 
       <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ display: 'none'}} className="DivImgCorto modelocategoria">
+        <div id={'div' + categoriaId} style={{ display: 'none'}} className="DivImgCorto modelocategoria">
           <div className="gradient fotocorto"></div>
           <img id={'img' + categoriaId} src="../img/LogoDEV.png" className="fotocorto" alt="" />
         </div>
@@ -130,12 +130,12 @@ function cambiarimg(img, categoriaId) {
 }
 
 function mostrarimg(Id) {
-  document.getElementById('img' + Id).style.display = "block";
+  document.getElementById('div' + Id).style.display = "block";
   console.log("Mostrando imagen" + Id);
 }
 
 function ocultarimg(Id) {
-  document.getElementById('img' + Id).style.display = "none";
+  document.getElementById('div' + Id).style.display = "none";
   console.log("Ocultando imagen" + Id);
 }
 
