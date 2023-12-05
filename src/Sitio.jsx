@@ -34,17 +34,17 @@ const Sitios = ({ciudad}) => {
   let categoriaId = 0; // Id inicial de la categoría
 
   // Generate category elements
-const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
+const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) => {
   const categoriaData = datosCiudad.categorias[categoria];
-  const modelocategoria = categoriaData[0].modelo; // Obtén la ruta del video desde la primera película de la categoría
-  // Variable de la ID de
+  const modelocategoria = categoriaData[0].modelo;
+
   const cortos = categoriaData.slice(1).map((corto) => (
     <button
       style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
       onClick={() => openPopup(corto.youtube_id)}
       className="corto fondoimg"
-      onMouseEnter={() => cambiarimg(corto.nombre_foto, categoriaId)}
-      onMouseLeave={() => ocultarimg(categoriaId)}
+      onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
+      onMouseLeave={() => ocultarimg(index)}
     >
       <p className="nombre">{corto.titulo}</p>
     </button>
@@ -60,9 +60,9 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
       </ParallaxLayer>
 
       <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div id={'div' + categoriaId} style={{ display: 'none'}} className="DivImgCorto modelocategoria">
+        <div id={'div' + index} style={{ display: 'none'}} className="DivImgCorto modelocategoria">
           <div className="gradient fotocorto"></div>
-          <img id={'img' + categoriaId} src="../img/LogoDEV.png" className="fotocorto" alt="" />
+          <img id={'img' + index} src="../img/LogoDEV.png" className="fotocorto" alt="" />
         </div>
       </ParallaxLayer>
 
