@@ -34,12 +34,14 @@ const Sitios = ({ciudad}) => {
 const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
   const categoriaData = datosCiudad.categorias[categoria];
   const modelocategoria = categoriaData[0].modelo; // Obtén la ruta del video desde la primera película de la categoría
-
+  // Variable de la ID de
   const cortos = categoriaData.slice(1).map((corto) => (
     <button
       style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
       onClick={() => openPopup(corto.youtube_id)}
       className="corto fondoimg"
+      onMouseEnter={() => cambiarimg(corto.nombre_foto, categoriaId)}
+      onMouseLeave={() => ocultarimg(categoriaId)}
     >
       <p className="nombre">{corto.titulo}</p>
     </button>
@@ -120,7 +122,23 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
     </div>
   );
 };
- 
+
+function cambiarimg(img, categoriaId) {
+  document.getElementById('img' + categoriaId).src = "../img/nominados/" + img;
+  console.log("Cambiando imagen a " + img);
+  mostrarimg(categoriaId);
+}
+
+function mostrarimg(Id) {
+  document.getElementById('img' + Id).style.display = "block";
+  console.log("Mostrando imagen" + Id);
+}
+
+function ocultarimg(Id) {
+  document.getElementById('img' + Id).style.display = "none";
+  console.log("Ocultando imagen" + Id);
+}
+
 const userAgent = navigator.userAgent;
 
 function openPopup(VideoId) {
