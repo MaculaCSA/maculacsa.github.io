@@ -266,7 +266,7 @@ h3 {
     display: inline-block;
 }
 .bcolegios:hover {
-    color: blue;
+    color: white;
 }
 .bcolegios::after {
     position: absolute;
