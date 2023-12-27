@@ -55,6 +55,7 @@ function App() {
           <div className="flexcolegios">
             {botones}
           </div>
+          <button style={{position: 'absolute', width: '200px', right: '5vh', bottom: '5vh'}} className="bcolegios" onClick={() => window.location.href='./2023'}>2023</button>
         </ParallaxLayer>
 
       </Parallax>
