@@ -32,8 +32,7 @@
     position: absolute;
     top: 50%;
     transform: translate(50%, -50%);
-    width: 490px;
-    height: 335.983px;
+    height: 30vh;
 }
 
 .hidden {
