@@ -5,8 +5,8 @@ import carga from './carga.js';
 //Importar jquery
 import $ from 'jquery';
 
-//Importar elevator.js
-import Elevator from 'elevator.js';
+//Importar element-elevator.js
+import Elevator from 'element-elevator.js';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -19,10 +19,12 @@ const Sitios = ({ciudad}) => {
   window.onload = function() {
     carga();
     console.log("Elevator cargado");
+    console.log(window.location.protocol + "//" + window.location.host + '/elevator/subir.mp3')
     var elevator = new Elevator({
       element: document.querySelector('#elevator'),
-      mainAudio: '../public/elevator/subir.mp3',
-      endAudio: '../public/elevator/ding.mp3'
+      targetElement: document.querySelector('Parallax'),
+      mainAudio: window.location.protocol + "//" + window.location.host + '/elevator/subir.mp3',
+      endAudio: window.location.protocol + "//" + window.location.host + '/elevator/ding.mp3'
     });
   }
   
