@@ -1,6 +1,6 @@
 {
     "santander": {
-        "titulo": "Santander",
+        "titulo": "Nominados",
         "fotociudad": "santander.jpg",
         "categorias": {
             "Mejor Edición": [
@@ -74,87 +74,6 @@
                 },
                 {
                     "titulo": "Actriz 4",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                }
-            ]
-        }
-    },
-    "urdaneta": {
-        "titulo": "Urdaneta",
-        "fotociudad": "urdaneta.jpg",
-        "categorias": {
-            "Mejor Edición": [
-                {
-                    "modelo": "/img/categorias/pc.mp4"
-                },
-                {
-                    "titulo": "Película 5",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Película 6",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Película 7",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Película 8",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                }
-            ],
-            "Mejor Actor": [
-                {
-                    "modelo": "/img/categorias/claqueta.mp4"
-                },
-                {
-                    "titulo": "Actor 5",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Actor 6",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Actor 7",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Actor 8",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                }
-            ],
-            "Mejor Actríz": [
-                {
-                    "modelo": "/img/categorias/claqueta.mp4"
-                },
-                {
-                    "titulo": "Actriz 5",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Actriz 6",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Actriz 7",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Actriz 8",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
                 }
