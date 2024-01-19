@@ -3,31 +3,6 @@
         "titulo": "Nominados",
         "fotociudad": "santander.jpg",
         "categorias": {
-            "Mejor Edición": [
-                {
-                    "modelo": "/img/categorias/pc.mp4"
-                },
-                {
-                    "titulo": "Película 1",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Película 2",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Película 3",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                },
-                {
-                    "titulo": "Película 4",
-                    "nombre_foto": "LogoDEV.png",
-                    "youtube_id": "CHZZepkQ-24"
-                }
-            ],
             "Mejor Actor": [
                 {
                     "modelo": "/img/categorias/claqueta.mp4"
@@ -74,6 +49,191 @@
                 },
                 {
                     "titulo": "Actriz 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Mejor Edición": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Corto 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 2",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 3",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Mejor Documental": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Corto 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 2",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 3",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Mejor Animación": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Corto 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 2",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 3",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Mejor guion": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Corto 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 2",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 3",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Mejor dirección artística": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Corto 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 2",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 3",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Mejor Cortometraje": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Corto 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 2",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 3",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Premio del público": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Corto 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                }
+            ],
+            "Mejor Cartel": [
+                {
+                    "modelo": "/img/categorias/pc.mp4"
+                },
+                {
+                    "titulo": "Cartel 1",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Cartel 2",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Cartel 3",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Cartel 4",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
                 }
