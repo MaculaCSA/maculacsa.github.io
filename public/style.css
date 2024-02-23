@@ -67,12 +67,12 @@
 /* This styles the navbar and its contents */
 #navbar {
     height: 80px;
-    width: 100%;
+    width: 50%;
     position: fixed;
     top: 0;
     left: 0;
     background: none;
-}
+  }  
 
 /* This styles the logo in the navbar */
 #navbar #logo {
