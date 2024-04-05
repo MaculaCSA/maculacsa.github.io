@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from 'react';
+
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import './Sitio.css';
 
@@ -34,10 +37,12 @@ const Sitios = ({ ciudad }) => {
       const currentCanvas = canvasRefs.current[key];
       const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: currentCanvas });
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, currentCanvas.clientWidth / currentCanvas.clientHeight, 0.1, 1000);
+      const camera = new THREE.PerspectiveCamera(40, currentCanvas.clientWidth / currentCanvas.clientHeight, 0.1, 1000);
       const loader = new GLTFLoader();
+      const controls = new OrbitControls(camera, renderer.domElement);
 
-      camera.position.set(0, 0, 5);
+
+      camera.position.set(0, 0, 10);
       scene.add(new THREE.AmbientLight(0xffffff, 0.5));
 
       loader.load(`/path/to/models/${key}.glb`, (gltf) => {
@@ -48,6 +53,7 @@ const Sitios = ({ ciudad }) => {
 
       const animate = () => {
         requestAnimationFrame(animate);
+        controls.update();
         renderer.render(scene, camera);
       };
 
