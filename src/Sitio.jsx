@@ -1,86 +1,120 @@
-import React from "react";
-
-import carga from './carga.js';
-
-//Importar jquery
-import $ from 'jquery';
-
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-
+import React, { useRef, useEffect } from 'react';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import './Sitio.css';
 
+import carga from './carga.js';
+import $ from 'jquery';
 const datos = require('./datos.json');
 
-const Sitios = ({ciudad}) => {
-
-  console.log(ciudad);
-  //coger dato de datos.json
+const Sitios = ({ ciudad }) => {
   const datosCiudad = datos[ciudad];
   const titulo = datosCiudad.titulo;
   const fotociudad = '/img/colegios/' + datosCiudad.fotociudad;
-  
   const numCategorias = Object.keys(datosCiudad.categorias).length;
-  
+  // Logs de prueba
+
   console.log("Categorias: " + numCategorias);
 
   const numPaginas = numCategorias + 1;
+
   console.log("Paginas: " + numPaginas);
 
-  
   console.log(datosCiudad);
 
+
   window.onload = carga();
+  let categoriaId = 0;
 
-  let categoriaId = 0; // Id inicial de la categoría
+  const canvasRefs = useRef({});
 
-  // Generate category elements
-const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) => {
-  const categoriaData = datosCiudad.categorias[categoria];
-  const modelocategoria = categoriaData[0].modelo;
+  useEffect(() => {
+    Object.keys(canvasRefs.current).forEach((key) => {
+      const currentCanvas = canvasRefs.current[key];
+      const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: currentCanvas });
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, currentCanvas.clientWidth / currentCanvas.clientHeight, 0.1, 1000);
+      const loader = new GLTFLoader();
 
-  const cortos = categoriaData.slice(1).map((corto) => (
-    <button
-      style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
-      onClick={() => openPopup(corto.youtube_id)}
-      className="corto fondoimg"
-      onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
-      onMouseLeave={() => ocultarimg(index)}
-    >
-      <p className="nombre">{corto.titulo}</p>
-    </button>
-  ));
+      camera.position.set(0, 0, 5);
+      scene.add(new THREE.AmbientLight(0xffffff, 0.5));
 
-  categoriaId++;
-  console.log("Id de página: " + categoriaId);
+      loader.load(`/path/to/models/${key}.glb`, (gltf) => {
+        scene.add(gltf.scene);
+      }, undefined, (error) => {
+        console.error(error);
+      });
 
-  return (
-    <React.Fragment key={categoriaId}>
-      <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
-      </ParallaxLayer>
+      const animate = () => {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+      };
 
-      <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div id={'div' + index} style={{ display: 'none'}} className="DivImgCorto modelocategoria">
-          <div className="gradient fotocorto"></div>
-          <img id={'img' + index} src="../img/LogoDEV.png" className="fotocorto" alt="" />
-        </div>
-      </ParallaxLayer>
+      animate();
 
-      <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div className="item categoria">
-          <h2 className="titulocategoria titulo">{categoria}</h2>
-          <div className="container2">
-            {cortos}
+      const onWindowResize = () => {
+        const width = currentCanvas.clientWidth;
+        const height = currentCanvas.clientHeight;
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      };
+
+      window.addEventListener('resize', onWindowResize, false);
+
+      return () => {
+        window.removeEventListener('resize', onWindowResize, false);
+      };
+    });
+  }, []);
+
+  const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) => {
+    const categoriaData = datosCiudad.categorias[categoria];
+    /*const modelocategoria = categoriaData[0].modelo;*/
+
+    const cortos = categoriaData.slice(1).map((corto) => (
+      <button
+        style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
+        onClick={() => openPopup(corto.youtube_id)}
+        className="corto fondoimg"
+        onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
+        onMouseLeave={() => ocultarimg(index)}
+      >
+        <p className="nombre">{corto.titulo}</p>
+      </button>
+    ));
+
+    categoriaId++;
+    console.log("Id de página: " + categoriaId);
+
+    return (
+      <React.Fragment key={categoriaId}>
+        <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <canvas ref={(el) => canvasRefs.current[categoria] = el} className="modelocategoria" />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div id={'div' + index} style={{ display: 'none'}} className="DivImgCorto modelocategoria">
+            <div className="gradient fotocorto"></div>
+            <img id={'img' + index} src="../img/LogoDEV.png" className="fotocorto" alt="" />
           </div>
-        </div>
-      </ParallaxLayer>
-    </React.Fragment>
-  );
-});
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div className="item categoria">
+            <h2 className="titulocategoria titulo">{categoria}</h2>
+            <div className="container2">
+              {cortos}
+            </div>
+          </div>
+        </ParallaxLayer>
+      </React.Fragment>
+    );
+  });
 
   return (
     <div className="App">
-
       <div className="popup" id="popup">
         <iframe
           width="100%"
@@ -108,13 +142,11 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
       <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={false}>
         <ParallaxLayer offset={0}>
           <img className="fondo" src={fotociudad} alt="" />
-      </ParallaxLayer>
-        
+        </ParallaxLayer>
 
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content">
             <h2 className="titulociudad titulo">{titulo}</h2>
-
             <p className="subtitulo">Mácula 2024</p>
           </div>
         </ParallaxLayer>
