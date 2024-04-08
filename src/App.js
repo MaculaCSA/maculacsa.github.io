@@ -4,10 +4,76 @@ import carga from './carga.js';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
+// Importar three.js
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 // Base de datos
 const datos = require('./datos.json');
 
 console.log("App.js")
+
+
+
+
+// Three.js
+
+// Create scene with transparent background
+const scene = new THREE.Scene();
+scene.background = null;
+
+
+// Create camera
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+
+// Create renderer
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// Load GLB model
+const loader = new GLTFLoader();
+loader.load(
+    'model/maculanogirar.glb',
+    function(gltf) {
+        scene.add(gltf.scene);
+    },
+    undefined,
+    function(error) {
+        console.error(error);
+    }
+);
+
+
+
+
+// Add ambient light
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
+// Add directional light
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+directionalLight.position.set(0, 1, 0);
+scene.add(directionalLight);
+
+// Animation loop
+function animate() {
+    requestAnimationFrame(animate);
+    // Optionally add rotation
+    // scene.rotation.y += 0.01;
+    renderer.render(scene, camera);
+}
+
+animate();
+
+// Optional: Resize handling
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
 
 function App() {
 
@@ -39,7 +105,7 @@ function App() {
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div className="modelo">
-            <model-viewer id="aSide" src="model/maculanogirar.glb" alt="Macula" auto-rotate loading="eager" ar ar-modes="webxr scene-viewer quick-look" poster="model/poster.webp" shadow-intensity="1" autoplay environment-image="model/fireplace_2k.hdr"> </model-viewer>
+            <canvas id="aSide" alt="Macula"></canvas>
           </div>
         </ParallaxLayer>
 
