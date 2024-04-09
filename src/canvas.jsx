@@ -5,6 +5,10 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
 
+//carga de la página
+import carga from './carga.js';
+window.onload = carga()
+
 const PremioCanvas = () => {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
