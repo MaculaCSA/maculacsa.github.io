@@ -9,7 +9,7 @@ const carga = function(){
             $('body').removeClass('hidden');
             $('#carga').fadeOut();
     }
-    , 6000);
+    , 1000);
     
   }
 
