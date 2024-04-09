@@ -1,93 +1,101 @@
-import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
-import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/examples/jsm/Addons.js';
 
-//carga de la página
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+
 import carga from './carga.js';
-window.onload = carga()
+window.onload = carga();
 
-const PremioCanvas = () => {
-  const containerRef = useRef(null);
-  const canvasRef = useRef(null);
-  const mixer = useRef(null);
-  const clock = new THREE.Clock();
+//const clock = new THREE.Clock();
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-  useEffect(() => {
-    const container = containerRef.current;
-    const canvas = canvasRef.current;
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
+renderer.setClearColor(0x000000, 0);
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
 
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
-    const pmremGenerator = new THREE.PMREMGenerator(renderer);
+/*const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );*/
+const controls = new OrbitControls( camera, renderer.domElement );
+scene.environment = pmremGenerator.fromScene( new RoomEnvironment( renderer ), 0.04 ).texture;
 
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xbfe3dd);
-    scene.environment = pmremGenerator.fromScene(new RoomEnvironment(renderer), 0.04).texture;
+camera.position.z = 5;
 
-    const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
-    camera.position.set(5, 2, 8);
+function render() {
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 0.5, 0);
-    controls.update();
-    controls.enablePan = false;
-    controls.enableDamping = true;
+  renderer.render( scene, camera );
 
-    const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three/examples/js/libs/draco/');
+}
 
-    const loader = new GLTFLoader();
-    loader.setDRACOLoader(dracoLoader);
-    loader.load('models/gltf/LittlestTokyo.glb', function (gltf) {
+
+new RGBELoader()
+  .setPath( 'textures/equirectangular/' )
+  .load( '../model/fireplace_2k.hdr', function ( texture ) {
+
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+
+    scene.background = texture;
+    scene.environment = texture;
+
+    render();
+
+    // model
+
+    const loader = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
+    loader.load( 'DamagedHelmet.gltf', async function ( gltf ) {
+
       const model = gltf.scene;
-      model.position.set(1, 1, 0);
-      model.scale.set(0.01, 0.01, 0.01);
-      scene.add(model);
 
-      mixer.current = new THREE.AnimationMixer(model);
-      mixer.current.clipAction(gltf.animations[0]).play();
+      // wait until the model can be added to the scene without blocking due to shader compilation
 
-      animate();
-    }, undefined, function (e) {
-      console.error(e);
-    });
+      await renderer.compileAsync( model, camera, scene );
 
-    const animate = () => {
-      requestAnimationFrame(animate);
+      scene.add( model );
 
-      const delta = clock.getDelta();
+      render();
 
-      if (mixer.current) {
-        mixer.current.update(delta);
-      }
+    } );
 
-      controls.update();
-      renderer.render(scene, camera);
-    };
+  } );
 
-    const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    };
+const loader = new GLTFLoader();
 
-    window.addEventListener('resize', handleResize);
+loader.load( '../model/maculanogirar.glb', function ( gltf ) {
+  scene.add( gltf.scene );
+}, undefined, function ( error ) {
+  console.error( error );
+});
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+window.onresize = function () {
 
-  return (
-    <div ref={containerRef}>
-      <canvas ref={canvasRef}></canvas>
-    </div>
-  );
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
 };
 
-export default PremioCanvas;
+
+function animate() {
+	requestAnimationFrame( animate );
+
+  //const delta = clock.getDelta();
+	//mixer.update( delta );
+  controls.update();
+
+	renderer.render( scene, camera );
+}
+
+animate();
+
+// Export PremioCanvas con un solo elemento <canvas>
+export default function PremioCanvas() {
+  return ;
+}
