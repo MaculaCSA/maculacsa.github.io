@@ -10,7 +10,7 @@ window.onload = carga();
 
 //const clock = new THREE.Clock();
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 8, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
 renderer.setClearColor(0x000000, 0);
@@ -24,8 +24,10 @@ scene.add( cube );*/
 //const controls = new OrbitControls( camera, renderer.domElement );
 
 camera.position.x = 0;
-camera.position.z = 5;
-camera.position.y = 0.14;
+camera.position.z = 0.73;
+camera.position.y = 0.40;
+
+camera.rotation.x = 75;
 
 let modelo; // Declare the modelo variable
 
@@ -63,7 +65,10 @@ function animate() {
   requestAnimationFrame( animate );
 
   // Esto hará que el modelo gire constantemente en su eje Y.
-  modelo.rotation.y += 0.01;
+  if (modelo && modelo.rotation) {
+    // Esto hará que el modelo gire constantemente en su eje Y.
+    modelo.rotation.y += 0.005;
+  }
 
   render();
 }
