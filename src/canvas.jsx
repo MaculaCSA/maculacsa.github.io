@@ -1,9 +1,10 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { RoomEnvironment } from 'three/examples/jsm/Addons.js';
+//import { RoomEnvironment } from 'three/examples/jsm/Addons.js';
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+import { HDRCubeTextureLoader } from 'three/examples/jsm/loaders/HDRCubeTextureLoader.js';
 
 import carga from './carga.js';
 window.onload = carga();
@@ -19,12 +20,15 @@ document.body.appendChild( renderer.domElement );
 
 const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
+const params = {
+  envMap: 'HDR'
+};
+
 /*const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );*/
 const controls = new OrbitControls( camera, renderer.domElement );
-scene.environment = pmremGenerator.fromScene( new RoomEnvironment( renderer ), 0.04 ).texture;
 
 camera.position.z = 5;
 
@@ -36,12 +40,12 @@ function render() {
 
 
 new RGBELoader()
-  .setPath( 'textures/equirectangular/' )
+  .setPath( 'textures/' )
   .load( '../model/fireplace_2k.hdr', function ( texture ) {
 
     texture.mapping = THREE.EquirectangularReflectionMapping;
 
-    scene.background = texture;
+    //scene.background = texture;
     scene.environment = texture;
 
     render();
