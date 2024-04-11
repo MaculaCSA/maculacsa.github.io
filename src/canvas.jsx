@@ -40,8 +40,8 @@ function render() {
 
 
 new RGBELoader()
-  .setPath( 'textures/' )
-  .load( '../model/fireplace_2k.hdr', function ( texture ) {
+  .setPath( '/model/' )
+  .load( 'fireplace_2k.hdr', function ( texture ) {
 
     texture.mapping = THREE.EquirectangularReflectionMapping;
 
