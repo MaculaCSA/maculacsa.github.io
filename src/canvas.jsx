@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 //import { RoomEnvironment } from 'three/examples/jsm/Addons.js';
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -10,7 +10,7 @@ window.onload = carga();
 
 //const clock = new THREE.Clock();
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 8, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
 renderer.setClearColor(0x000000, 0);
@@ -21,9 +21,11 @@ document.body.appendChild( renderer.domElement );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );*/
-const controls = new OrbitControls( camera, renderer.domElement );
+//const controls = new OrbitControls( camera, renderer.domElement );
 
+camera.position.x = 0;
 camera.position.z = 5;
+camera.position.y = 0.14;
 
 function render() {
 
@@ -85,7 +87,7 @@ function animate() {
 
   //const delta = clock.getDelta();
 	//mixer.update( delta );
-  controls.update();
+  //controls.update();
 
 	renderer.render( scene, camera );
 }
