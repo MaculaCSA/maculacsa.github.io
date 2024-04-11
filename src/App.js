@@ -41,7 +41,7 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <div className="modelo">
+          <div id="canvas" className="modelo">
             <PremioCanvas id="aSide" alt="Macula"></PremioCanvas>
           </div>
         </ParallaxLayer>
