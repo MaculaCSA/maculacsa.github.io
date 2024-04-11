@@ -27,69 +27,45 @@ camera.position.x = 0;
 camera.position.z = 5;
 camera.position.y = 0.14;
 
+let modelo; // Declare the modelo variable
+
 function render() {
-
-  renderer.render( scene, camera );
-
+  renderer.render(scene, camera);
 }
 
-
 new RGBELoader()
-  .setPath( '/model/' )
-  .load( 'fireplace_2k.hdr', function ( texture ) {
-
+  .setPath('/model/')
+  .load('fireplace_2k.hdr', function (texture) {
     texture.mapping = THREE.EquirectangularReflectionMapping;
-
-    //scene.background = texture;
     scene.environment = texture;
-
     render();
-
-    // model
-
-    const loader = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
-    loader.load( 'DamagedHelmet.gltf', async function ( gltf ) {
-
-      const model = gltf.scene;
-
-      // wait until the model can be added to the scene without blocking due to shader compilation
-
-      await renderer.compileAsync( model, camera, scene );
-
-      scene.add( model );
-
-      render();
-
-    } );
-
-  } );
+  });
 
 const loader = new GLTFLoader();
 
-loader.load( '../model/maculanogirar.glb', function ( gltf ) {
-  scene.add( gltf.scene );
-}, undefined, function ( error ) {
-  console.error( error );
+loader.load('../model/maculanogirar.glb', function (gltf) {
+  scene.add(gltf.scene);
+  modelo = gltf.scene; // Assign the gltf.scene to the modelo variable
+  console.log(modelo);
+}, undefined, function (error) {
+  console.error(error);
 });
 
 window.onresize = function () {
-
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-
-  renderer.setSize( window.innerWidth, window.innerHeight );
-
+  renderer.setSize(window.innerWidth, window.innerHeight);
 };
 
+console.log(modelo);
 
 function animate() {
-	requestAnimationFrame( animate );
+  requestAnimationFrame( animate );
 
-  //const delta = clock.getDelta();
-	//mixer.update( delta );
-  //controls.update();
+  // Esto hará que el modelo gire constantemente en su eje Y.
+  modelo.rotation.y += 0.01;
 
-	renderer.render( scene, camera );
+  render();
 }
 
 animate();
