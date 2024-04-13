@@ -13,7 +13,7 @@ const datos = require('./datos.json');
 
 const Sitios = ({ciudad}) => {
 
-  console.log(ciudad);
+  //console.log(ciudad);
   //coger dato de datos.json
   const datosCiudad = datos[ciudad];
   const titulo = datosCiudad.titulo;
@@ -21,13 +21,13 @@ const Sitios = ({ciudad}) => {
   
   const numCategorias = Object.keys(datosCiudad.categorias).length;
   
-  console.log("Categorias: " + numCategorias);
+  //console.log("Categorias: " + numCategorias);
 
   const numPaginas = numCategorias + 1;
-  console.log("Paginas: " + numPaginas);
+  //console.log("Paginas: " + numPaginas);
 
   
-  console.log(datosCiudad);
+  //console.log(datosCiudad);
 
   window.onload = carga();
 
@@ -51,7 +51,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
   ));
 
   categoriaId++;
-  console.log("Id de página: " + categoriaId);
+  //console.log("Id de página: " + categoriaId);
 
   return (
     <React.Fragment key={categoriaId}>
@@ -133,7 +133,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
 
 function cambiarimg(img, categoriaId) {
   document.getElementById('img' + categoriaId).src = "../img/nominados/" + img;
-  console.log("Cambiando imagen a " + img);
+  //console.log("Cambiando imagen a " + img);
   mostrarimg(categoriaId);
 }
 
@@ -143,14 +143,14 @@ function mostrarimg(Id) {
   //document.getElementById('div' + Id).style.display = "block";
   //fadein jquery
   $('#div' + Id).fadeIn(velocidad);
-  console.log("Mostrando imagen" + Id);
+  //console.log("Mostrando imagen" + Id);
 }
 
 function ocultarimg(Id) {
   //document.getElementById('div' + Id).style.display = "none";
   //FadeOut jquery
   $('#div' + Id).fadeOut(velocidad);
-  console.log("Ocultando imagen" + Id);
+  //console.log("Ocultando imagen" + Id);
 }
 
 const userAgent = navigator.userAgent;
