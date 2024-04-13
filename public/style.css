@@ -206,12 +206,11 @@ h3 {
     border: none;
 }
 
-.modelo {
-    background: transparent;
+#canvaspremio {
+    position: absolute;
     height: 75%;
     width: 50%;
-    position: absolute;
-    right: 0;
+    right: -10%;
 }
 
 /* This styles the descriptions of the 3D object */
@@ -298,17 +297,18 @@ h3 {
     .colegios {
         font-size: 300%;
     }
-    .modelo {
-        text-align: center;
-        width: 100%;
+    #canvaspremio {
+        position: absolute;
         height: 45%;
-        position: relative;
-        top: 10%;
+        width: 100%;
+        bottom: 10%;
+        text-align: center;
+        right: auto;
     }
-    .modelo model-viewer {
-        width: 50%;
-        height: 100%;
-        top: 20%;
+    canvas {
+        width: 100%;
+        height: 100%; 
+        position: static;
     }
     #content {
         width: 100%;
@@ -323,7 +323,7 @@ h3 {
         margin-top: 0px;
     }
 }
-@media (max-width: 675px) {
+@media (max-width: 1200px) {
     .bcolegios {
         width: 400px;
     }
@@ -340,3 +340,10 @@ h3 {
 .creditos {
     text-align: center;
 }
+
+/*canvas {
+    position: fixed;
+    top: 7vh;
+    right: -40vh;
+    z-index: -1;
+}*/

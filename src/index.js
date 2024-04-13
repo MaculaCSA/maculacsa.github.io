@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import PremioCanvas from './canvas.jsx';
 
 import Sitios from './Sitio';
 
@@ -21,13 +22,9 @@ const router = createBrowserRouter([
     element: <Sitios ciudad="santander" />,
   },
   {
-    path: "/negrales",
-    element: <Sitios ciudad="negrales" />,
-  },
-  {
-    path: "/alicante",
-    element: <Sitios ciudad="alicante" />,
-  },
+    path: "/canvas",
+    element: <PremioCanvas/>,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
