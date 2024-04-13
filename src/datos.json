@@ -5,7 +5,7 @@
         "categorias": {
             "Mejor Actor": [
                 {
-                    "modelo": "/img/categorias/claqueta.mp4"
+                    "modelo": "/img/categorias/teatro.mp4"
                 },
                 {
                     "titulo": "Actor 1",
@@ -40,7 +40,7 @@
             ],
             "Mejor Actríz": [
                 {
-                    "modelo": "/img/categorias/claqueta.mp4"
+                    "modelo": "/img/categorias/teatro.mp4"
                 },
                 {
                     "titulo": "Actriz 1",
@@ -110,7 +110,7 @@
             ],
             "Mejor Documental": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/camara.mp4"
                 },
                 {
                     "titulo": "Corto 1",
@@ -145,7 +145,7 @@
             ],
             "Mejor Animación": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/camara.mp4"
                 },
                 {
                     "titulo": "Corto 1",
@@ -180,7 +180,7 @@
             ],
             "Mejor guion": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/guion.mp4"
                 },
                 {
                     "titulo": "Corto 1",
@@ -215,7 +215,7 @@
             ],
             "Mejor dirección artística": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/artistica.mp4"
                 },
                 {
                     "titulo": "Corto 1",
@@ -250,7 +250,7 @@
             ],
             "Mejor Cortometraje": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/claqueta.mp4"
                 },
                 {
                     "titulo": "Corto 1",
@@ -285,7 +285,7 @@
             ],
             "Premio del público": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/publico.mp4"
                 },
                 {
                     "titulo": "¿Quién ganará el premio del público? El corto que tenga más likes!",
@@ -295,7 +295,7 @@
             ],
             "Mejor Cartel": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/artistica.mp4"
                 },
                 {
                     "titulo": "Cartel 1",
