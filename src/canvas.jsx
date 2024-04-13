@@ -9,20 +9,31 @@ import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 function PremioCanvas() {
 
 useEffect(() => {
+
+var height;
+var width;
 //import carga from './carga.js';
 //window.onload = carga();
-
-const Height = window.innerHeight * 0.75;
-const Width = window.innerWidth * 0.50;
+// Si la aunchura es de más de 1300px
+/*if (window.innerWidth > 1300) {
+var height = window.innerHeight * 0.75;
+var width = window.innerWidth * 0.50;
+} else {
+var height = window.innerHeight * 0.45;
+var width = window.innerWidth * 0.45;
+}*/
   
 var contenedor = document.getElementById('canvaspremio');
+
+height = contenedor.offsetHeight;
+width= contenedor.offsetWidth;
 //const clock = new THREE.Clock();
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 50, Width / Height, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 50, width / height, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
 renderer.setClearColor(0x000000, 0);
-renderer.setSize( Width, Height );
+renderer.setSize( width, height );
 if (contenedor.childNodes.length === 0) {
   contenedor.appendChild(renderer.domElement);
 } else {
@@ -38,8 +49,8 @@ scene.add( cube );*/
 //const controls = new OrbitControls( camera, renderer.domElement );
 
 camera.position.x = 0;
-camera.position.z = 0.73;
-camera.position.y = 0.40;
+camera.position.z = 0.4;
+camera.position.y = 0.3;
 
 camera.rotation.x = 75;
 
@@ -67,10 +78,10 @@ loader.load('../model/maculanogirar.glb', function (gltf) {
   console.error(error);
 });
 
-window.onresize = function () {
-  camera.aspect = Width / Height;
+contenedor.onresize = function () {
+  camera.aspect = width / height;
   camera.updateProjectionMatrix();
-  renderer.setSize(Width, Height);
+  renderer.setSize(width, height);
 };
 
 console.log(modelo);

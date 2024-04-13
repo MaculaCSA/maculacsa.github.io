@@ -30,7 +30,7 @@ function App() {
         <ParallaxLayer offset={2} style={{backgroundColor: '#407ECD'}}/>
 
 
-        <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div id="content">
             <h2 className="titulo">PREMIOS MÁCULA</h2>
 
@@ -39,9 +39,7 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div className='modelo'>
           <PremioCanvas id="aSide"  />
-        </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
