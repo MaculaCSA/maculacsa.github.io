@@ -340,3 +340,10 @@ h3 {
 .creditos {
     text-align: center;
 }
+
+/*canvas {
+    position: fixed;
+    top: 7vh;
+    right: -40vh;
+    z-index: -1;
+}*/

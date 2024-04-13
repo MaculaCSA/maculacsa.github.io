@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import * as THREE from 'three';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 //import { RoomEnvironment } from 'three/examples/jsm/Addons.js';
@@ -5,9 +6,13 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
-import carga from './carga.js';
-window.onload = carga();
+function PremioCanvas() {
 
+useEffect(() => {
+//import carga from './carga.js';
+//window.onload = carga();
+  
+var contenedor = document.getElementById('canvaspremio');
 //const clock = new THREE.Clock();
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -15,7 +20,7 @@ const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.inner
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
 renderer.setClearColor(0x000000, 0);
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+contenedor.appendChild( renderer.domElement );
 
 /*const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
@@ -75,7 +80,12 @@ function animate() {
 
 animate();
 
-// Export PremioCanvas con un solo elemento <canvas>
-export default function PremioCanvas() {
-  return ;
+}, []);
+
+return (
+  <div id="canvaspremio"></div>
+);
 }
+
+// Export PremioCanvas con un solo elemento <canvas>
+export default PremioCanvas;

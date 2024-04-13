@@ -11,6 +11,7 @@ const datos = require('./datos.json');
 
 console.log("App.js")
 
+window.onload = carga()
 
 function App() {
 
@@ -20,12 +21,9 @@ function App() {
 
   const botones = ciudades.map((ciudad) => {
     return (
-      <button className="bcolegios" onClick={() => window.location.href='./' + ciudad} id={ciudad}>{datos[ciudad].titulo}</button>
+      <button key={ciudad} className="bcolegios" onClick={() => window.location.href='./' + ciudad} id={ciudad}>{datos[ciudad].titulo}</button>
     );
   });
-
-  //carga de la página
-  window.onload = carga()
   return (
     <div className="App">
       <Parallax pages={3} scrolling={false}>
@@ -41,13 +39,11 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <div id="canvas" className="modelo">
-            <PremioCanvas id="aSide" alt="Macula"></PremioCanvas>
-          </div>
+          <PremioCanvas />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div id="content" class="creditos">
+          <div id="content" className="creditos">
             <h3 className="titulo">Hecho con ❤️</h3>
             <h3 className="titulo">Pablo García y Aarón Sancibrián</h3>
             <p className="subtitulo">Modelos por Hector Sancibrián</p>
