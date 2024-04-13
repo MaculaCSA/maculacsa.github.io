@@ -20,7 +20,13 @@ const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.inner
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
 renderer.setClearColor(0x000000, 0);
 renderer.setSize( window.innerWidth, window.innerHeight );
-contenedor.appendChild( renderer.domElement );
+if (contenedor.childNodes.length === 0) {
+  contenedor.appendChild(renderer.domElement);
+} else {
+  // Si ya existe un canvas, reemplazarlo
+  contenedor.replaceChild(renderer.domElement, contenedor.childNodes[0]);
+}
+
 
 /*const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
