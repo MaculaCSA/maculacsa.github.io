@@ -39,7 +39,9 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div id="canvaspremio">
           <PremioCanvas id="aSide"  />
+        </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

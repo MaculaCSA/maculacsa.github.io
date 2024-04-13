@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import * as THREE from 'three';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 //import { RoomEnvironment } from 'three/examples/jsm/Addons.js';
@@ -10,30 +10,26 @@ function PremioCanvas() {
 
 useEffect(() => {
 
-var height;
-var width;
 //import carga from './carga.js';
 //window.onload = carga();
 // Si la aunchura es de más de 1300px
 /*if (window.innerWidth > 1300) {
-var height = window.innerHeight * 0.75;
-var width = window.innerWidth * 0.50;
+var document.getElementById('canvaspremio').offsetHeight = window.innerHeight * 0.75;
+var document.getElementById('canvaspremio').offsetWidth = window.innerWidth * 0.50;
 } else {
-var height = window.innerHeight * 0.45;
-var width = window.innerWidth * 0.45;
+var document.getElementById('canvaspremio').offsetHeight = window.innerHeight * 0.45;
+var document.getElementById('canvaspremio').offsetWidth = window.innerWidth * 0.45;
 }*/
   
 var contenedor = document.getElementById('canvaspremio');
 
-height = contenedor.offsetHeight;
-width= contenedor.offsetWidth;
 //const clock = new THREE.Clock();
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 50, width / height, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 50, document.getElementById('canvaspremio').offsetWidth / document.getElementById('canvaspremio').offsetHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
 renderer.setClearColor(0x000000, 0);
-renderer.setSize( width, height );
+renderer.setSize( document.getElementById('canvaspremio').offsetWidth, document.getElementById('canvaspremio').offsetHeight );
 if (contenedor.childNodes.length === 0) {
   contenedor.appendChild(renderer.domElement);
 } else {
@@ -73,18 +69,18 @@ const loader = new GLTFLoader();
 loader.load('../model/maculanogirar.glb', function (gltf) {
   scene.add(gltf.scene);
   modelo = gltf.scene; // Assign the gltf.scene to the modelo variable
-  console.log(modelo);
 }, undefined, function (error) {
   console.error(error);
 });
 
-contenedor.onresize = function () {
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-  renderer.setSize(width, height);
-};
+document.body.onresize = function () {
+  //console log con width y height
+  //console.log(document.getElementById('canvaspremio').offsetHeight, document.getElementById('canvaspremio').offsetHeight);
 
-console.log(modelo);
+  camera.aspect = document.getElementById('canvaspremio').offsetWidth / document.getElementById('canvaspremio').offsetHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(document.getElementById('canvaspremio').offsetWidth, document.getElementById('canvaspremio').offsetHeight);
+};
 
 function animate() {
   requestAnimationFrame( animate );
@@ -103,7 +99,7 @@ animate();
 }, []);
 
 return (
-  <div id="canvaspremio"></div>
+  <Fragment/>
 );
 }
 
