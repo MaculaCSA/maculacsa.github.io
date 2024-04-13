@@ -26,6 +26,16 @@
                     "titulo": "Actor 4",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Actor 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Actor 6",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
                 }
             ],
             "Mejor Actríz": [
@@ -49,6 +59,16 @@
                 },
                 {
                     "titulo": "Actriz 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Actriz 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Actriz 6",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
                 }
@@ -76,6 +96,16 @@
                     "titulo": "Corto 4",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 6",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
                 }
             ],
             "Mejor Documental": [
@@ -99,6 +129,16 @@
                 },
                 {
                     "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 6",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
                 }
@@ -126,6 +166,16 @@
                     "titulo": "Corto 4",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 6",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
                 }
             ],
             "Mejor guion": [
@@ -149,6 +199,16 @@
                 },
                 {
                     "titulo": "Corto 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 6",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
                 }
@@ -176,6 +236,16 @@
                     "titulo": "Corto 4",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 6",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
                 }
             ],
             "Mejor Cortometraje": [
@@ -201,6 +271,16 @@
                     "titulo": "Corto 4",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Corto 6",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
                 }
             ],
             "Premio del público": [
@@ -208,7 +288,7 @@
                     "modelo": "/img/categorias/pc.mp4"
                 },
                 {
-                    "titulo": "Corto 1",
+                    "titulo": "¿Quién ganará el premio del público? El corto que tenga más likes!",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
                 }
@@ -234,6 +314,26 @@
                 },
                 {
                     "titulo": "Cartel 4",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Cartel 5",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Cartel 6",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Cartel 7",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "CHZZepkQ-24"
+                },
+                {
+                    "titulo": "Cartel 8",
                     "nombre_foto": "LogoDEV.png",
                     "youtube_id": "CHZZepkQ-24"
                 }
