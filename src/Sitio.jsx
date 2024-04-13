@@ -103,14 +103,14 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
         </button>
       </div>
 
-      <div class="popup" id="popupImg">
-            <img src="img/logoMP.png" id="IframeImg" frameborder="0" alt=""></img>
-            <button class="cerrarpopup cerrarpopupImg" onclick="closePopup()"><img src="img/x-square.svg" alt="Cerrar"/></button>
+      <div className="popup" id="popupImg">
+            <img src="img/logoMP.png" id="IframeImg" frameBorder="0" alt=""></img>
+            <button className="cerrarpopup cerrarpopupImg" onClick={closePopup}><img src="img/x-square.svg" alt="Cerrar"/></button>
         </div>
 
       <button id="closePopup" className="cerrarpopupgigante" onClick={closePopup}></button>
 
-      <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={false}>
+      <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={"false"}>
         <ParallaxLayer offset={0}>
           <img className="fondo" src={fotociudad} alt="" />
       </ParallaxLayer>
