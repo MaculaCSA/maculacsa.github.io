@@ -11,15 +11,18 @@ function PremioCanvas() {
 useEffect(() => {
 //import carga from './carga.js';
 //window.onload = carga();
+
+const Height = window.innerHeight * 0.75;
+const Width = window.innerWidth * 0.50;
   
 var contenedor = document.getElementById('canvaspremio');
 //const clock = new THREE.Clock();
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 50, Width / Height, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
 renderer.setClearColor(0x000000, 0);
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( Width, Height );
 if (contenedor.childNodes.length === 0) {
   contenedor.appendChild(renderer.domElement);
 } else {
@@ -65,9 +68,9 @@ loader.load('../model/maculanogirar.glb', function (gltf) {
 });
 
 window.onresize = function () {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.aspect = Width / Height;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(Width, Height);
 };
 
 console.log(modelo);
