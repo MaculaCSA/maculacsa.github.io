@@ -104,7 +104,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
       </div>
 
       <div class="popup" id="popupImg">
-            <img src="img/logoMP.png" id="IframeImg" frameborder="0"></img>
+            <img src="img/logoMP.png" id="IframeImg" frameborder="0" alt=""></img>
             <button class="cerrarpopup cerrarpopupImg" onclick="closePopup()"><img src="img/x-square.svg" alt="Cerrar"/></button>
         </div>
 
