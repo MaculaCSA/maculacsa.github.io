@@ -103,6 +103,11 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
         </button>
       </div>
 
+      <div class="popup" id="popupImg">
+            <img src="img/logoMP.png" id="IframeImg" frameborder="0"></img>
+            <button class="cerrarpopup cerrarpopupImg" onclick="closePopup()"><img src="img/x-square.svg" alt="Cerrar"/></button>
+        </div>
+
       <button id="closePopup" className="cerrarpopupgigante" onClick={closePopup}></button>
 
       <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={false}>
@@ -151,8 +156,13 @@ function ocultarimg(Id) {
 const userAgent = navigator.userAgent;
 
 function openPopup(VideoId) {
-  // Si el usuario es de movil, en vez de ejecutarse close popup se redirige a la pagina de youtube
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+  //Si el nombre contiene o .svg o .png
+  if (VideoId.includes(".svg") || VideoId.includes(".png")) {
+    openPopupImg(VideoId);
+  }
+  else {
+    // Si el usuario es de movil, en vez de ejecutarse close popup se redirige a la pagina de youtube
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
       url("https://www.youtube.com/watch?v=" + VideoId);
   }
   else {
@@ -162,17 +172,18 @@ function openPopup(VideoId) {
       document.getElementById("popup").style.display = "block";
       document.getElementById("closePopup").style.display = "block";
   }
+  }
 }
 
 // Abrir popup para carteles
-/*function openPopupImg(ImageId) {
+function openPopupImg(ImageId) {
   // Se cambia el src del iframe
   document.getElementById("IframeImg").src = "img/nominados/carteles/" + ImageId;
   // Se muestra el div
   document.getElementById("popupImg").style.display = "block";
   document.getElementById("closePopup").style.display = "block";
 
-}*/
+}
 
 // Cuando el boton de cerrar se pulsa
 function closePopup() {
