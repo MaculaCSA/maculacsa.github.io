@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/nominados",
-    element: <Sitios ciudad="santander" />,
+    element: <Sitios ciudad="nominados" />,
   }
 ]);
 
