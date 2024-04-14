@@ -37,6 +37,8 @@ const Sitios = ({ciudad}) => {
 const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) => {
   const categoriaData = datosCiudad.categorias[categoria];
   const modelocategoria = categoriaData[0].modelo;
+  // Se comprueba si la variable categoria incluye la palabra "público". Si sí entonces se declara la variable "publico" como classpublico, si no se declara como vacío
+  const classpublico = categoria.includes("público") ? { display: 'flex' } : {};
 
   const cortos = categoriaData.slice(1).map((corto) => (
     <button
@@ -69,7 +71,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
       <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="item categoria">
           <h2 className="titulocategoria titulo">{categoria}</h2>
-          <div className="container2">
+          <div className="container2" style={classpublico}>
             {cortos}
           </div>
         </div>

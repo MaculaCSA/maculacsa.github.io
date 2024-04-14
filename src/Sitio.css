@@ -141,7 +141,7 @@
         /*display: inline-block !important;*/
 
         /*display: grid 2x2*/
-        display: grid !important;
+        display: grid;
         grid-template-columns: 1fr 1fr !important;
         grid-template-rows: 1fr 1fr !important;
         grid-gap: 10px !important;
@@ -182,15 +182,6 @@
     width: 35%;
     margin-left: 0.5%;
     margin-right: 0.5%;
-}
-.container2{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /*Márgenes*/
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-bottom: 1.5%;
 }
 .corto{
     text-align: center;

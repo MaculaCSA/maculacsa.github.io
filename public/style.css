@@ -284,6 +284,15 @@ h3 {
     top: 0;
     opacity: 10%;
 }
+.container2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*Márgenes*/
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 1.5%;
+}
 @media (max-width: 1500px) {
     .flexcolegios {
         flex-direction: column;
