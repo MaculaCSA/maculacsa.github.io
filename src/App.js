@@ -23,7 +23,7 @@ function App() {
   });
   return (
     <div className="App">
-      <Parallax pages={3} scrolling={false}>
+      <Parallax pages={3}>
         <ParallaxLayer offset={2} style={{backgroundColor: '#407ECD'}}/>
 
 
