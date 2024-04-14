@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import PremioCanvas from './canvas.jsx';
 
 import Sitios from './Sitio';
 
@@ -20,10 +19,6 @@ const router = createBrowserRouter([
   {
     path: "/santander",
     element: <Sitios ciudad="santander" />,
-  },
-  {
-    path: "/canvas",
-    element: <PremioCanvas/>,
   }
 ]);
 
