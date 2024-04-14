@@ -6,20 +6,19 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
+import carga from './carga.js';
+
 function PremioCanvas() {
+// Al cargar el canvas de three.js ejecutar la función carga
 
 useEffect(() => {
 
-//import carga from './carga.js';
-//window.onload = carga();
-// Si la aunchura es de más de 1300px
-/*if (window.innerWidth > 1300) {
-var document.getElementById('canvaspremio').offsetHeight = window.innerHeight * 0.75;
-var document.getElementById('canvaspremio').offsetWidth = window.innerWidth * 0.50;
-} else {
-var document.getElementById('canvaspremio').offsetHeight = window.innerHeight * 0.45;
-var document.getElementById('canvaspremio').offsetWidth = window.innerWidth * 0.45;
-}*/
+const loadingManager = new THREE.LoadingManager();
+
+loadingManager.onLoad = function () {
+  carga();
+  console.log('Carga modelo completada');
+};
   
 var contenedor = document.getElementById('canvaspremio');
 
@@ -64,7 +63,7 @@ new RGBELoader()
     render();
   });
 
-const loader = new GLTFLoader();
+const loader = new GLTFLoader(loadingManager);
 
 loader.load('../model/maculanogirar.glb', function (gltf) {
   scene.add(gltf.scene);

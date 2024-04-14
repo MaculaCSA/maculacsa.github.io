@@ -1,7 +1,5 @@
 import './App.css';
 
-import carga from './carga.js';
-
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import PremioCanvas from './canvas.jsx';
@@ -11,7 +9,6 @@ const datos = require('./datos.json');
 
 console.log("App.js")
 
-window.onload = carga()
 
 function App() {
 
