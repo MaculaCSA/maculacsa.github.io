@@ -38,11 +38,12 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
   const categoriaData = datosCiudad.categorias[categoria];
   const modelocategoria = categoriaData[0].modelo;
   // Se comprueba si la variable categoria incluye la palabra "público". Si sí entonces se declara la variable "publico" como classpublico, si no se declara como vacío
-  const classpublico = categoria.includes("público") ? { display: 'flex' } : {};
+  const styledivpublico = categoria.includes("público") ? { display: 'flex' } : {};
+  const stylepublico = categoria.includes("público") ? { width: 'auto' } : {};
 
   const cortos = categoriaData.slice(1).map((corto) => (
     <button
-      style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
+      style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`, ...stylepublico}}
       onClick={() => openPopup(corto.youtube_id)}
       className="corto fondoimg"
       onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
@@ -71,7 +72,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
       <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="item categoria">
           <h2 className="titulocategoria titulo">{categoria}</h2>
-          <div className="container2" style={classpublico}>
+          <div className="container2" style={styledivpublico}>
             {cortos}
           </div>
         </div>
