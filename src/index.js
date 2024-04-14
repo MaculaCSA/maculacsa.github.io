@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/santander",
+    path: "/nominados",
     element: <Sitios ciudad="santander" />,
   }
 ]);
