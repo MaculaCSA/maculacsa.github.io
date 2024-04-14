@@ -161,19 +161,19 @@ function openPopup(VideoId) {
   //Si el nombre contiene o .svg o .png
   if (VideoId.includes(".svg") || VideoId.includes(".png")) {
     openPopupImg(VideoId);
-  }
-  else {
+  } else if (VideoId.includes("https")) {
+    url(VideoId);
+  } else {
     // Si el usuario es de movil, en vez de ejecutarse close popup se redirige a la pagina de youtube
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
       url("https://www.youtube.com/watch?v=" + VideoId);
-  }
-  else {
+    } else {
       // Se cambia el src del iframe
       document.getElementById("IframeVideo").src = "https://www.youtube.com/embed/" + VideoId;
       // Se muestra el div
       document.getElementById("popup").style.display = "block";
       document.getElementById("closePopup").style.display = "block";
-  }
+    }
   }
 }
 
