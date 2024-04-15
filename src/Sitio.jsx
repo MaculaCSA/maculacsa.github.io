@@ -106,11 +106,6 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
         </button>
       </div>
 
-      <div className="popup" id="popupImg">
-            <img src="img/logoMP.png" id="IframeImg" frameBorder="0" alt=""></img>
-            <button className="cerrarpopup cerrarpopupImg" onClick={closePopup}><img src="img/x-square.svg" alt="Cerrar"/></button>
-        </div>
-
       <button id="closePopup" className="cerrarpopupgigante" onClick={closePopup}></button>
 
       <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={"false"}>
