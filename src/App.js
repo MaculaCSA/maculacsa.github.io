@@ -3,6 +3,7 @@ import './App.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import PremioCanvas from './canvas.jsx';
+import React from 'react';
 
 // Base de datos
 const datos = require('./datos.json');
@@ -22,7 +23,16 @@ function App() {
     );
   });
   return (
-    <div className="App">
+    <React.Fragment className="App">
+      <div id="carga" style={{ width: '100%', height: '100vh', backgroundColor: 'white' }}>
+        <div className="logo" style={{ width: '50%' }}>
+          <img width="100%" src="%PUBLIC_URL%/img/logoMP.png" alt="" class="imgr"/>
+        </div>
+
+        <div className="circular-progress">
+          <div className="value-container">0%</div>
+        </div>
+      </div>
       <Parallax pages={3}>
         <ParallaxLayer offset={2} style={{backgroundColor: '#407ECD'}}/>
 
@@ -57,7 +67,7 @@ function App() {
 
       </Parallax>
     
-    </div>
+    </React.Fragment>
   );
 }
 
