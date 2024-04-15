@@ -1,4 +1,4 @@
-import { React, Fragment } from "react";
+import React from "react";
 
 import carga from './carga.js';
 
@@ -57,12 +57,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
   //console.log("Id de página: " + categoriaId);
 
   return (
-    <Fragment key={categoriaId}>
-      <div id="carga" style={{ width: '100%', height: '100vh', backgroundColor: 'white' }}>
-        <div className="logo" style={{ width: '50%' }}>
-          <img width="100%" src="%PUBLIC_URL%/img/logoMP.png" alt="" class="imgr"/>
-        </div>
-      </div>
+    <div key={categoriaId}>
       <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
       </ParallaxLayer>
@@ -82,13 +77,17 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
           </div>
         </div>
       </ParallaxLayer>
-    </Fragment>
+    </div>
   );
 });
 
   return (
     <div className="App">
-
+      <div id="carga" style={{ width: '100%', height: '100vh', backgroundColor: 'white' }}>
+        <div className="logo" style={{ width: '50%' }}>
+          <img width="100%" src="../img/logoMP.png" alt="" class="imgr"/>
+        </div>
+      </div>
       <div className="popup" id="popup">
         <iframe
           width="100%"
