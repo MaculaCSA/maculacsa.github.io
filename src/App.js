@@ -18,7 +18,7 @@ function App() {
 
   const botones = ciudades.map((ciudad) => {
     return (
-      <button key={ciudad} className="bcolegios" onClick={() => window.location.href='./' + ciudad} id={ciudad}>{datos[ciudad].titulo}</button>
+      <button key={ciudad} className="bcolegios" onClick={() => window.location.href='./#/' + ciudad} id={ciudad}>{datos[ciudad].titulo}</button>
     );
   });
   return (
