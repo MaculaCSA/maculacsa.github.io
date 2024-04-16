@@ -32,8 +32,7 @@
     position: absolute;
     top: 50%;
     transform: translate(50%, -50%);
-    width: 490px;
-    height: 335.983px;
+    height: 30vh;
 }
 
 .hidden {
@@ -68,12 +67,12 @@
 /* This styles the navbar and its contents */
 #navbar {
     height: 80px;
-    width: 100%;
+    width: 50%;
     position: fixed;
     top: 0;
     left: 0;
     background: none;
-}
+  }  
 
 /* This styles the logo in the navbar */
 #navbar #logo {
@@ -207,12 +206,11 @@ h3 {
     border: none;
 }
 
-.modelo {
-    background: transparent;
+#canvaspremio {
+    position: absolute;
     height: 75%;
     width: 50%;
-    position: absolute;
-    right: 0;
+    right: -10%;
 }
 
 /* This styles the descriptions of the 3D object */
@@ -266,7 +264,7 @@ h3 {
     display: inline-block;
 }
 .bcolegios:hover {
-    color: blue;
+    color: white;
 }
 .bcolegios::after {
     position: absolute;
@@ -286,6 +284,15 @@ h3 {
     top: 0;
     opacity: 10%;
 }
+.container2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*Márgenes*/
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 1.5%;
+}
 @media (max-width: 1500px) {
     .flexcolegios {
         flex-direction: column;
@@ -299,17 +306,18 @@ h3 {
     .colegios {
         font-size: 300%;
     }
-    .modelo {
-        text-align: center;
-        width: 100%;
+    #canvaspremio {
+        position: absolute;
         height: 45%;
-        position: relative;
-        top: 10%;
+        width: 100%;
+        bottom: 10%;
+        text-align: center;
+        right: auto;
     }
-    .modelo model-viewer {
-        width: 50%;
-        height: 100%;
-        top: 20%;
+    canvas {
+        width: 100%;
+        height: 100%; 
+        position: static;
     }
     #content {
         width: 100%;
@@ -324,7 +332,7 @@ h3 {
         margin-top: 0px;
     }
 }
-@media (max-width: 675px) {
+@media (max-width: 1200px) {
     .bcolegios {
         width: 400px;
     }

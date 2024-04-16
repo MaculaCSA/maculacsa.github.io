@@ -25,7 +25,7 @@ h1 {
 }
 
 button {
-    padding: 1rem 2rem;
+    padding: 10px 10px;
     border: none;
     border-radius: 5px;
     background-color: #0077b6;
@@ -33,6 +33,10 @@ button {
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    /*Contenido centrado vertical y horizontalmente*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:hover {

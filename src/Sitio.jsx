@@ -2,15 +2,20 @@ import React from "react";
 
 import carga from './carga.js';
 
+//Importar jquery
+import $ from 'jquery';
+
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import './Sitio.css';
+
+import { AutoTextSize } from 'auto-text-size'
 
 const datos = require('./datos.json');
 
 const Sitios = ({ciudad}) => {
 
-  console.log(ciudad);
+  //console.log(ciudad);
   //coger dato de datos.json
   const datosCiudad = datos[ciudad];
   const titulo = datosCiudad.titulo;
@@ -18,35 +23,40 @@ const Sitios = ({ciudad}) => {
   
   const numCategorias = Object.keys(datosCiudad.categorias).length;
   
-  console.log("Categorias: " + numCategorias);
+  //console.log("Categorias: " + numCategorias);
 
   const numPaginas = numCategorias + 1;
-  console.log("Paginas: " + numPaginas);
+  //console.log("Paginas: " + numPaginas);
 
   
-  console.log(datosCiudad);
+  //console.log(datosCiudad);
 
   window.onload = carga();
 
   let categoriaId = 0; // Id inicial de la categoría
 
   // Generate category elements
-const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
+const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) => {
   const categoriaData = datosCiudad.categorias[categoria];
-  const modelocategoria = categoriaData[0].modelo; // Obtén la ruta del video desde la primera película de la categoría
+  const modelocategoria = categoriaData[0].modelo;
+  // Se comprueba si la variable categoria incluye la palabra "público". Si sí entonces se declara la variable "publico" como classpublico, si no se declara como vacío
+  const styledivpublico = categoria.includes("público") ? { display: 'flex' } : {};
+  const stylepublico = categoria.includes("público") ? { width: 'auto' } : {};
 
   const cortos = categoriaData.slice(1).map((corto) => (
     <button
-      style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`}}
+      style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`, ...stylepublico}}
       onClick={() => openPopup(corto.youtube_id)}
       className="corto fondoimg"
+      onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
+      onMouseLeave={() => ocultarimg(index)}
     >
-      <p className="nombre">{corto.titulo}</p>
+      <AutoTextSize mode="multiline" minFontSizePx={17} maxFontSizePx={26} className="nombre">{corto.titulo}</AutoTextSize>
     </button>
   ));
 
   categoriaId++;
-  console.log("Id de página: " + categoriaId);
+  //console.log("Id de página: " + categoriaId);
 
   return (
     <React.Fragment key={categoriaId}>
@@ -54,10 +64,17 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
         <video src={modelocategoria} className="modelocategoria" playsInline autoPlay muted loop />
       </ParallaxLayer>
 
+      <ParallaxLayer offset={categoriaId} speed={0} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div id={'div' + index} style={{ display: 'none'}} className="DivImgCorto modelocategoria">
+          <div className="gradient fotocorto"></div>
+          <img id={'img' + index} src="../img/LogoDEV.png" className="fotocorto" alt="" />
+        </div>
+      </ParallaxLayer>
+
       <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="item categoria">
           <h2 className="titulocategoria titulo">{categoria}</h2>
-          <div className="container2">
+          <div className="container2" style={styledivpublico}>
             {cortos}
           </div>
         </div>
@@ -68,10 +85,6 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
 
   return (
     <div className="App">
-
-
-
-<button id="closePopup" className="cerrarpopupgigante" onClick={closePopup}></button>
 
       <div className="popup" id="popup">
         <iframe
@@ -95,9 +108,9 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
         </button>
       </div>
 
+      <button id="closePopup" className="cerrarpopupgigante" onClick={closePopup}></button>
 
-
-      <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={false}>
+      <Parallax style={{ backgroundColor: '#212121' }} pages={numPaginas} scrolling={"false"}>
         <ParallaxLayer offset={0}>
           <img className="fondo" src={fotociudad} alt="" />
       </ParallaxLayer>
@@ -117,32 +130,60 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria) => {
     </div>
   );
 };
- 
+
+function cambiarimg(img, categoriaId) {
+  document.getElementById('img' + categoriaId).src = "../img/nominados/" + img;
+  //console.log("Cambiando imagen a " + img);
+  mostrarimg(categoriaId);
+}
+
+const velocidad = 175;
+
+function mostrarimg(Id) {
+  //document.getElementById('div' + Id).style.display = "block";
+  //fadein jquery
+  $('#div' + Id).fadeIn(velocidad);
+  //console.log("Mostrando imagen" + Id);
+}
+
+function ocultarimg(Id) {
+  //document.getElementById('div' + Id).style.display = "none";
+  //FadeOut jquery
+  $('#div' + Id).fadeOut(velocidad);
+  //console.log("Ocultando imagen" + Id);
+}
+
 const userAgent = navigator.userAgent;
 
 function openPopup(VideoId) {
-  // Si el usuario es de movil, en vez de ejecutarse close popup se redirige a la pagina de youtube
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+  //Si el nombre contiene o .svg o .png
+  if (VideoId.includes(".svg") || VideoId.includes(".png")) {
+    openPopupImg(VideoId);
+  } else if (VideoId.includes("https")) {
+    url(VideoId);
+  } else {
+    // Si el usuario es de movil, en vez de ejecutarse close popup se redirige a la pagina de youtube
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
       url("https://www.youtube.com/watch?v=" + VideoId);
-  }
-  else {
+    } else {
       // Se cambia el src del iframe
       document.getElementById("IframeVideo").src = "https://www.youtube.com/embed/" + VideoId;
       // Se muestra el div
       document.getElementById("popup").style.display = "block";
       document.getElementById("closePopup").style.display = "block";
+    }
   }
 }
 
 // Abrir popup para carteles
-/*function openPopupImg(ImageId) {
+function openPopupImg(ImageId) {
   // Se cambia el src del iframe
   document.getElementById("IframeImg").src = "img/nominados/carteles/" + ImageId;
   // Se muestra el div
   document.getElementById("popupImg").style.display = "block";
   document.getElementById("closePopup").style.display = "block";
 
-}*/
+}
 
 // Cuando el boton de cerrar se pulsa
 function closePopup() {

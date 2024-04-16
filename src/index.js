@@ -1,21 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-/*import App from './App';*/
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-/*import Sitios from './Sitio';*/
+import Sitios from './Sitio';
 
-/*import ErrorPage from './errorpage';*/
+import ErrorPage from './errorpage';
 
-import Proximamente from './proximamente';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Proximamente />,
-    errorElement: <Proximamente />,
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/nominados",
+    element: <Sitios ciudad="nominados" />,
   }
 ]);
 
