@@ -87,7 +87,7 @@ function animate() {
   // Esto hará que el modelo gire constantemente en su eje Y.
   if (modelo && modelo.rotation) {
     // Esto hará que el modelo gire constantemente en su eje Y.
-    modelo.rotation.y += 0.005;
+    modelo.rotation.y += 0.003;
   }
 
   render();
