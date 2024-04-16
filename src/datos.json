@@ -5,7 +5,7 @@
         "categorias": {
             "Mejor Actor": [
                 {
-                    "modelo": "/img/categorias/teatro.mp4"
+                    "modelo": "/img/categorias/teatro.webm"
                 },
                 {
                     "titulo": "Daniel Herrero",
@@ -40,7 +40,7 @@
             ],
             "Mejor Actriz": [
                 {
-                    "modelo": "/img/categorias/teatro.mp4"
+                    "modelo": "/img/categorias/teatro.webm"
                 },
                 {
                     "titulo": "Claudia Traspaderne",
@@ -75,7 +75,7 @@
             ],
             "Mejor Edición": [
                 {
-                    "modelo": "/img/categorias/pc.mp4"
+                    "modelo": "/img/categorias/pc.webm"
                 },
                 {
                     "titulo": "La guerra de los mundos",
@@ -110,7 +110,7 @@
             ],
             "Mejor Documental": [
                 {
-                    "modelo": "/img/categorias/camara.mp4"
+                    "modelo": "/img/categorias/camara.webm"
                 },
                 {
                     "titulo": "La Primera",
@@ -145,7 +145,7 @@
             ],
             "Mejor Animación": [
                 {
-                    "modelo": "/img/categorias/animacion.mp4"
+                    "modelo": "/img/categorias/animacion.webm"
                 },
                 {
                     "titulo": "La guerra de los mundos",
@@ -180,7 +180,7 @@
             ],
             "Mejor guion": [
                 {
-                    "modelo": "/img/categorias/guion.mp4"
+                    "modelo": "/img/categorias/guion.webm"
                 },
                 {
                     "titulo": "Globalizados",
@@ -215,7 +215,7 @@
             ],
             "Mejor dirección artística": [
                 {
-                    "modelo": "/img/categorias/artistica.mp4"
+                    "modelo": "/img/categorias/artistica.webm"
                 },
                 {
                     "titulo": "Mártires",
@@ -250,7 +250,7 @@
             ],
             "Mejor Cortometraje": [
                 {
-                    "modelo": "/img/categorias/claqueta.mp4"
+                    "modelo": "/img/categorias/claqueta.webm"
                 },
                 {
                     "titulo": "La guerra de los mundos",
@@ -285,7 +285,7 @@
             ],
             "Premio del público": [
                 {
-                    "modelo": "/img/categorias/publico.mp4"
+                    "modelo": "/img/categorias/publico.webm"
                 },
                 {
                     "titulo": "¿Quién ganará el premio del público? ¡El corto que tenga más likes!",
@@ -295,7 +295,7 @@
             ],
             "Mejor Cartel": [
                 {
-                    "modelo": "/img/categorias/cartel.mp4"
+                    "modelo": "/img/categorias/cartel.webm"
                 },
                 {
                     "titulo": "Pol Sanz",
