@@ -300,42 +300,42 @@
                 {
                     "titulo": "Pol Sanz",
                     "nombre_foto": "./carteles/pol.png",
-                    "youtube_id": "./carteles/pol.png"
+                    "youtube_id": "pol.png"
                 },
                 {
                     "titulo": "Jesús Alberto",
                     "nombre_foto": "./carteles/martires.png",
-                    "youtube_id": "./carteles/martires.png"
+                    "youtube_id": "martires.png"
                 },
                 {
                     "titulo": "Aarón Sancibrián",
                     "nombre_foto": "./carteles/multiguerras.png",
-                    "youtube_id": "./carteles/multiguerras.png"
+                    "youtube_id": "multiguerras.png"
                 },
                 {
                     "titulo": "Sara, Claudia y Candela",
-                    "nombre_foto": "./carteles/mileva.png",
-                    "youtube_id": "./carteles/mileva.png"
+                    "nombre_foto": "./carteles/mileva.jpg",
+                    "youtube_id": "mileva.jpg"
                 },
                 {
                     "titulo": "Hectór Sancibrián y Diego",
                     "nombre_foto": "./carteles/turing.png",
-                    "youtube_id": "./carteles/turing.png"
+                    "youtube_id": "turing.png"
                 },
                 {
                     "titulo": "Little Boy",
                     "nombre_foto": "./carteles/boy.svg",
-                    "youtube_id": "./carteles/boy.svg"
+                    "youtube_id": "boy.svg"
                 },
                 {
                     "titulo": "Borrón y cuenta nueva",
                     "nombre_foto": "./carteles/borron.png",
-                    "youtube_id": "./carteles/borron.png"
+                    "youtube_id": "borron.png"
                 },
                 {
                     "titulo": "Fleming",
                     "nombre_foto": "./carteles/fleming.png",
-                    "youtube_id": "./carteles/fleming.png"
+                    "youtube_id": "fleming.png"
                 }
             ]
         }

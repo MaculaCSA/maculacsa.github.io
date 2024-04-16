@@ -156,8 +156,8 @@ function ocultarimg(Id) {
 const userAgent = navigator.userAgent;
 
 function openPopup(VideoId) {
-  //Si el nombre contiene o .svg o .png
-  if (VideoId.includes(".svg") || VideoId.includes(".png")) {
+  //Si el nombre contiene o .svg o .png o .jpg
+  if (VideoId.includes(".svg") || VideoId.includes(".png") || VideoId.includes(".jpg")) {
     openPopupImg(VideoId);
   } else if (VideoId.includes("https")) {
     url(VideoId);
