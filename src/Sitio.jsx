@@ -9,6 +9,8 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import './Sitio.css';
 
+import { AutoTextSize } from 'auto-text-size'
+
 const datos = require('./datos.json');
 
 const Sitios = ({ciudad}) => {
@@ -49,7 +51,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
       onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
       onMouseLeave={() => ocultarimg(index)}
     >
-      <p className="nombre">{corto.titulo}</p>
+      <AutoTextSize mode="multiline" minFontSizePx={17} maxFontSizePx={26} className="nombre">{corto.titulo}</AutoTextSize>
     </button>
   ));
 
