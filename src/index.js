@@ -7,19 +7,19 @@ import reportWebVitals from './reportWebVitals';
 import Sitios from './Sitio';
 
 import ErrorPage from './errorpage';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
-ReactDOM.render(
+
+const router = createHashRouter( [
+  { path: '/', element: <App /> },
+  { path: '/nominados', element: <Sitios ciudad="nominados" /> },
+  { path: '*', element: <ErrorPage /> }
+])
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/nominados" element={<Sitios ciudad="nominados" />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
 
 reportWebVitals();
