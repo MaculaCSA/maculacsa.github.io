@@ -349,3 +349,7 @@ h3 {
 .creditos {
     text-align: center;
 }
+
+.ganador{
+    box-shadow: 0 0 10px 10px gold;
+}

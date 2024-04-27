@@ -39,15 +39,15 @@ const Sitios = ({ciudad}) => {
 const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) => {
   const categoriaData = datosCiudad.categorias[categoria];
   const modelocategoria = categoriaData[0].modelo;
-  // Se comprueba si la variable categoria incluye la palabra "público". Si sí entonces se declara la variable "publico" como classpublico, si no se declara como vacío
-  const styledivpublico = categoria.includes("público") ? { display: 'flex' } : {};
+  // Se comprueba si la variable categoria incluye la palabra "público" o "academia". Si sí entonces se declara la variable "publico" como classpublico, si no se declara como vacío
+  const styledivpublico = categoria.includes("público") || categoria.includes("academia") ? { display: 'flex' } : {};
   const stylepublico = categoria.includes("público") ? { width: 'auto' } : {};
 
   const cortos = categoriaData.slice(1).map((corto) => (
     <button
       style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`, ...stylepublico}}
       onClick={() => openPopup(corto.youtube_id)}
-      className="corto fondoimg"
+      className={`corto fondoimg ${corto.class}`}
       onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
       onMouseLeave={() => ocultarimg(index)}
     >
