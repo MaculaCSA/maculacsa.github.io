@@ -4,8 +4,8 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: []
+  #push:
+  #  branches: []
   workflow_dispatch:
 
 jobs:
