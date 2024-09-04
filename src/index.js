@@ -1,23 +1,25 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import Sitios from './Sitio';
+
 import ErrorPage from './errorpage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import ReactDOM from 'react-dom/client';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
-
-const router = createHashRouter([
-  { path: '/', element: <App /> },
-  { path: '/nominados', element: <Sitios ciudad={"nominados"} /> },
-  { path: '*', element: <ErrorPage /> },
-]);
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/nominados" element={<Sitios ciudad="nominados" />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 reportWebVitals();
