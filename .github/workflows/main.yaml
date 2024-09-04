@@ -31,18 +31,35 @@ jobs:
       uses: actions/upload-pages-artifact@v2
       with:
         path: ./build
-
-  deploy:
+  
+  deployCloudfare:
     if: github.ref == 'refs/heads/main'
     needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
     steps:
-    - name: Deploy a GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v2
+
+      - name: Descargar build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: ./build
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: MaculaWeb
+          directory: ./build
+          # Optional: Enable this if you want to have GitHub Deployments triggered
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: Switch what branch you are publishing to.
+          # By default this will be the branch which triggered this workflow
+          branch: main
+          # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
+          wranglerVersion: '3'
+
