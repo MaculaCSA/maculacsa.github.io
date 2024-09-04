@@ -5,49 +5,36 @@ name: Node.js deploy
 
 on:
   #push:
-  #  branches: []
+  #  branches: [main]
   workflow_dispatch:
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.6.1]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - name: Upload Artifacts
-      uses: actions/upload-pages-artifact@v2
-      with:
-        name: build
-        path: ./build
   
   deployCloudfare:
     if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.6.1]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     permissions:
       contents: read
       deployments: write
     name: Publish to Cloudflare Pages
     steps:
 
-      - name: Descargar build artifact
-        uses: actions/download-artifact@v3
+
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          name: build
-          path: ./build
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build --if-present
+
+
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
