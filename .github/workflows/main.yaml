@@ -30,6 +30,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v2
       with:
+        name: build
         path: ./build
   
   deployCloudfare:
@@ -45,7 +46,7 @@ jobs:
       - name: Descargar build artifact
         uses: actions/download-artifact@v3
         with:
-          name: build-artifact
+          name: build
           path: ./build
 
       - name: Publish to Cloudflare Pages
