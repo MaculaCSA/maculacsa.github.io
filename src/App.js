@@ -21,14 +21,15 @@ console.log("App.js");
 console.log("Archivos JSON encontrados:", Object.keys(datosPorAno));
 
 function App() {
-  // Lista de años disponibles
-  const anosDisponibles = Object.keys(datosPorAno);
+  const anosDisponibles = Object.keys(datosPorAno).sort((a, b) => b - a);
+  
+  const actual = anosDisponibles[0];
   
   // Crear botones para los años disponibles
   const botonesAnos = anosDisponibles.map(ano => (
     <button 
       key={ano} 
-      className="bcolegios" 
+      className={`${ano === actual ? 'actual' : ''} bcolegios`}
       onClick={() => window.location.href=`./${ano}`} 
       id={`ano-${ano}`}
     >

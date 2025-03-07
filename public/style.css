@@ -247,6 +247,15 @@ h3 {
     transform: translate(0%, -50%);
 }
 
+.actual {
+    /*Gradient color*/
+    background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(205,162,0,1) 35%);
+    /*Color de borde*/
+    border: 5px solid #ffffff !important;
+    /*Color de texto*/
+    color: #ffffff !important;
+}
+
 .bcolegios {
     position: relative;
     color: #407ECD;
