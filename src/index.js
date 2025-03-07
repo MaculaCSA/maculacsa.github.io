@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/nominados" element={<Sitios ciudad="nominados" />} />
+        <Route path="/nominados" element={<Sitios ciudad="nominados" ano="2024"/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>

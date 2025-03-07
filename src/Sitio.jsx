@@ -11,9 +11,9 @@ import './Sitio.css';
 
 import { AutoTextSize } from 'auto-text-size'
 
-const datos = require('./datos.json');
+const Sitios = ({ciudad,ano}) => {
 
-const Sitios = ({ciudad}) => {
+  const datos = require(`./datos/${ano}.json`);
 
   //console.log(ciudad);
   //coger dato de datos.json
