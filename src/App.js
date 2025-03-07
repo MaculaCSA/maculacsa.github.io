@@ -2,18 +2,7 @@ import './App.css';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import PremioCanvas from './canvas.jsx';
-
-const importarTodosLosDatos = () => {
-  const context = require.context('./datos/', false, /\.json$/);
-  const datos = {};
-
-  context.keys().forEach(key => {
-    const nombreArchivo = key.replace('./', '').replace('.json', '');
-    datos[nombreArchivo] = context(key);
-  });
-  
-  return datos;
-};
+import importarTodosLosDatos from './importarDatos.js';
 
 const datosPorAno = importarTodosLosDatos();
 
