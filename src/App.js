@@ -65,8 +65,14 @@ function App() {
         <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center", flexDirection: "column", flexWrap : "wrap" }}>
           <div className="flexcolegios">
             {botonesAnos}
+            <button 
+              key={'2023'} 
+              className={`bcolegios`}
+              onClick={() => window.location.href=`./2023`} 
+            >
+              2023
+            </button>
           </div>
-          <button style={{position: 'absolute', width: '200px', right: '5vh', bottom: '5vh'}} className="bcolegios" onClick={() => window.location.href='./2023'}>2023</button>
         </ParallaxLayer>
       </Parallax>
     </div>
