@@ -1,43 +1,56 @@
 import './App.css';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-
 import PremioCanvas from './canvas.jsx';
 
-// Base de datos
-const datos = require('./datos.json');
+const importarTodosLosDatos = () => {
+  const context = require.context('./datos/', false, /\.json$/);
+  const datos = {};
 
-console.log("App.js")
+  context.keys().forEach(key => {
+    const nombreArchivo = key.replace('./', '').replace('.json', '');
+    datos[nombreArchivo] = context(key);
+  });
+  
+  return datos;
+};
 
+const datosPorAno = importarTodosLosDatos();
+
+console.log("App.js");
+console.log("Archivos JSON encontrados:", Object.keys(datosPorAno));
 
 function App() {
+  // Lista de años disponibles
+  const anosDisponibles = Object.keys(datosPorAno);
+  
+  // Crear botones para los años disponibles
+  const botonesAnos = anosDisponibles.map(ano => (
+    <button 
+      key={ano} 
+      className="bcolegios" 
+      onClick={() => window.location.href=`./${ano}`} 
+      id={`ano-${ano}`}
+    >
+      {ano}
+    </button>
+  ));
 
-  //const data = JSON.parse(datos);
-  const ciudades = Object.keys(datos);
-  console.log(datos);
-
-  const botones = ciudades.map((ciudad) => {
-    return (
-      <button key={ciudad} className="bcolegios" onClick={() => window.location.href='./' + ciudad} id={ciudad}>{datos[ciudad].titulo}</button>
-    );
-  });
   return (
     <div className="App">
       <Parallax pages={3}>
         <ParallaxLayer offset={2} style={{backgroundColor: '#407ECD'}}/>
 
-
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div id="content">
             <h2 className="titulo">PREMIOS MÁCULA</h2>
-
             <p className="subtitulo">2024</p>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} sticky={{}} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <div id="canvaspremio">
-          <PremioCanvas id="aSide"  />
+          <PremioCanvas id="aSide" />
         </div>
         </ParallaxLayer>
 
@@ -50,30 +63,14 @@ function App() {
 
         <ParallaxLayer offset={2} speed={0.1} style={{ display: "flex", alignItems: "center", justifycontent: "center", flexDirection: "column", flexWrap : "wrap" }}>
           <div className="flexcolegios">
-            {botones}
+            {botonesAnos}
           </div>
           <button style={{position: 'absolute', width: '200px', right: '5vh', bottom: '5vh'}} className="bcolegios" onClick={() => window.location.href='./2023'}>2023</button>
         </ParallaxLayer>
-
       </Parallax>
-    
     </div>
   );
 }
 
 export default App;
-
-//const modelViewer = document.getElementById('aSide');
-
-//console.log("Cargando modelo en app.js");
-
-//modelViewer.addEventListener('loaded', function() {
-//        handleScroll();
-//        $('#mainNav').removeClass('invisible');
-//        $('body').removeClass('hidden');
-//        $('#carga').fadeOut();
-//        console.log("Modelo cargado");
-//});
-
-//window.onload = carga()
 
