@@ -4,14 +4,12 @@
 name: Node.js deploy
 
 on:
-  push:
-    branches: [main]
+  push: {}
   workflow_dispatch:
 
 jobs:
   
   deployCloudfare:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     strategy:
       matrix:
