@@ -34,7 +34,7 @@ function App() {
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div id="content">
             <h2 className="titulo">PREMIOS MÁCULA</h2>
-            <p className="subtitulo">2024</p>
+            <p className="subtitulo">{actual}</p>
           </div>
         </ParallaxLayer>
 
