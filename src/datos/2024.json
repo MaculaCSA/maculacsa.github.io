@@ -1,6 +1,6 @@
 {
     "nominados": {
-        "titulo": "Nominados",
+        "titulo": "Nominados 2024",
         "fotociudad": "santander.jpg",
         "categorias": {
             "Mejor Actor": [
@@ -9,37 +9,37 @@
                 },
                 {
                     "titulo": "Daniel Herrero",
-                    "nombre_foto": "daniel.png",
+                    "nombre_foto": "nominados24/daniel.png",
                     "youtube_id": "DV8Zb8Yd_ag",
                     "class":""
                 },
                 {
                     "titulo": "Pablo Pardo",
-                    "nombre_foto": "pablo.png",
+                    "nombre_foto": "nominados24/pablo.png",
                     "youtube_id": "XxE4vfQUsFU",
                     "class":""
                 },
                 {
                     "titulo": "Gabriel Gómez",
-                    "nombre_foto": "gabriel.png",
+                    "nombre_foto": "nominados24/gabriel.png",
                     "youtube_id": "GIasP2AxiS8",
                     "class":""
                 },
                 {
                     "titulo": "Alejandro Nogués",
-                    "nombre_foto": "alejandro.png",
+                    "nombre_foto": "nominados24/alejandro.png",
                     "youtube_id": "sMA_7uLg-3M/",
                     "class":""
                 },
                 {
                     "titulo": "Íñigo González de Langarica",
-                    "nombre_foto": "inigo.png",
+                    "nombre_foto": "nominados24/inigo.png",
                     "youtube_id": "6ON1Jpwmot4",
                     "class":"ganador"
                 },
                 {
                     "titulo": "Guillermo García",
-                    "nombre_foto": "guillermo.png",
+                    "nombre_foto": "nominados24/guillermo.png",
                     "youtube_id": "z300JXbqTX8",
                     "class":""
                 }
@@ -50,37 +50,37 @@
                 },
                 {
                     "titulo": "Claudia Traspaderne",
-                    "nombre_foto": "claudia.png",
+                    "nombre_foto": "nominados24/claudia.png",
                     "youtube_id": "2ryfRWoby2M",
                     "class":""
                 },
                 {
                     "titulo": "Sara Menéndez",
-                    "nombre_foto": "sara.png",
+                    "nombre_foto": "nominados24/sara.png",
                     "youtube_id": "1-CUnvxa8co",
                     "class":""
                 },
                 {
                     "titulo": "Alba Rodrigo",
-                    "nombre_foto": "alba.png",
+                    "nombre_foto": "nominados24/alba.png",
                     "youtube_id": "YJ9ZkF7AEsI",
                     "class":""
                 },
                 {
                     "titulo": "Inés Fernández",
-                    "nombre_foto": "ines.png",
+                    "nombre_foto": "nominados24/ines.png",
                     "youtube_id": "cPkSBFkAoE0",
                     "class":""
                 },
                 {
                     "titulo": "Sofía Iglesias",
-                    "nombre_foto": "sofia.png",
+                    "nombre_foto": "nominados24/sofia.png",
                     "youtube_id": "LYP-_HKtGrw",
                     "class":""
                 },
                 {
                     "titulo": "Jimena Martínez",
-                    "nombre_foto": "jimena.png",
+                    "nombre_foto": "nominados24/jimena.png",
                     "youtube_id": "8PwPPSdX1Pk",
                     "class":"ganador"
                 }
@@ -91,37 +91,37 @@
                 },
                 {
                     "titulo": "La guerra de los mundos",
-                    "nombre_foto": "fuegoespacio.png",
+                    "nombre_foto": "nominados24/fuegoespacio.png",
                     "youtube_id": "Nsr-vSEP_Bk",
                     "class": ""
                 },
                 {
                     "titulo": "Mártires",
-                    "nombre_foto": "martires.png",
+                    "nombre_foto": "nominados24/martires.png",
                     "youtube_id": "NwazPMJXJrk",
                     "class": ""
                 },
                 {
                     "titulo": "El enigma de Turing",
-                    "nombre_foto": "turing.png",
+                    "nombre_foto": "nominados24/turing.png",
                     "youtube_id": "i7PJJUBx0PQ",
                     "class": ""
                 },
                 {
                     "titulo": "Run!",
-                    "nombre_foto": "run.png",
+                    "nombre_foto": "nominados24/run.png",
                     "youtube_id": "hctPllwXA5w",
                     "class": ""
                 },
                 {
                     "titulo": "El que no arriesga, no gana",
-                    "nombre_foto": "arriesga.png",
+                    "nombre_foto": "nominados24/arriesga.png",
                     "youtube_id": "LYP-_HKtGrw",
                     "class": ""
                 },
                 {
                     "titulo": "Biólogas en marcha",
-                    "nombre_foto": "biologas.png",
+                    "nombre_foto": "nominados24/biologas.png",
                     "youtube_id": "jif3B87Vc3E",
                     "class": "ganador"
                 }
@@ -132,37 +132,37 @@
                 },
                 {
                     "titulo": "La Primera",
-                    "nombre_foto": "laprimera.png",
+                    "nombre_foto": "nominados24/laprimera.png",
                     "youtube_id": "Aux9O0eFEdw",
                     "class": ""
                 },
                 {
                     "titulo": "Lady Di",
-                    "nombre_foto": "ladydi.png",
+                    "nombre_foto": "nominados24/ladydi.png",
                     "youtube_id": "2ryfRWoby2M",
                     "class": ""
                 },
                 {
                     "titulo": "El día que España tembló",
-                    "nombre_foto": "espanatemblo.png",
+                    "nombre_foto": "nominados24/espanatemblo.png",
                     "youtube_id": "DV8Zb8Yd_ag",
                     "class": ""
                 },
                 {
                     "titulo": "El genio oculto",
-                    "nombre_foto": "genio.png",
+                    "nombre_foto": "nominados24/genio.png",
                     "youtube_id": "GIasP2AxiS8",
                     "class": "ganador"
                 },
                 {
                     "titulo": "El inventor olvidado",
-                    "nombre_foto": "inventor.png",
+                    "nombre_foto": "nominados24/inventor.png",
                     "youtube_id": "sMA_7uLg-3M",
                     "class": ""
                 },
                 {
                     "titulo": "¿Sabías qué?",
-                    "nombre_foto": "sabiasque.png",
+                    "nombre_foto": "nominados24/sabiasque.png",
                     "youtube_id": "uWtw6qLpijk",
                     "class": ""
                 }
@@ -173,37 +173,37 @@
                 },
                 {
                     "titulo": "La guerra de los mundos",
-                    "nombre_foto": "fuegoespacio.png",
+                    "nombre_foto": "nominados24/fuegoespacio.png",
                     "youtube_id": "Nsr-vSEP_Bk",
                     "class": "ganador"
                 },
                 {
                     "titulo": "La michimáquina del tiempo",
-                    "nombre_foto": "michimaquina.png",
+                    "nombre_foto": "nominados24/michimaquina.png",
                     "youtube_id": "D-d2sM2-drM",
                     "class": ""
                 },
                 {
                     "titulo": "Daños colaterales",
-                    "nombre_foto": "colaterales.png",
+                    "nombre_foto": "nominados24/colaterales.png",
                     "youtube_id": "hsvx4SnzB6E",
                     "class": ""
                 },
                 {
                     "titulo": "Biólogas en marcha",
-                    "nombre_foto": "biologas.png",
+                    "nombre_foto": "nominados24/biologas.png",
                     "youtube_id": "jif3B87Vc3E",
                     "class": ""
                 },
                 {
                     "titulo": "El agua de nuestro planeta",
-                    "nombre_foto": "aguaplaneta.png",
+                    "nombre_foto": "nominados24/aguaplaneta.png",
                     "youtube_id": "MjwmWoKGKME",
                     "class": ""
                 },
                 {
                     "titulo": "Heal the world",
-                    "nombre_foto": "heal.png",
+                    "nombre_foto": "nominados24/heal.png",
                     "youtube_id": "OSX16SFN8bc",
                     "class": ""
                 }
@@ -214,37 +214,37 @@
                 },
                 {
                     "titulo": "Globalizados",
-                    "nombre_foto": "globalizados.png",
+                    "nombre_foto": "nominados24/globalizados.png",
                     "youtube_id": "siSsS_yxwEA",
                     "class": ""
                 },
                 {
                     "titulo": "Mileva",
-                    "nombre_foto": "mileva.png",
+                    "nombre_foto": "nominados24/mileva.png",
                     "youtube_id": "1-CUnvxa8co",
                     "class": "ganador"
                 },
                 {
                     "titulo": "El que no arriesga",
-                    "nombre_foto": "arriesga.png",
+                    "nombre_foto": "nominados24/arriesga.png",
                     "youtube_id": "LYP-_HKtGrw",
                     "class": ""
                 },
                 {
                     "titulo": "El latido del crimen",
-                    "nombre_foto": "latidocrimen.png",
+                    "nombre_foto": "nominados24/latidocrimen.png",
                     "youtube_id": "TuiwS72l0O8",
                     "class": ""
                 },
                 {
                     "titulo": "Tú eres tú",
-                    "nombre_foto": "tuerestu.png",
+                    "nombre_foto": "nominados24/tuerestu.png",
                     "youtube_id": "8PwPPSdX1Pk",
                     "class": ""
                 },
                 {
                     "titulo": "De la Luna a la Tierra",
-                    "nombre_foto": "luna.png",
+                    "nombre_foto": "nominados24/luna.png",
                     "youtube_id": "p6ktojVXE2Y",
                     "class": ""
                 }
@@ -255,37 +255,37 @@
                 },
                 {
                     "titulo": "Mártires",
-                    "nombre_foto": "martires.png",
+                    "nombre_foto": "nominados24/martires.png",
                     "youtube_id": "NwazPMJXJrk",
                     "class": ""
                 },
                 {
                     "titulo": "Lady Di",
-                    "nombre_foto": "ladydi.png",
+                    "nombre_foto": "nominados24/ladydi.png",
                     "youtube_id": "2ryfRWoby2M",
                     "class": "ganador"
                 },
                 {
                     "titulo": "Globalizados",
-                    "nombre_foto": "globalizados.png",
+                    "nombre_foto": "nominados24/globalizados.png",
                     "youtube_id": "siSsS_yxwEA",
                     "class": ""
                 },
                 {
                     "titulo": "Realidades paralelas",
-                    "nombre_foto": "realidades.png",
+                    "nombre_foto": "nominados24/realidades.png",
                     "youtube_id": "-JvggfnwAJM",
                     "class": ""
                 },
                 {
                     "titulo": "Magister in futuro",
-                    "nombre_foto": "magister.png",
+                    "nombre_foto": "nominados24/magister.png",
                     "youtube_id": "6ON1Jpwmot4",
                     "class": ""
                 },
                 {
                     "titulo": "El genio oculto",
-                    "nombre_foto": "genio.png",
+                    "nombre_foto": "nominados24/genio.png",
                     "youtube_id": "GIasP2AxiS8",
                     "class": ""
                 }
@@ -296,37 +296,37 @@
                 },
                 {
                     "titulo": "La guerra de los mundos",
-                    "nombre_foto": "fuegoespacio.png",
+                    "nombre_foto": "nominados24/fuegoespacio.png",
                     "youtube_id": "Nsr-vSEP_Bk",
                     "class": ""
                 },
                 {
                     "titulo": "Mártires",
-                    "nombre_foto": "martires.png",
+                    "nombre_foto": "nominados24/martires.png",
                     "youtube_id": "NwazPMJXJrk",
                     "class": "ganador"
                 },
                 {
                     "titulo": "Lady Di",
-                    "nombre_foto": "ladydi.png",
+                    "nombre_foto": "nominados24/ladydi.png",
                     "youtube_id": "2ryfRWoby2M",
                     "class": ""
                 },
                 {
                     "titulo": "El genio oculto",
-                    "nombre_foto": "genio.png",
+                    "nombre_foto": "nominados24/genio.png",
                     "youtube_id": "GIasP2AxiS8",
                     "class": ""
                 },
                 {
                     "titulo": "Caperucita negra",
-                    "nombre_foto": "caperucita.png",
+                    "nombre_foto": "nominados24/caperucita.png",
                     "youtube_id": "cPkSBFkAoE0",
                     "class": ""
                 },
                 {
                     "titulo": "El loco",
-                    "nombre_foto": "loco.png",
+                    "nombre_foto": "nominados24/loco.png",
                     "youtube_id": "V4Vk2V3UYl4",
                     "class": ""
                 }
@@ -337,7 +337,7 @@
                 },
                 {
                     "titulo": "Heal the world",
-                    "nombre_foto": "heal.png",
+                    "nombre_foto": "nominados24/heal.png",
                     "youtube_id": "OSX16SFN8bc",
                     "class": "ganador"
                 }
@@ -348,50 +348,50 @@
                 },
                 {
                     "titulo": "Pol Sanz",
-                    "nombre_foto": "./carteles/pol.png",
-                    "youtube_id": "pol.png",
+                    "nombre_foto": "nominados24/carteles/pol.png",
+                    "youtube_id": "nominados24/carteles/pol.png",
                     "class": ""
                 },
                 {
                     "titulo": "Jesús Alberto",
-                    "nombre_foto": "./carteles/martires.png",
-                    "youtube_id": "martires.png",
+                    "nombre_foto": "nominados24/carteles/martires.png",
+                    "youtube_id": "nominados24/carteles/martires.png",
                     "class": ""
                 },
                 {
                     "titulo": "Aarón Sancibrián",
-                    "nombre_foto": "./carteles/multiguerras.png",
-                    "youtube_id": "multiguerras.png",
+                    "nombre_foto": "nominados24/carteles/multiguerras.png",
+                    "youtube_id": "nominados24/carteles/multiguerras.png",
                     "class": ""
                 },
                 {
                     "titulo": "Sara, Claudia y Candela",
-                    "nombre_foto": "./carteles/mileva.jpg",
-                    "youtube_id": "mileva.jpg",
+                    "nombre_foto": "nominados24/carteles/mileva.jpg",
+                    "youtube_id": "nominados24/carteles/mileva.jpg",
                     "class": ""
                 },
                 {
                     "titulo": "Hectór Sancibrián y Diego",
-                    "nombre_foto": "./carteles/turing.png",
-                    "youtube_id": "turing.png",
+                    "nombre_foto": "nominados24/carteles/turing.png",
+                    "youtube_id": "nominados24/carteles/turing.png",
                     "class": "ganador"
                 },
                 {
                     "titulo": "Little Boy",
-                    "nombre_foto": "./carteles/boy.svg",
-                    "youtube_id": "boy.svg",
+                    "nombre_foto": "nominados24/carteles/boy.svg",
+                    "youtube_id": "nominados24/carteles/boy.svg",
                     "class": ""
                 },
                 {
                     "titulo": "Borrón y cuenta nueva",
-                    "nombre_foto": "./carteles/borron.png",
-                    "youtube_id": "borron.png",
+                    "nombre_foto": "nominados24/carteles/borron.png",
+                    "youtube_id": "nominados24/carteles/borron.png",
                     "class": ""
                 },
                 {
                     "titulo": "Fleming",
-                    "nombre_foto": "./carteles/fleming.png",
-                    "youtube_id": "fleming.png",
+                    "nombre_foto": "nominados24/carteles/fleming.png",
+                    "youtube_id": "nominados24/carteles/fleming.png",
                     "class": ""
                 }
             ],
@@ -401,7 +401,7 @@
                 },
                 {
                     "titulo": "Mártires",
-                    "nombre_foto": "martires.png",
+                    "nombre_foto": "nominados24/martires.png",
                     "youtube_id": "NwazPMJXJrk",
                     "class": "ganador"
                 }

@@ -1,0 +1,505 @@
+{
+    "nominados": {
+        "titulo": "Nominados 2025",
+        "fotociudad": "santander.jpg",
+        "categorias": {
+            "Mejor Guión": [
+                {
+                    "modelo": "/img/categorias/guion.webm"
+                },
+                {
+                    "titulo": "Yo Soy...",
+                    "nombre_foto": "nominados25/8.YO SOY ....png",
+                    "youtube_id": "1NcIpjBFf80",
+                    "class": ""
+                },
+                {
+                    "titulo": "Círculo de Sanación",
+                    "nombre_foto": "nominados25/9.Círculo de sanación.png",
+                    "youtube_id": "_68aSA2g3Rg",
+                    "class": ""
+                },
+                {
+                    "titulo": "Definirá Quién Eres",
+                    "nombre_foto": "nominados25/10.DEFINIRÁ QUIÉN ERES.png",
+                    "youtube_id": "3yWt-11sKEU",
+                    "class": ""
+                },
+                {
+                    "titulo": "Un Pasado Enterrado",
+                    "nombre_foto": "nominados25/11.UN PASADO ENTERRADO.png",
+                    "youtube_id": "RnvRXWe_eEg",
+                    "class": ""
+                },
+                {
+                    "titulo": "Revolución",
+                    "nombre_foto": "nominados25/19.REVOLUCIÓN.png",
+                    "youtube_id": "7K9g5z0jzXk",
+                    "class": ""
+                },
+                {
+                    "titulo": "Evolución Vital",
+                    "nombre_foto": "nominados25/27.EVOLUCIÓN VITAL.png",
+                    "youtube_id": "li6SxU5oRr0",
+                    "class": ""
+                }
+            ],
+            "Mejor Documental": [
+                {
+                    "modelo": "/img/categorias/camara.webm"
+                },
+                {
+                    "titulo": "Clase Magistral",
+                    "nombre_foto": "nominados25/1.CLASE MAGISTRAL.png",
+                    "youtube_id": "SM83_EwHrP8",
+                    "class": ""
+                },
+                {
+                    "titulo": "Aventura por los Ciclos del Agua",
+                    "nombre_foto": "nominados25/2.aventura por los ciclos del agua.png",
+                    "youtube_id": "LpSLbF3he8E",
+                    "class": ""
+                },
+                {
+                    "titulo": "Josephine Cochrane",
+                    "nombre_foto": "nominados25/12.JOSEPHINE COCHRANE.png",
+                    "youtube_id": "8Kr1-IsAvNU",
+                    "class": ""
+                },
+                {
+                    "titulo": "El Delta del Okabango",
+                    "nombre_foto": "nominados25/20.el delta del okabango.png",
+                    "youtube_id": "gG6sdHbfPAE",
+                    "class": ""
+                },
+                {
+                    "titulo": "ETA: Sombras del Pasado",
+                    "nombre_foto": "nominados25/21.ETA_SOMBRAS DEL PASADO.png",
+                    "youtube_id": "ahp_8tFsDI4",
+                    "class": ""
+                },
+                {
+                    "titulo": "De la Guerra a la Luna",
+                    "nombre_foto": "nominados25/22.DE LA GUERRA A LA LUNA.png",
+                    "youtube_id": "fjvOw-ExNfU",
+                    "class": ""
+                }
+            ],
+             "Mejor Dirección Artística": [
+                {
+                    "modelo": "/img/categorias/artistica.webm"
+                },
+                {
+                    "titulo": "Definirá Quién Eres",
+                    "nombre_foto": "nominados25/10.DEFINIRÁ QUIÉN ERES.png",
+                    "youtube_id": "3yWt-11sKEU",
+                    "class": ""
+                },
+                 {
+                    "titulo": "El Origen de las Galletas",
+                    "nombre_foto": "nominados25/13.EL ORIGEN DE LAS GALLETAS.png",
+                    "youtube_id": "K8WLMCHVayU",
+                    "class": ""
+                },
+                {
+                    "titulo": "Lumière",
+                    "nombre_foto": "nominados25/14.LUMIÈRE.png",
+                    "youtube_id": "vKCqwTYRcY8",
+                    "class": ""
+                },
+                {
+                    "titulo": "Proyecto Manhattan",
+                    "nombre_foto": "nominados25/15.PROYECTO MANHATTAN.png",
+                    "youtube_id": "8fVKcGxCaCU",
+                    "class": ""
+                },
+                {
+                    "titulo": "Recuerdos en la Oscuridad",
+                    "nombre_foto": "nominados25/23.RECUERDOS EN LA OSCURIDAD.png",
+                    "youtube_id": "y8Y5_P6Qgfk",
+                    "class": ""
+                },
+                {
+                    "titulo": "El Delta del Okabango",
+                    "nombre_foto": "nominados25/20.el delta del okabango.png",
+                    "youtube_id": "gG6sdHbfPAE",
+                    "class": ""
+                }
+            ],
+            "Mejor Animación": [
+                {
+                    "modelo": "/img/categorias/animacion.webm"
+                },
+                {
+                    "titulo": "Back to the Pollution",
+                    "nombre_foto": "nominados25/3.BACK TO THE POLLUTION.png",
+                    "youtube_id": "Yy9wFSuaTus",
+                    "class": ""
+                },
+                {
+                    "titulo": "El Susurro del Viento",
+                    "nombre_foto": "nominados25/4.EL SUSURRO DEL VIENTO.png",
+                    "youtube_id": "5ZwOxD9VXKY",
+                    "class": ""
+                },
+                {
+                    "titulo": "La Gotita Aventurera",
+                    "nombre_foto": "nominados25/5.LA GOTITA AVENTURERA.png",
+                    "youtube_id": "E3V6r9_E1Ts",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Clase Magistral",
+                    "nombre_foto": "nominados25/1.CLASE MAGISTRAL.png",
+                    "youtube_id": "SM83_EwHrP8",
+                    "class": ""
+                },
+                {
+                    "titulo": "Capa a Capa",
+                    "nombre_foto": "nominados25/6.capa a capa.png",
+                    "youtube_id": "fqi7w84DaKQ",
+                    "class": ""
+                },
+                {
+                    "titulo": "Despierta el Agua se Acaba",
+                    "nombre_foto": "nominados25/7.Despierta, el agua se acaba.png",
+                    "youtube_id": "1Q_IPwWyLs4",
+                    "class": ""
+                }
+            ],
+            "Mejor Actriz": [
+                {
+                    "modelo": "/img/categorias/teatro.webm"
+                },
+                 {
+                    "titulo": "Lucía Muñoz",
+                    "nombre_foto": "nominados25/LUCÍA MUÑOZ.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                 {
+                    "titulo": "Inés Fernández",
+                    "nombre_foto": "nominados25/INÉS FERNÁNDEZ.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                 {
+                    "titulo": "Jimena Martínez",
+                    "nombre_foto": "nominados25/JIMENA MARTÍNEZ.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                {
+                    "titulo": "Camila Fernández",
+                    "nombre_foto": "nominados25/CAMILA FERNÁNDEZ.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                {
+                    "titulo": "Alba Rodrigo",
+                    "nombre_foto": "nominados25/ALBA RODRIGO.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                 {
+                    "titulo": "Aurora Valenzuela",
+                    "nombre_foto": "nominados25/AURORA VALENZUELA.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                }
+            ],
+            "Mejor Edición": [
+                 {
+                    "modelo": "/img/categorias/pc.webm"
+                },
+                {
+                    "titulo": "El Susurro del Viento",
+                    "nombre_foto": "nominados25/4.EL SUSURRO DEL VIENTO.png",
+                    "youtube_id": "5ZwOxD9VXKY",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Tesla",
+                    "nombre_foto": "nominados25/16.TESLA.png",
+                    "youtube_id": "cUACClMBFuI",
+                    "class": ""
+                },
+                {
+                    "titulo": "Gracias, Gertrude",
+                    "nombre_foto": "nominados25/17.GRACIAS, GERTRUDE.png",
+                    "youtube_id": "BOqdkg0bP14",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Revolución",
+                    "nombre_foto": "nominados25/19.REVOLUCIÓN.png",
+                    "youtube_id": "7K9g5z0jzXk",
+                    "class": ""
+                },
+                {
+                    "titulo": "Mátame, si puedes",
+                    "nombre_foto": "nominados25/24.Mátame si puedes.png",
+                    "youtube_id": "Ls3g1LRUfX8",
+                    "class": ""
+                },
+                 {
+                    "titulo": "La Última Misión",
+                    "nombre_foto": "nominados25/25.La última misión.png",
+                    "youtube_id": "Xo6SPJyVboo",
+                    "class": ""
+                }
+            ],
+             "Mejor Banda Sonora": [
+                 {
+                    "modelo": "/img/categorias/musica.webm"
+                },
+                {
+                    "titulo": "Lumière",
+                    "nombre_foto": "nominados25/14.LUMIÈRE.png",
+                    "youtube_id": "vKCqwTYRcY8",
+                    "class": ""
+                },
+                {
+                    "titulo": "Proyecto Manhattan",
+                    "nombre_foto": "nominados25/15.PROYECTO MANHATTAN.png",
+                    "youtube_id": "8fVKcGxCaCU",
+                    "class": ""
+                },
+                {
+                    "titulo": "El Origen de las Galletas",
+                    "nombre_foto": "nominados25/13.EL ORIGEN DE LAS GALLETAS.png",
+                    "youtube_id": "K8WLMCHVayU",
+                    "class": ""
+                },
+                {
+                    "titulo": "Gracias, Gertrude",
+                    "nombre_foto": "nominados25/17.GRACIAS, GERTRUDE.png",
+                    "youtube_id": "BOqdkg0bP14",
+                    "class": ""
+                },
+                {
+                    "titulo": "Mátame, si puedes",
+                    "nombre_foto": "nominados25/24.Mátame si puedes.png",
+                    "youtube_id": "Ls3g1LRUfX8",
+                    "class": ""
+                },
+                {
+                    "titulo": "Recuerdos en la Oscuridad",
+                    "nombre_foto": "nominados25/23.RECUERDOS EN LA OSCURIDAD.png",
+                    "youtube_id": "y8Y5_P6Qgfk",
+                    "class": ""
+                }
+            ],
+             "Mejor Actor": [
+                {
+                    "modelo": "/img/categorias/teatro.webm"
+                },
+                 {
+                    "titulo": "Javier Arias",
+                    "nombre_foto": "nominados25/JAVIER ARIAS.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                 {
+                    "titulo": "Carlos Bóver",
+                    "nombre_foto": "nominados25/CARLOS BÓVER.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                 {
+                    "titulo": "Alejandro Cosío",
+                    "nombre_foto": "nominados25/ALEJANDRO COSÍO.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                {
+                    "titulo": "Marcos García",
+                    "nombre_foto": "nominados25/MARCOS GARCÍA.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                {
+                    "titulo": "Víctor García",
+                    "nombre_foto": "nominados25/VÍCTOR GARCÍA.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                },
+                 {
+                    "titulo": "Guillermo González",
+                    "nombre_foto": "nominados25/GUILLERMO GONZÁLEZ.png",
+                    "youtube_id": "VIDEO_ID_ACTOR",
+                    "class":""
+                }
+            ],
+            "Mejor Colaboración": [
+                {
+                    "modelo": "/img/categorias/colaboracion.webm"
+                },
+                {
+                    "titulo": "El Origen de las Galletas",
+                    "nombre_foto": "nominados25/COLAB_ORIGEN DE LAS GALLETAS1.png",
+                    "youtube_id": "K8WLMCHVayU",
+                    "class": ""
+                },
+                {
+                    "titulo": "Un Pasado Enterrado",
+                    "nombre_foto": "nominados25/COLAB_UN PASADO ENTERRADO.png",
+                    "youtube_id": "RnvRXWe_eEg",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Conexiones",
+                    "nombre_foto": "nominados25/COLAB_CONEXIONES.png",
+                    "youtube_id": "hK2hugFSdF0",
+                    "class": ""
+                },
+                {
+                    "titulo": "Gracias, Gertrude",
+                    "nombre_foto": "nominados25/COLAB_GRACIAS GERTRUDE1.png",
+                    "youtube_id": "BOqdkg0bP14",
+                    "class": ""
+                },
+                {
+                    "titulo": "Recuerdos en la Oscuridad",
+                    "nombre_foto": "nominados25/COLAB_RECUERDOS EN LA OSCURIDAD.png",
+                    "youtube_id": "y8Y5_P6Qgfk",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Revolución",
+                    "nombre_foto": "nominados25/COLAB_REVOLUCIÓN.png",
+                    "youtube_id": "7K9g5z0jzXk",
+                    "class": ""
+                }
+            ],
+            "Mejor Cartel": [
+                {
+                    "modelo": "/img/categorias/cartel.webm"
+                },
+                {
+                    "titulo": "La Última Misión",
+                    "nombre_foto": "nominados25/./cartel/Cartel_HéctorSancibrián.pdf",
+                    "youtube_id": "Cartel_HéctorSancibrián",
+                    "class": ""
+                },
+                {
+                    "titulo": "ETA: Sombras del Pasado",
+                    "nombre_foto": "nominados25/./cartel/RozasBenito_CARTEL.jpg",
+                    "youtube_id": "RozasBenito_CARTEL",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Definirá Quién Eres",
+                    "nombre_foto": "nominados25/./cartel/3ºC_Inés_Fernández_Y_Lucía_Muñoz.jpg",
+                    "youtube_id": "3ºC_Inés_Fernández_Y_Lucía_Muñoz",
+                    "class": ""
+                },
+                {
+                    "titulo": "De la Tormenta a la Solución",
+                    "nombre_foto": "nominados25/./cartel/3B CARLOTA, JULIA Y GABRIELA.pdf",
+                    "youtube_id": "3B CARLOTA, JULIA Y GABRIELA",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Musk",
+                    "nombre_foto": "nominados25/./cartel/3A Angel Macho, Valentin Banaga. (1).jpg",
+                    "youtube_id": "3A Angel Macho, Valentin Banaga. (1)",
+                    "class": ""
+                },
+                {
+                    "titulo": "La Triste Guerra Telefónica",
+                    "nombre_foto": "nominados25/./cartel/GUERRA_TELEFONICA_PENDIENTE.jpg",
+                    "youtube_id": "GUERRA_TELEFONICA_PENDIENTE",
+                    "class": ""
+                },
+                {
+                    "titulo": "Cenizas de Lealtad",
+                    "nombre_foto": "nominados25/./cartel/CartelFinal_MarcosSantiago.png",
+                    "youtube_id": "CartelFinal_MarcosSantiago",
+                    "class": ""
+                },
+                {
+                    "titulo": "Evolución Vital",
+                    "nombre_foto": "nominados25/./cartel/BradsherHollyDowning_CartelMinimalista.png",
+                    "youtube_id": "BradsherHollyDowning_CartelMinimalista",
+                    "class": ""
+                }
+            ],
+             "Mejor Cortometraje": [
+                {
+                    "modelo": "/img/categorias/claqueta.webm"
+                },
+                 {
+                    "titulo": "Definirá Quién Eres",
+                    "nombre_foto": "nominados25/10.DEFINIRÁ QUIÉN ERES.png",
+                    "youtube_id": "3yWt-11sKEU",
+                    "class": ""
+                },
+                 {
+                    "titulo": "Tesla",
+                    "nombre_foto": "nominados25/16.TESLA.png",
+                    "youtube_id": "cUACClMBFuI",
+                    "class": ""
+                },
+                {
+                    "titulo": "Lumière",
+                    "nombre_foto": "nominados25/14.LUMIÈRE.png",
+                    "youtube_id": "vKCqwTYRcY8",
+                    "class": ""
+                },
+                {
+                    "titulo": "Proyecto Manhattan",
+                    "nombre_foto": "nominados25/15.PROYECTO MANHATTAN.png",
+                    "youtube_id": "8fVKcGxCaCU",
+                    "class": ""
+                },
+                {
+                    "titulo": "Recuerdos en la Oscuridad",
+                    "nombre_foto": "nominados25/23.RECUERDOS EN LA OSCURIDAD.png",
+                    "youtube_id": "y8Y5_P6Qgfk",
+                    "class": ""
+                },
+                {
+                    "titulo": "Revolución",
+                    "nombre_foto": "nominados25/19.REVOLUCIÓN.png",
+                    "youtube_id": "7K9g5z0jzXk",
+                    "class": ""
+                },
+                {
+                    "titulo": "Evolución Vital",
+                    "nombre_foto": "nominados25/27.EVOLUCIÓN VITAL.png",
+                    "youtube_id": "li6SxU5oRr0",
+                    "class": ""
+                },
+                {
+                    "titulo": "Ana y su diario",
+                    "nombre_foto": "nominados25/26.Ana y su diario.png",
+                    "youtube_id": "RIhh6XE2E3I",
+                    "class": ""
+                }
+            ],
+            "Premio del público": [
+                {
+                    "modelo": "/img/categorias/publico.webm"
+                },
+                {
+                    "titulo": "¿Quién ganará el premio del público? ¡El corto que tenga más likes!",
+                    "nombre_foto": "nominados25/LogoDEV.png",
+                    "youtube_id": "https://www.youtube.com/@csamacula",
+                    "class": ""
+                }
+            ],
+            "Premio de la academia": [
+                {
+                    "modelo": "/img/categorias/camara.webm"
+                },
+                 {
+                    "titulo": "Puede ser cualquiera 😉",
+                    "nombre_foto": "nominados25/LogoDEV.png",
+                    "youtube_id": "https://www.youtube.com/@csamacula",
+                    "class": ""
+                }
+            ]
+        }
+    }
+}
