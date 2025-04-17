@@ -39,15 +39,16 @@ const Sitios = ({ciudad,ano}) => {
 const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) => {
   const categoriaData = datosCiudad.categorias[categoria];
   const modelocategoria = categoriaData[0].modelo;
-  // Se comprueba si la variable categoria incluye la palabra "público" o "academia". Si sí entonces se declara la variable "publico" como classpublico, si no se declara como vacío
-  const styledivpublico = categoria.includes("público") || categoria.includes("academia") ? { display: 'flex' } : {};
-  const stylepublico = categoria.includes("público") ? { width: 'auto' } : {};
+  // Comprueba si la categoría es "público" o "academia"
+  const esPublicoOAcademia = categoria.includes("público") || categoria.includes("academia");
+  const claseContenedorAdicional = esPublicoOAcademia ? 'container-publico' : '';
+  const claseCortoAdicional = esPublicoOAcademia ? 'corto-publico' : '';
 
   const cortos = categoriaData.slice(1).map((corto) => (
     <button
-      style={{backgroundImage: `url(../img/nominados/${corto.nombre_foto})`, ...stylepublico}}
+      style={{backgroundImage: `url(../img/${corto.nombre_foto})`}}
       onClick={() => openPopup(corto.youtube_id)}
-      className={`corto fondoimg ${corto.class}`}
+      className={`corto fondoimg ${corto.class || ''} ${claseCortoAdicional}`}
       onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
       onMouseLeave={() => ocultarimg(index)}
     >
@@ -74,7 +75,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
       <ParallaxLayer offset={categoriaId} speed={0.5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="item categoria">
           <h2 className="titulocategoria titulo">{categoria}</h2>
-          <div className="container2" style={styledivpublico}>
+          <div className={`container2 ${claseContenedorAdicional}`}>
             {cortos}
           </div>
         </div>
@@ -119,8 +120,6 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
         <ParallaxLayer offset={0} speed={0.1} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div id="content">
             <h2 className="titulociudad titulo">{titulo}</h2>
-
-            <p className="subtitulo">Mácula 2024</p>
           </div>
         </ParallaxLayer>
 
@@ -132,7 +131,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
 };
 
 function cambiarimg(img, categoriaId) {
-  document.getElementById('img' + categoriaId).src = "../img/nominados/" + img;
+  document.getElementById('img' + categoriaId).src = "../img/" + img;
   //console.log("Cambiando imagen a " + img);
   mostrarimg(categoriaId);
 }
@@ -178,7 +177,7 @@ function openPopup(VideoId) {
 // Abrir popup para carteles
 function openPopupImg(ImageId) {
   // Se cambia el src del iframe
-  document.getElementById("IframeImg").src = "img/nominados/carteles/" + ImageId;
+  document.getElementById("IframeImg").src = "img/" + ImageId;
   // Se muestra el div
   document.getElementById("popupImg").style.display = "block";
   document.getElementById("closePopup").style.display = "block";

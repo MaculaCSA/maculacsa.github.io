@@ -95,6 +95,40 @@
     .fotocorto * {
         
     }*/
+    /* Estilos grid para contenedores normales en pantallas pequeñas */
+    .container2:not(.container-publico) {
+        /*display: inline-block !important;*/
+
+        /*display: grid 2x2*/
+        display: grid !important; /* Asegurar que se aplique */
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+        grid-gap: 10px !important;
+    }
+    /* Estilos flex para contenedores publico/academia en pantallas pequeñas */
+    .container-publico {
+        display: flex !important; /* Asegurar display flex */
+        justify-content: space-around !important; /* O el valor deseado */
+        align-items: center !important; /* O el valor deseado */
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan si no caben */
+    }
+
+    /* Ancho completo para cortos normales en pantallas pequeñas */
+    .container2:not(.container-publico) .corto {
+        width: 100% !important;
+        /*display: inline-block !important;*/
+    }
+    /* Ancho automático para cortos publico/academia en pantallas pequeñas */
+    .corto-publico {
+        width: auto !important; /* Asegurar ancho automático */
+        flex-grow: 1; /* Permitir que crezcan si hay espacio */
+        margin: 5px !important; /* Añadir algo de margen */
+    }
+
+    .item {
+        top: 75px !important;
+        /*width: 75% !important;*/
+    }
 
     #content{
         width: 100%;
@@ -164,6 +198,27 @@
     }
 }
 
+/* Estilos base para publico/academia (aplican siempre) */
+.container-publico {
+    display: flex;
+    justify-content: space-around; /* O el alineamiento deseado */
+    align-items: center;
+    flex-wrap: wrap; /* Envolver elementos si es necesario */
+}
+
+.corto-publico {
+    width: auto; /* Ancho basado en contenido */
+    flex-grow: 1; /* Crecer para llenar espacio si es posible */
+    margin: 5px; /* Espaciado */
+}
+
+/* Asegurar que los estilos base no sean anulados por otros menos específicos */
+.container2.container-publico {
+    display: flex !important;
+}
+.corto.corto-publico {
+    width: auto !important;
+}
 
 /*Importado desde V1*/
 
