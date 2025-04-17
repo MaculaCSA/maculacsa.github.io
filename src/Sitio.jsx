@@ -52,7 +52,7 @@ const categorias = Object.keys(datosCiudad.categorias).map((categoria, index) =>
       onMouseEnter={() => cambiarimg(corto.nombre_foto, index)}
       onMouseLeave={() => ocultarimg(index)}
     >
-      <AutoTextSize mode="multiline" minFontSizePx={17} maxFontSizePx={26} className="nombre">{corto.titulo}</AutoTextSize>
+      <AutoTextSize mode="multiline" minFontSizePx={14} maxFontSizePx={26} className="nombre">{corto.titulo}</AutoTextSize>
     </button>
   ));
 
