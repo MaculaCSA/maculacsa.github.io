@@ -20,8 +20,6 @@ jobs:
       deployments: write
     name: Publish to Cloudflare Pages
     steps:
-
-
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -31,11 +29,34 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
 
-
-
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3.10.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build --project-name=maculaweb
+
+      - name: Add Pull Request Comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## Deploy - Resultado
+            La aplicación se ha desplegado correctamente en Cloudflare Pages.
+            Puedes ver los detalles o acceder a la URL de deploy si está disponible.
+
+      - name: Set Deploy Status
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: 'success',
+              context: 'Deploy',
+              description: 'Deployment succeeded',
+              target_url: 'https://<your-deploy-url-if-available>' // Reemplaza con la URL de tu deploy, si aplicable.
+            });
