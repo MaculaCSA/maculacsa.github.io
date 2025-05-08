@@ -35,7 +35,7 @@
                     "titulo": "Revolución",
                     "nombre_foto": "nominados25/19revolucion.png",
                     "youtube_id": "7K9g5z0jzXk",
-                    "class": ""
+                    "class": "ganador"
                 },
                 {
                     "titulo": "Evolucion Vital",
@@ -70,7 +70,7 @@
                     "titulo": "El Delta del Okabango",
                     "nombre_foto": "nominados25/20el_delta_del_okabango.png",
                     "youtube_id": "gG6sdHbfPAE",
-                    "class": ""
+                    "class": "ganador"
                 },
                 {
                     "titulo": "ETA: Sombras del Pasado",
@@ -85,7 +85,7 @@
                     "class": ""
                 }
             ],
-             "Mejor Dirección Artística": [
+            "Mejor Dirección Artística": [
                 {
                     "modelo": "/img/categorias/artistica.webm"
                 },
@@ -95,7 +95,7 @@
                     "youtube_id": "3yWt-11sKEU",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "El Origen de las Galletas",
                     "nombre_foto": "nominados25/13el_origen_de_las_galletas.png",
                     "youtube_id": "K8WLMCHVayU",
@@ -105,7 +105,7 @@
                     "titulo": "Lumiere",
                     "nombre_foto": "nominados25/14lumiere.png",
                     "youtube_id": "vKCqwTYRcY8",
-                    "class": ""
+                    "class": "ganador"
                 },
                 {
                     "titulo": "Proyecto Manhattan",
@@ -148,7 +148,7 @@
                     "youtube_id": "E3V6r9_E1Ts",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "Clase Magistral",
                     "nombre_foto": "nominados25/1clase_magistral.png",
                     "youtube_id": "SM83_EwHrP8",
@@ -164,52 +164,52 @@
                     "titulo": "Despierta el Agua se Acaba",
                     "nombre_foto": "nominados25/7despierta,_el_agua_se_acaba.png",
                     "youtube_id": "1Q_IPwWyLs4",
-                    "class": ""
+                    "class": "ganador"
                 }
             ],
             "Mejor Actriz": [
                 {
                     "modelo": "/img/categorias/teatro.webm"
                 },
-                 {
+                {
                     "titulo": "Lucia Muñoz",
                     "nombre_foto": "nominados25/lucia_munoz.png",
                     "youtube_id": "3yWt-11sKEU",
-                    "class":""
+                    "class": ""
                 },
-                 {
+                {
                     "titulo": "Ines Fernandez",
                     "nombre_foto": "nominados25/ines_fernandez.png",
                     "youtube_id": "3yWt-11sKEU",
-                    "class":""
+                    "class": ""
                 },
-                 {
+                {
                     "titulo": "Jimena Martinez",
                     "nombre_foto": "nominados25/jimena_martinez.png",
                     "youtube_id": "BOqdkg0bP14",
-                    "class":""
+                    "class": ""
                 },
                 {
                     "titulo": "Camila Fernandez",
                     "nombre_foto": "nominados25/camila_fernandez.png",
                     "youtube_id": "RnvRXWe_eEg",
-                    "class":""
+                    "class": ""
                 },
                 {
                     "titulo": "Alba Rodrigo",
                     "nombre_foto": "nominados25/alba_rodrigo.png",
                     "youtube_id": "y8Y5_P6Qgfk",
-                    "class":""
+                    "class": "ganador"
                 },
-                 {
+                {
                     "titulo": "Aurora Valenzuela",
                     "nombre_foto": "nominados25/aurora_valenzuela.png",
                     "youtube_id": "li6SxU5oRr0",
-                    "class":""
+                    "class": ""
                 }
             ],
             "Mejor Edición": [
-                 {
+                {
                     "modelo": "/img/categorias/pc.webm"
                 },
                 {
@@ -218,7 +218,7 @@
                     "youtube_id": "5ZwOxD9VXKY",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "Tesla",
                     "nombre_foto": "nominados25/16tesla.png",
                     "youtube_id": "cUACClMBFuI",
@@ -230,7 +230,7 @@
                     "youtube_id": "BOqdkg0bP14",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "Revolución",
                     "nombre_foto": "nominados25/19revolucion.png",
                     "youtube_id": "7K9g5z0jzXk",
@@ -242,15 +242,15 @@
                     "youtube_id": "Ls3g1LRUfX8",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "La Ultima Mision",
                     "nombre_foto": "nominados25/25la_ultima_mision.png",
                     "youtube_id": "Xo6SPJyVboo",
-                    "class": ""
+                    "class": "ganador"
                 }
             ],
-             "Mejor Banda Sonora": [
-                 {
+            "Mejor Banda Sonora": [
+                {
                     "modelo": "/img/categorias/bandasonora.webm"
                 },
                 {
@@ -263,7 +263,7 @@
                     "titulo": "Proyecto Manhattan",
                     "nombre_foto": "nominados25/15proyecto_manhattan.png",
                     "youtube_id": "8fVKcGxCaCU",
-                    "class": ""
+                    "class": "ganador"
                 },
                 {
                     "titulo": "El Origen de las Galletas",
@@ -290,45 +290,45 @@
                     "class": ""
                 }
             ],
-             "Mejor Actor": [
+            "Mejor Actor": [
                 {
                     "modelo": "/img/categorias/teatro.webm"
                 },
-                 {
+                {
                     "titulo": "Javier Arias",
                     "nombre_foto": "nominados25/javier_arias.png",
                     "youtube_id": "vKCqwTYRcY8",
-                    "class":""
+                    "class": ""
                 },
-                 {
+                {
                     "titulo": "Carlos Bover",
                     "nombre_foto": "nominados25/carlos_bover.png",
                     "youtube_id": "QRYkqpuP9yQ",
-                    "class":""
+                    "class": ""
                 },
-                 {
+                {
                     "titulo": "Alejandro Cosio",
                     "nombre_foto": "nominados25/alejandro_cosio.png",
                     "youtube_id": "8fVKcGxCaCU",
-                    "class":""
+                    "class": ""
                 },
                 {
                     "titulo": "Marcos Garcia",
                     "nombre_foto": "nominados25/marcos_garcia.png",
                     "youtube_id": "cUACClMBFuI",
-                    "class":""
+                    "class": ""
                 },
                 {
                     "titulo": "Victor Garcia",
                     "nombre_foto": "nominados25/victor_garcia.png",
                     "youtube_id": "Ls3g1LRUfX8",
-                    "class":""
+                    "class": "ganador"
                 },
-                 {
+                {
                     "titulo": "Guillermo Gonzalez",
                     "nombre_foto": "nominados25/guillermo_gonzalez.png",
                     "youtube_id": "7K9g5z0jzXk",
-                    "class":""
+                    "class": ""
                 }
             ],
             "Mejor Colaboración": [
@@ -347,7 +347,7 @@
                     "youtube_id": "RnvRXWe_eEg",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "Conexiones",
                     "nombre_foto": "nominados25/colab_conexiones.png",
                     "youtube_id": "hK2hugFSdF0",
@@ -357,7 +357,7 @@
                     "titulo": "Gracias, Gertrude",
                     "nombre_foto": "nominados25/colab_gracias_gertrude1.png",
                     "youtube_id": "BOqdkg0bP14",
-                    "class": ""
+                    "class": "ganador"
                 },
                 {
                     "titulo": "Recuerdos en la Oscuridad",
@@ -365,7 +365,7 @@
                     "youtube_id": "y8Y5_P6Qgfk",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "Revolución",
                     "nombre_foto": "nominados25/colab_revolucion.png",
                     "youtube_id": "7K9g5z0jzXk",
@@ -388,7 +388,7 @@
                     "youtube_id": "nominados25/carteles/rozasbenito.jpg",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "Definira Quien Eres",
                     "nombre_foto": "nominados25/carteles/inesylucia.jpg",
                     "youtube_id": "nominados25/carteles/inesylucia.jpg",
@@ -400,11 +400,11 @@
                     "youtube_id": "nominados25/carteles/carlotajuliagabriela.svg",
                     "class": ""
                 },
-                 {
+                {
                     "titulo": "Musk",
                     "nombre_foto": "nominados25/carteles/angelyvalentin.jpg",
                     "youtube_id": "nominados25/carteles/angelyvalentin.jpg",
-                    "class": ""
+                    "class": "ganador"
                 },
                 {
                     "titulo": "La Triste Guerra Telefonica",
@@ -425,17 +425,17 @@
                     "class": ""
                 }
             ],
-             "Mejor Cortometraje": [
+            "Mejor Cortometraje": [
                 {
                     "modelo": "/img/categorias/claqueta.webm"
                 },
-                 {
+                {
                     "titulo": "Definira Quien Eres",
                     "nombre_foto": "nominados25/10definira_quien_eres.png",
                     "youtube_id": "3yWt-11sKEU",
-                    "class": ""
+                    "class": "ganador"
                 },
-                 {
+                {
                     "titulo": "Tesla",
                     "nombre_foto": "nominados25/16tesla.png",
                     "youtube_id": "cUACClMBFuI",
@@ -483,21 +483,21 @@
                     "modelo": "/img/categorias/publico.webm"
                 },
                 {
-                    "titulo": "¿Quién ganará el premio del público? ¡El corto que tenga más likes!",
-                    "nombre_foto": "LogoDEV.png",
+                    "titulo": "Back to the Pollution",
+                    "nombre_foto": "nominados25/3back_to_the_pollution.png",
                     "youtube_id": "https://www.youtube.com/@csamacula",
-                    "class": ""
+                    "class": "ganador"
                 }
             ],
             "Premio de la academia": [
                 {
                     "modelo": "/img/categorias/camara.webm"
                 },
-                 {
-                    "titulo": "Puede ser cualquiera 😉",
-                    "nombre_foto": "LogoDEV.png",
+                {
+                    "titulo": "Evolucion Vital",
+                    "nombre_foto": "nominados25/27evolucion_vital.png",
                     "youtube_id": "https://www.youtube.com/@csamacula",
-                    "class": ""
+                    "class": "ganador"
                 }
             ]
         }
