@@ -43,7 +43,7 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             🚀 **Preview Publicada:**  
-            ${{ steps.deploy.outputs.deployment-url }}
+            ${{ steps.deploy.outputs.deployment-alias-url }}
 
       - name: Set Deploy Status
         uses: actions/github-script@v6
@@ -58,6 +58,6 @@ jobs:
               state: 'success',
               context: 'Deploy',
               description: 'Deployment succeeded',
-              target_url: '${{ steps.deploy.outputs.deployment-url }}'
+              target_url: '${{ steps.deploy.outputs.deployment-alias-url }}'
             });
             console.log(`✅ Created status id=${res.data.id}`);
