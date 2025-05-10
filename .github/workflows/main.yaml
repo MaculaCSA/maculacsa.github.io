@@ -40,17 +40,25 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build --project-name=maculaweb --branch=${{ github.head_ref || github.ref_name }}
 
+      - name: Find Preview Comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/find-comment@v3
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: "🚀 **Preview Publicada:**"
+
       - name: Add Pull Request Comment
         if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
-          edit-mode: replace
-          body-includes: "🚀 **Preview Publicada:**"
           body: |
             🚀 **Preview Publicada:**
             ${{ steps.deploy.outputs.deployment-alias-url }}
+          edit-mode: replace
 
       - name: Set Deploy Status
         uses: actions/github-script@v6
