@@ -1,41 +1,78 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Node.js deploy
 
 on:
-  push: {}
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  deployments: write
+  statuses: write
+  pull-requests: write
+
 jobs:
-  
   deployCloudfare:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [20.6.1]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-    permissions:
-      contents: read
-      deployments: write
     name: Publish to Cloudflare Pages
     steps:
-
-
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+
       - run: npm ci
       - run: npm run build --if-present
 
-
-
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3.10.0
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./build --project-name=maculaweb
+          command: pages deploy ./build --project-name=maculaweb --branch=${{ github.head_ref || github.ref_name }}
+
+      - name: Find Preview Comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/find-comment@v3
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: "🚀 **Preview Publicada:**"
+
+      - name: Add Pull Request Comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            🚀 **Preview Publicada:**
+            ${{ steps.deploy.outputs.deployment-alias-url }}
+          edit-mode: replace
+
+      - name: Set Deploy Status
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // now works because GITHUB_TOKEN has 'statuses: write'
+            const res = await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              sha:   context.sha,
+              state: 'success',
+              context: 'Deploy',
+              description: 'Deployment correcto',
+              target_url: '${{ steps.deploy.outputs.deployment-alias-url }}'
+            });
+            console.log(`✅ Created status id=${res.data.id}`);
