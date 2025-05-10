@@ -1,4 +1,4 @@
-name: Compress Images (Manual)
+name: Scheduled Compress Images
 
 on:
   workflow_dispatch:
@@ -7,9 +7,10 @@ on:
     - cron: '0 0 * * *'
     # For weekly runs (e.g., every Sunday at midnight UTC), use:
     # - cron: '0 0 * * 0'
-  permissions:
-    contents: write
-    pull-requests: write
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
