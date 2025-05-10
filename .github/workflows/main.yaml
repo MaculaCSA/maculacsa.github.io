@@ -50,13 +50,16 @@ jobs:
       - name: Set Deploy Status
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            await github.repos.createCommitStatus({
+            // Use github.rest.repos.createCommitStatus instead of github.repos
+            const response = await github.rest.repos.createCommitStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha: context.sha,
               state: 'success',
               context: 'Deploy',
               description: 'Deployment succeeded',
-              target_url: 'https://<your-deploy-url-if-available>' // Reemplaza con la URL de tu deploy, si aplicable.
+              target_url: 'https://premiosmacula.es' // Reemplaza con la URL de tu deploy, si aplicable.
             });
+            console.log(`Created commit status #${response.data.id}`);
