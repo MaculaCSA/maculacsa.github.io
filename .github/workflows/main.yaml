@@ -1,5 +1,3 @@
-# This workflow installs deps, builds, deploys to Cloudflare Pages, comments on PRs and sets a commit status.
-
 name: Node.js deploy
 
 on:
@@ -30,6 +28,7 @@ jobs:
       - run: npm run build --if-present
 
       - name: Publish to Cloudflare Pages
+        id: deploy
         uses: cloudflare/wrangler-action@v3.10.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -43,9 +42,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ## Deploy – Resultado
-            La aplicación se ha desplegado correctamente en Cloudflare Pages.
-            Puedes ver los detalles o acceder a la URL de deploy si está disponible.
+            🚀 **Preview Publicada:**  
+            ${{ steps.deploy.outputs.url }}
 
       - name: Set Deploy Status
         uses: actions/github-script@v6
@@ -60,6 +58,6 @@ jobs:
               state: 'success',
               context: 'Deploy',
               description: 'Deployment succeeded',
-              target_url: '${{ steps.deploy.outputs.deployment-url }}'
+              target_url: '${{ steps.deploy.outputs.url }}'
             });
             console.log(`✅ Created status id=${res.data.id}`);
