@@ -36,7 +36,7 @@ jobs:
           command: pages deploy ./build --project-name=maculaweb
 
       - name: Add Pull Request Comment
-        if: github.event_name == 'pull_request'
+        if: ${{ github.event_name == 'pull_request' }}
         uses: peter-evans/create-or-update-comment@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
