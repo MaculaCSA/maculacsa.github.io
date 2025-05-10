@@ -46,6 +46,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
+          edit-mode: replace
+          body-includes: "🚀 **Preview Publicada:**"
           body: |
             🚀 **Preview Publicada:**
             ${{ steps.deploy.outputs.deployment-alias-url }}
