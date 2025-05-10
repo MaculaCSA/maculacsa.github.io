@@ -1,65 +1,71 @@
-# This workflow installs deps, builds, deploys to Cloudflare Pages, comments on PRs and sets a commit status.
-
-name: Node.js deploy
+name: Deploy to Cloudflare Pages
 
 on:
-  push: {}
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
 
 permissions:
   contents: read
-  deployments: write
-  statuses: write      # ← allow createCommitStatus
+  statuses: write  # if you want to set commit statuses
+  pull-requests: write  # if you want to comment on PRs
 
 jobs:
-  deployCloudfare:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.6.1]
-    name: Publish to Cloudflare Pages
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20'
           cache: 'npm'
 
-      - run: npm ci
-      - run: npm run build --if-present
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3.10.0
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy       # <- give this step an ID
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build --project-name=maculaweb
 
-      - name: Add Pull Request Comment
+      - name: Show deploy URL
+        run: |
+          echo "✓ Pages URL: ${{ steps.deploy.outputs.url }}"
+
+      - name: Comment on PR with deploy URL
         if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ## Deploy – Resultado
-            La aplicación se ha desplegado correctamente en Cloudflare Pages.
-            Puedes ver los detalles o acceder a la URL de deploy si está disponible.
+            🚀 **Deployed Preview:**  
+            ${{ steps.deploy.outputs.url }}
 
-      - name: Set Deploy Status
+      - name: Set GitHub commit status
+        if: github.event_name != 'pull_request'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            // now works because GITHUB_TOKEN has 'statuses: write'
-            const res = await github.rest.repos.createCommitStatus({
+            await github.rest.repos.createCommitStatus({
               owner: context.repo.owner,
-              repo:  context.repo.repo,
-              sha:   context.sha,
+              repo: context.repo.repo,
+              sha: context.sha,
               state: 'success',
               context: 'Deploy',
               description: 'Deployment succeeded',
-              target_url: '${{ steps.deploy.outputs.deployment-url }}'
+              target_url: context.payload.pull_request
+                          ? steps.deploy.outputs.url
+                          : steps.deploy.outputs.url
             });
-            console.log(`✅ Created status id=${res.data.id}`);
