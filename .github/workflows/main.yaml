@@ -60,6 +60,6 @@ jobs:
               state: 'success',
               context: 'Deploy',
               description: 'Deployment succeeded',
-              target_url: 'https://premiosmacula.es'
+              target_url: '${{ steps.deploy.outputs.deployment-url }}'
             });
             console.log(`✅ Created status id=${res.data.id}`);
