@@ -1,0 +1,493 @@
+{
+    "nominados": {
+        "titulo": "Nominados 2026",
+        "fotociudad": "santander.jpg",
+        "categorias": {
+            "Mejor Guión": [
+                {
+                    "modelo": "/img/categorias/guion.webm"
+                },
+                {
+                    "titulo": "PERFECTLY IMPERFECT",
+                    "nombre_foto": "nominados26/PERFECTLY_IMPERFECT_FOTO.png",
+                    "youtube_id": "AuxEnJroBwY",
+                    "class": ""
+                },
+                {
+                    "titulo": "RESET",
+                    "nombre_foto": "nominados26/RESET_FOTO.png",
+                    "youtube_id": "x39yyKugNMA",
+                    "class": ""
+                },
+                {
+                    "titulo": "AQUÍ NO HAY CORTO",
+                    "nombre_foto": "nominados26/aqui_no_hay_corto.png",
+                    "youtube_id": "r4xFOxbpJPw",
+                    "class": ""
+                },
+                {
+                    "titulo": "OH, KITTY!",
+                    "nombre_foto": "nominados26/KITTY_FOTO.png",
+                    "youtube_id": "tmotnyESxzw",
+                    "class": ""
+                },
+                {
+                    "titulo": "RUIDO BLANCO",
+                    "nombre_foto": "nominados26/RUIDO_BLANCO_FOTO.png",
+                    "youtube_id": "u-LaLsOIjuY",
+                    "class": ""
+                },
+                {
+                    "titulo": "TODO ENCAJA",
+                    "nombre_foto": "nominados26/TODO_ENCAJA_FOTO.png",
+                    "youtube_id": "PxKoWx1oeaE",
+                    "class": ""
+                }
+            ],
+            "Mejor Documental": [
+                {
+                    "modelo": "/img/categorias/camara.webm"
+                },
+                {
+                    "titulo": "INVIERNO ROJO",
+                    "nombre_foto": "nominados26/INVIERNO_ROJO_FOTO.png",
+                    "youtube_id": "mEdRSv3zP48",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL CICLO DEL AGUA",
+                    "nombre_foto": "nominados26/EL_CICLO_DEL_AGUA.png",
+                    "youtube_id": "a7EqGygN3L8",
+                    "class": ""
+                },
+                {
+                    "titulo": "ASESINATO DE UN PLANETA",
+                    "nombre_foto": "nominados26/ASESINATO_DE_UN_PLANETA_FOTO.png",
+                    "youtube_id": "QVUX9pHFgdY",
+                    "class": ""
+                },
+                {
+                    "titulo": "AGUA Y AIRE",
+                    "nombre_foto": "nominados26/AGUA_Y_AIRE.png",
+                    "youtube_id": "kTeJ7MXCBS4",
+                    "class": ""
+                },
+                {
+                    "titulo": "HOJAS DE TÉ Y LIBERTAD",
+                    "nombre_foto": "nominados26/hojas-te.png",
+                    "youtube_id": "qTAuF8s889Y",
+                    "class": ""
+                },
+                {
+                    "titulo": "MARÍA ANTONIETA",
+                    "nombre_foto": "nominados26/MARIA_ANTONIETA_FOTO.png",
+                    "youtube_id": "GSggsVnDDvA",
+                    "class": ""
+                }
+            ],
+            "Mejor Dirección Artística": [
+                {
+                    "modelo": "/img/categorias/artistica.webm"
+                },
+                {
+                    "titulo": "BOMBARDEO EN OTXANDIO",
+                    "nombre_foto": "nominados26/BOMBARDEO_EN_OTXANDIO_FOTO.png",
+                    "youtube_id": "H6b5yLBzFAk",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL BAILE DE LA GUILLOTINA",
+                    "nombre_foto": "nominados26/EL_BAILE_DE_LA_GUILLOTINA_FOTO.png",
+                    "youtube_id": "K1xEoWFle4E",
+                    "class": ""
+                },
+                {
+                    "titulo": "PERFECTLY IMPERFECT",
+                    "nombre_foto": "nominados26/PERFECTLY_IMPERFECT_FOTO.png",
+                    "youtube_id": "AuxEnJroBwY",
+                    "class": ""
+                },
+                {
+                    "titulo": "INVIERNO ROJO",
+                    "nombre_foto": "nominados26/INVIERNO_ROJO_FOTO.png",
+                    "youtube_id": "8fVKcGxCaCU",
+                    "class": ""
+                },
+                {
+                    "titulo": "LISE MEITNER",
+                    "nombre_foto": "nominados26/LISE_MEITNER_FOTO.png",
+                    "youtube_id": "nXpVWAO0HUE",
+                    "class": ""
+                },
+                {
+                    "titulo": "THE BITE OF 54",
+                    "nombre_foto": "nominados26/THE_BITE_OF_54.png",
+                    "youtube_id": "t9FZQqZRyOI",
+                    "class": ""
+                }
+            ],
+            "Mejor Animación": [
+                {
+                    "modelo": "/img/categorias/animacion.webm"
+                },
+                {
+                    "titulo": "EL CICLO DEL AGUA",
+                    "nombre_foto": "nominados26/EL_CICLO_DEL_AGUA.png",
+                    "youtube_id": "a7EqGygN3L8",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL RÍO Y LO QUE SUCEDIÓ",
+                    "nombre_foto": "nominados26/rio.png",
+                    "youtube_id": "kZT65keQw98",
+                    "class": ""
+                },
+                {
+                    "titulo": "LA VIDA EN LA TIERRA",
+                    "nombre_foto": "nominados26/LA_VIDA_EN_LA_TIERRA.png",
+                    "youtube_id": "QRozLgbt4gk",
+                    "class": ""
+                },
+                {
+                    "titulo": "LA NOTICIA",
+                    "nombre_foto": "nominados26/LA_NOTICIA_FOTO.png",
+                    "youtube_id": "-ACDMWjf4tY",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL CARIBE EN LOS PIRINEOS",
+                    "nombre_foto": "nominados26/caribepirineos.png",
+                    "youtube_id": "yHqiI9d3gTw",
+                    "class": ""
+                },
+                {
+                    "titulo": "LA CLASE DE BIOLOGÍA",
+                    "nombre_foto": "nominados26/LA_CLAS_DE_BIOLOGIA_FOTO.png",
+                    "youtube_id": "D8qzeFWsrF8",
+                    "class": ""
+                }
+            ],
+            "Mejor Actriz": [
+                {
+                    "modelo": "/img/categorias/teatro.webm"
+                },
+                {
+                    "titulo": "SOFÍA IGLESIAS",
+                    "nombre_foto": "nominados26/sofia.png",
+                    "youtube_id": "0B6wbdE25QM",
+                    "class": ""
+                },
+                {
+                    "titulo": "JIMENA MARTÍNEZ",
+                    "nombre_foto": "nominados26/jimena_martinez.png",
+                    "youtube_id": "tmotnyESxzw",
+                    "class": ""
+                },
+                {
+                    "titulo": "MEGUMI LLASACA",
+                    "nombre_foto": "nominados26/megumi_llasaca.png",
+                    "youtube_id": "f7ylpCq6Ngo",
+                    "class": ""
+                },
+                {
+                    "titulo": "OLIVIA CARBALLEIRA",
+                    "nombre_foto": "nominados26/olivia_carballeira.png",
+                    "youtube_id": "DLHlLYq5Rns",
+                    "class": ""
+                },
+                {
+                    "titulo": "CARLA SANZ",
+                    "nombre_foto": "nominados26/carla_sanz.png",
+                    "youtube_id": "0AKqsCwNj7k",
+                    "class": ""
+                },
+                {
+                    "titulo": "SARA PEÑA",
+                    "nombre_foto": "nominados26/sara.png",
+                    "youtube_id": "ZOI9iB3Ak6c",
+                    "class": ""
+                }
+            ],
+            "Mejor Edición": [
+                {
+                    "modelo": "/img/categorias/pc.webm"
+                },
+                {
+                    "titulo": "PERFECTLY IMPERFECT",
+                    "nombre_foto": "nominados26/PERFECTLY_IMPERFECT_FOTO.png",
+                    "youtube_id": "AuxEnJroBwY",
+                    "class": ""
+                },
+                {
+                    "titulo": "QUE NO TE ATRAPEN",
+                    "nombre_foto": "nominados26/QUE_NO_TE_ATRAPEN_FOTO.png",
+                    "youtube_id": "f7ylpCq6Ngo",
+                    "class": ""
+                },
+                {
+                    "titulo": "RECUERDOS DE VIETNAM",
+                    "nombre_foto": "nominados26/recuerdos_de_vietnam_foto.png",
+                    "youtube_id": "VZ5DWBvlH4Y",
+                    "class": ""
+                },
+                {
+                    "titulo": "RESET",
+                    "nombre_foto": "nominados26/RESET_FOTO.png",
+                    "youtube_id": "x39yyKugNMA",
+                    "class": ""
+                },
+                {
+                    "titulo": "VIVIENDO EN UN SEGUNDO PLANO",
+                    "nombre_foto": "nominados26/VIVIENDO_EN_SEGUNDO_PLANO_FOTO.png",
+                    "youtube_id": "96GM6DdoqFk",
+                    "class": ""
+                },
+                {
+                    "titulo": "ASESINATO DE UN PLANETA",
+                    "nombre_foto": "nominados26/ASESINATO_DE_UN_PLANETA_FOTO.png",
+                    "youtube_id": "QVUX9pHFgdY",
+                    "class": ""
+                }
+            ],
+            "Mejor corto de terror": [
+                {
+                    "modelo": "/img/categorias/fantasma.webm"
+                },
+                {
+                    "titulo": "INSIDE",
+                    "nombre_foto": "nominados26/INSIDE_FOTO.png",
+                    "youtube_id": "5bdGonqqd10",
+                    "class": ""
+                },
+                {
+                    "titulo": "LA MEMORIA DE LA RADIACTIVIDAD",
+                    "nombre_foto": "nominados26/radioactividad.png",
+                    "youtube_id": "Od-1mtO7TnI",
+                    "class": ""
+                },
+                {
+                    "titulo": "QUE NO TE ATRAPEN",
+                    "nombre_foto": "nominados26/QUE_NO_TE_ATRAPEN_FOTO.png",
+                    "youtube_id": "f7ylpCq6Ngo",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL BAILE DE LA GUILLOTINA",
+                    "nombre_foto": "nominados26/EL_BAILE_DE_LA_GUILLOTINA_FOTO.png",
+                    "youtube_id": "K1xEoWFle4E",
+                    "class": ""
+                }
+            ],
+            "Mejor Actor": [
+                {
+                    "modelo": "/img/categorias/teatro.webm"
+                },
+                {
+                    "titulo": "ÍÑIGO GONZÁLEZ DE LANGARICA",
+                    "nombre_foto": "nominados26/inigo.png",
+                    "youtube_id": "H6b5yLBzFAk",
+                    "class": ""
+                },
+                {
+                    "titulo": "VALENTÍN BANAGA",
+                    "nombre_foto": "nominados26/valentin_banaga.png",
+                    "youtube_id": "mEdRSv3zP48",
+                    "class": ""
+                },
+                {
+                    "titulo": "CARLOS BÓVER",
+                    "nombre_foto": "nominados26/carlos_bover.png",
+                    "youtube_id": "K1xEoWFle4E",
+                    "class": ""
+                },
+                {
+                    "titulo": "NICOLÁS LIZ",
+                    "nombre_foto": "nominados26/nicolas_liz.png",
+                    "youtube_id": "ON7Um1JdYHg",
+                    "class": ""
+                },
+                {
+                    "titulo": "ÁNGEL MACHO",
+                    "nombre_foto": "nominados26/angel_macho.png",
+                    "youtube_id": "VZ5DWBvlH4Y",
+                    "class": ""
+                },
+                {
+                    "titulo": "MAURO RIVERO",
+                    "nombre_foto": "nominados26/mauro_rivero.png",
+                    "youtube_id": "VtcJ9o-LPxo",
+                    "class": ""
+                }
+            ],
+            "Mejor Colaboración": [
+                {
+                    "modelo": "/img/categorias/colab.webm"
+                },
+                {
+                    "titulo": "LUCÍA RODRÍGUEZ",
+                    "nombre_foto": "nominados26/lucia_rodriguez.png",
+                    "youtube_id": "AuxEnJroBwY",
+                    "class": ""
+                },
+                {
+                    "titulo": "GABRIEL GARCÍA",
+                    "nombre_foto": "nominados26/gabriel_garcia.png",
+                    "youtube_id": "AuxEnJroBwY",
+                    "class": ""
+                },
+                {
+                    "titulo": "LORENZO VELASCO",
+                    "nombre_foto": "nominados26/lorenzo_velasco.png",
+                    "youtube_id": "tmotnyESxzw",
+                    "class": ""
+                },
+                {
+                    "titulo": "LEONOR IBÁÑEZ",
+                    "nombre_foto": "nominados26/leonor_velasco.png",
+                    "youtube_id": "5bdGonqqd10",
+                    "class": ""
+                },
+                {
+                    "titulo": "SONIA LOZANO",
+                    "nombre_foto": "nominados26/sonia_lozano.png",
+                    "youtube_id": "ZOI9iB3Ak6c",
+                    "class": ""
+                },
+                {
+                    "titulo": "MIGUEL AJA",
+                    "nombre_foto": "nominados26/miguel_aja.png",
+                    "youtube_id": "f7ylpCq6Ngo",
+                    "class": ""
+                }
+            ],
+            "Mejor Cartel": [
+                {
+                    "modelo": "/img/categorias/cartel.webm"
+                },
+                {
+                    "titulo": "EL CONTAGIO",
+                    "nombre_foto": "nominados26/el_contagio_1_cartel.png",
+                    "youtube_id": "nominados26/el_contagio_1_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL CONTAGIO",
+                    "nombre_foto": "nominados26/el_contagio_2_cartel.png",
+                    "youtube_id": "nominados26/el_contagio_2_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "LUCES DE BAHÍA",
+                    "nombre_foto": "nominados26/luces_de_bahia_cartel.png",
+                    "youtube_id": "nominados26/luces_de_bahia_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "LA SOMBRA DE LA CRISIS",
+                    "nombre_foto": "nominados26/la_sombra_de_la_crisis_cartel.png",
+                    "youtube_id": "nominados26/la_sombra_de_la_crisis_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "RIVALES",
+                    "nombre_foto": "nominados26/rivales_cartel.png",
+                    "youtube_id": "nominados26/rivales_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "NEWTON",
+                    "nombre_foto": "nominados26/newon_cartel.png",
+                    "youtube_id": "nominados26/newon_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "FEAR OF LOSS",
+                    "nombre_foto": "nominados26/fear_of_loss_cartel.jpg",
+                    "youtube_id": "nominados26/fear_of_loss_cartel.jpg",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL EXPERIMENTO",
+                    "nombre_foto": "nominados26/el_experimento_cartel.png",
+                    "youtube_id": "nominados26/el_experimento_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "CUENTAS PENDIENTES",
+                    "nombre_foto": "nominados26/cuentas_pendientes_cartel.png",
+                    "youtube_id": "nominados26/cuentas_pendientes_cartel.png",
+                    "class": ""
+                },
+                {
+                    "titulo": "SILENCIO INFINITO",
+                    "nombre_foto": "nominados26/silencio_infinito_cartel.png",
+                    "youtube_id": "nominados26/silencio_infinito_cartel.png",
+                    "class": ""
+                }
+            ],
+            "Mejor Cortometraje": [
+                {
+                    "modelo": "/img/categorias/claqueta.webm"
+                },
+                {
+                    "titulo": "PERFECTLY IMPERFECT",
+                    "nombre_foto": "nominados26/PERFECTLY_IMPERFECT_FOTO.png",
+                    "youtube_id": "AuxEnJroBwY",
+                    "class": ""
+                },
+                {
+                    "titulo": "EL BAILE DE LA GUILLOTINA",
+                    "nombre_foto": "nominados26/EL_BAILE_DE_LA_GUILLOTINA_FOTO.png",
+                    "youtube_id": "K1xEoWFle4E",
+                    "class": ""
+                },
+                {
+                    "titulo": "RECUERDOS DE VIETNAM",
+                    "nombre_foto": "nominados26/recuerdos_de_vietnam_foto.png",
+                    "youtube_id": "VZ5DWBvlH4Y",
+                    "class": ""
+                },
+                {
+                    "titulo": "QUE NO TE ATRAPEN",
+                    "nombre_foto": "nominados26/QUE_NO_TE_ATRAPEN_FOTO.png",
+                    "youtube_id": "f7ylpCq6Ngo",
+                    "class": ""
+                },
+                {
+                    "titulo": "RESET",
+                    "nombre_foto": "nominados26/RESET_FOTO.png",
+                    "youtube_id": "x39yyKugNMA",
+                    "class": ""
+                },
+                {
+                    "titulo": "HIPATIA",
+                    "nombre_foto": "nominados26/HIPATIA_FOTO.png",
+                    "youtube_id": "DLHlLYq5Rns",
+                    "class": ""
+                }
+            ],
+            "Premio del público": [
+                {
+                    "modelo": "/img/categorias/publico.webm"
+                },
+                {
+                    "titulo": "¿Quién ganará el premio del público? ¡El corto que tenga más likes!",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "https://www.youtube.com/@csamacula",
+                    "class": ""
+                }
+            ],
+            "Premio de la academia": [
+                {
+                    "modelo": "/img/categorias/camara.webm"
+                },
+                {
+                    "titulo": "Puede ser cualquiera 😉",
+                    "nombre_foto": "LogoDEV.png",
+                    "youtube_id": "https://www.youtube.com/@csamacula",
+                    "class": ""
+                }
+            ]
+        }
+    }
+}
