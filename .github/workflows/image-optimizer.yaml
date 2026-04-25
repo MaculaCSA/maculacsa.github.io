@@ -1,7 +1,7 @@
-name: Compress Images in Pull Request
+name: Optimize Images
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   pull_request:
     paths:
       - '**/*.svg'
@@ -14,19 +14,175 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
-  build:
-    name: cadamsdev/image-optimizer-action
-    permissions: write-all
+  optimize:
+    name: Optimize Images
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
 
-      - name: Compress Images
-        id: compress-images
-        uses: cadamsdev/image-optimizer-action@v1
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # En PRs necesitamos el HEAD de la rama feature para poder hacer push
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      # ── 2. Instalar herramientas ──────────────────────────────────────────────
+      - name: Install optimization tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            optipng \
+            jpegoptim \
+            gifsicle \
+            webp \
+            libavif-bin
+          npm install -g svgo --silent
+
+      # ── 3. Detectar imágenes ──────────────────────────────────────────────────
+      # En PR: solo las imágenes modificadas en la rama
+      # En workflow_dispatch: TODAS las imágenes del repo
+      - name: Collect image files
+        id: collect
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git diff --name-only "origin/${{ github.base_ref }}...HEAD" \
+              | grep -iE '\.(png|jpg|jpeg|gif|webp|avif|svg)$' \
+              > /tmp/images.txt || true
+          else
+            find . \
+              -not -path './.git/*' \
+              -iregex '.*\.\(png\|jpg\|jpeg\|gif\|webp\|avif\|svg\)' \
+              >> /tmp/images.txt || true
+          fi
+
+          COUNT=$(grep -c '' /tmp/images.txt 2>/dev/null || echo 0)
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "──────────────────────────────────"
+          echo "Found $COUNT image(s) to optimize:"
+          cat /tmp/images.txt
+          echo "──────────────────────────────────"
+
+      # ── 4. Optimizar PNG (lossless) ───────────────────────────────────────────
+      # optipng elimina metadatos y recomprime el stream PNG sin pérdida de calidad
+      - name: Optimize PNG
+        if: steps.collect.outputs.count != '0'
+        run: |
+          grep -i '\.png$' /tmp/images.txt | while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            BEFORE=$(stat -c%s "$f")
+            optipng -quiet -o2 -strip all "$f"
+            AFTER=$(stat -c%s "$f")
+            SAVED=$(( BEFORE - AFTER ))
+            PCT=$(( SAVED * 100 / BEFORE ))
+            printf "✅ PNG  %-60s %7dB → %7dB  (-%d%%)\n" "$f" "$BEFORE" "$AFTER" "$PCT"
+          done
+
+      # ── 5. Optimizar JPEG ─────────────────────────────────────────────────────
+      # --strip-all elimina EXIF/IPTC/XMP; --max=85 reencoda si reduce tamaño
+      # Quita --max=85 si prefieres optimización 100% lossless (solo strip)
+      - name: Optimize JPEG
+        if: steps.collect.outputs.count != '0'
+        run: |
+          grep -iE '\.jpe?g$' /tmp/images.txt | while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            BEFORE=$(stat -c%s "$f")
+            jpegoptim --quiet --strip-all --max=85 "$f"
+            AFTER=$(stat -c%s "$f")
+            SAVED=$(( BEFORE - AFTER ))
+            PCT=$(( SAVED * 100 / BEFORE ))
+            printf "✅ JPEG %-60s %7dB → %7dB  (-%d%%)\n" "$f" "$BEFORE" "$AFTER" "$PCT"
+          done
+
+      # ── 6. Optimizar GIF (lossless) ───────────────────────────────────────────
+      - name: Optimize GIF
+        if: steps.collect.outputs.count != '0'
+        run: |
+          grep -i '\.gif$' /tmp/images.txt | while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            BEFORE=$(stat -c%s "$f")
+            gifsicle -O3 --batch "$f"
+            AFTER=$(stat -c%s "$f")
+            SAVED=$(( BEFORE - AFTER ))
+            PCT=$(( SAVED * 100 / BEFORE ))
+            printf "✅ GIF  %-60s %7dB → %7dB  (-%d%%)\n" "$f" "$BEFORE" "$AFTER" "$PCT"
+          done
+
+      # ── 7. Optimizar WebP ─────────────────────────────────────────────────────
+      # cwebp reencoda a calidad 85; usa un fichero temporal para evitar
+      # sobreescribir con un archivo mayor que el original
+      - name: Optimize WebP
+        if: steps.collect.outputs.count != '0'
+        run: |
+          grep -i '\.webp$' /tmp/images.txt | while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            BEFORE=$(stat -c%s "$f")
+            TMP=$(mktemp --suffix=.webp)
+            if cwebp -quiet -q 85 "$f" -o "$TMP" 2>/dev/null; then
+              AFTER=$(stat -c%s "$TMP")
+              if [ "$AFTER" -lt "$BEFORE" ]; then
+                mv "$TMP" "$f"
+                PCT=$(( (BEFORE - AFTER) * 100 / BEFORE ))
+                printf "✅ WebP %-60s %7dB → %7dB  (-%d%%)\n" "$f" "$BEFORE" "$AFTER" "$PCT"
+              else
+                rm -f "$TMP"
+                printf "⏭️  WebP %-60s ya optimizado, sin cambios\n" "$f"
+              fi
+            else
+              rm -f "$TMP"
+              printf "⚠️  WebP %-60s error al procesar, omitido\n" "$f"
+            fi
+          done
+
+      # ── 8. Optimizar AVIF ────────────────────────────────────────────────────
+      # avifdec decodifica a PNG, avifenc reencoda a AVIF con calidad 60 (escala 0-100)
+      # Solo sobreescribe si el nuevo fichero es más pequeño
+      - name: Optimize AVIF
+        if: steps.collect.outputs.count != '0'
+        run: |
+          grep -i '\.avif$' /tmp/images.txt | while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            BEFORE=$(stat -c%s "$f")
+            TMP_PNG=$(mktemp --suffix=.png)
+            TMP_AVIF=$(mktemp --suffix=.avif)
+            if avifdec "$f" "$TMP_PNG" 2>/dev/null && \
+               avifenc --speed 6 --jobs all "$TMP_PNG" "$TMP_AVIF" 2>/dev/null; then
+              AFTER=$(stat -c%s "$TMP_AVIF")
+              if [ "$AFTER" -lt "$BEFORE" ]; then
+                mv "$TMP_AVIF" "$f"
+                PCT=$(( (BEFORE - AFTER) * 100 / BEFORE ))
+                printf "✅ AVIF %-60s %7dB → %7dB  (-%d%%)\n" "$f" "$BEFORE" "$AFTER" "$PCT"
+              else
+                printf "⏭️  AVIF %-60s ya optimizado, sin cambios\n" "$f"
+              fi
+            else
+              printf "⚠️  AVIF %-60s error al procesar, omitido\n" "$f"
+            fi
+            rm -f "$TMP_PNG" "$TMP_AVIF"
+          done
+
+      # ── 9. Optimizar SVG ─────────────────────────────────────────────────────
+      - name: Optimize SVG
+        if: steps.collect.outputs.count != '0'
+        run: |
+          grep -i '\.svg$' /tmp/images.txt | while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            BEFORE=$(stat -c%s "$f")
+            svgo --quiet "$f" -o "$f" 2>/dev/null
+            AFTER=$(stat -c%s "$f")
+            SAVED=$(( BEFORE - AFTER ))
+            PCT=$(( SAVED * 100 / BEFORE ))
+            printf "✅ SVG  %-60s %7dB → %7dB  (-%d%%)\n" "$f" "$BEFORE" "$AFTER" "$PCT"
+          done
+
+      # ── 10. Commit y push de cambios ─────────────────────────────────────────
+      # git-auto-commit-action detecta automáticamente los ficheros modificados
+      # y hace commit+push solo si hay cambios reales
+      - name: Commit optimized images
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "chore: optimize images [skip ci]"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
